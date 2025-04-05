@@ -1,0 +1,12 @@
+{
+  "nav": {
+    "services": "Services",
+    "howItWorks": "How It Works",
+    "workshops": "For Workshops",
+    "contact": "Contact",
+    "login": "Login / Sign Up"
+  },
+  "common": {
+    "toggleTheme": "Toggle Theme"
+  }
+}
