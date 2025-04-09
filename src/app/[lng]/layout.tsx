@@ -1,20 +1,7 @@
-// app/[lng]/layout.tsx
-import { Geist, Geist_Mono } from "next/font/google";
-import "../globals.css";
-import { ThemeProvider } from "@/components/theme/theme-provider";
+import { ClientProviders } from "@/components/providers/client-providers";
 import { languages } from "../../../i18n/settings";
+import "../globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-// Generate static params for all supported languages
 export async function generateStaticParams() {
   return languages.map((lng) => ({ lng }));
 }
@@ -30,17 +17,10 @@ export default function RootLayout({
     <html
       lang={lng}
       dir={lng === "ar" ? "rtl" : "ltr"}
-      className={`${geistSans.variable} ${geistMono.variable}`}
+      suppressHydrationWarning={true}
     >
-      <body className="antialiased">
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
+      <body>
+        <ClientProviders lang={lng}>{children}</ClientProviders>
       </body>
     </html>
   );
