@@ -1,25 +1,71 @@
-// app/[lng]/layout.tsx
-import { Geist, Geist_Mono } from "next/font/google";
-import "../globals.css";
-import { ThemeProvider } from "@/components/theme/theme-provider";
+import { Metadata } from "next";
+import { ClientProviders } from "@/components/providers/client-providers";
+
 import { languages } from "../../../i18n/settings";
+import "../globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+// Import translations
+async function getTranslations(lng: string) {
+  const translations = await import(
+    `../../../public/locales/${lng}/translation.json`
+  );
+  return translations.default;
+}
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+export async function generateMetadata({
+  params: { lng },
+}: {
+  params: { lng: string };
+}): Promise<Metadata> {
+  const t = await getTranslations(lng);
 
-// Generate static params for all supported languages
+  return {
+    title: {
+      default: t.metadata.title,
+      template: `%s | ${t.metadata.shortTitle}`,
+    },
+    description: t.metadata.description,
+    icons: {
+      icon: "/favicon.ico",
+      apple: "/apple-touch-icon.png",
+    },
+    keywords: t.metadata.keywords,
+    authors: [{ name: "AutoFix Team" }],
+    viewport: {
+      width: "device-width",
+      initialScale: 1,
+    },
+    openGraph: {
+      title: t.metadata.title,
+      description: t.metadata.description,
+      url: `https://autofix.com/${lng}`,
+      siteName: t.metadata.siteName,
+      locale: lng,
+      type: "website",
+      images: [
+        {
+          url: "/og-image.jpg",
+          width: 1200,
+          height: 630,
+          alt: t.metadata.shortTitle,
+        },
+      ],
+    },
+    alternates: {
+      canonical: `https://autofix.com/${lng}`,
+      languages: {
+        en: "https://autofix.com/en",
+        ar: "https://autofix.com/ar",
+      },
+    },
+  };
+}
+
 export async function generateStaticParams() {
   return languages.map((lng) => ({ lng }));
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
   params: { lng },
 }: {
@@ -30,17 +76,10 @@ export default function RootLayout({
     <html
       lang={lng}
       dir={lng === "ar" ? "rtl" : "ltr"}
-      className={`${geistSans.variable} ${geistMono.variable}`}
+      suppressHydrationWarning={true}
     >
-      <body className="antialiased">
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
+      <body>
+        <ClientProviders lang={lng}>{children}</ClientProviders>
       </body>
     </html>
   );
