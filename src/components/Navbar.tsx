@@ -12,12 +12,13 @@ import {
 import { Menu } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { ThemeToggle } from "./theme/theme-toggle";
-import { LanguageSwitcher } from "@/components/language-switcher";
+import { LanguageSwitcher } from "./language-switcher";
 import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
   const pathname = usePathname();
   const { t } = useTranslation();
+  const currentLang = pathname.split("/")[1];
 
   const routes = [
     {
@@ -41,12 +42,10 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 w-full border-b bg-background z-50">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-        {/* Logo */}
-        <Link href="/" className="flex items-center">
-          <span className="text-2xl font-bold">El7a2ny</span>
-        </Link>
+        <span className="text-2xl font-bold cursor-pointer">
+          {t("nav.logo")}
+        </span>
 
-        {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-6">
           {routes.map((route) => (
             <Link
@@ -69,7 +68,6 @@ const Navbar = () => {
           </Button>
         </div>
 
-        {/* Mobile Navigation */}
         <div className="md:hidden flex items-center gap-2">
           <ThemeToggle />
           <LanguageSwitcher />

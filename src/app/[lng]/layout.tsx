@@ -77,7 +77,10 @@ export default async function RootLayout({
       lang={lng}
       dir={lng === "ar" ? "rtl" : "ltr"}
       suppressHydrationWarning={true}
+      suppressHydrationWarning={true}
     >
+      <body>
+        <ClientProviders lang={lng}>{children}</ClientProviders>
       <body>
         <ClientProviders lang={lng}>{children}</ClientProviders>
       </body>

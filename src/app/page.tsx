@@ -1,11 +1,7 @@
-import Navbar from "@/components/Navbar";
-import { Button } from "@/components/ui/button";
+// app/page.tsx
+import { redirect } from "next/navigation";
+import { fallbackLng } from "../../i18n/settings";
 
-export default function Home() {
-  return (
-    <>
-      <Navbar />
-      <Button>Click me</Button>;
-    </>
-  );
+export default function RootPage() {
+  redirect(`/${fallbackLng}`);
 }

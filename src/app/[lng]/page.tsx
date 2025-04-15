@@ -3,7 +3,6 @@ import Navbar from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
 import { languages } from "../../../i18n/settings";
 
-// Generate static params for all supported languages
 export async function generateStaticParams() {
   return languages.map((lng) => ({ lng }));
 }
@@ -14,11 +13,9 @@ export default async function Home({
   params: { lng: string };
 }) {
   return (
-    <>
+    <main>
       <Navbar />
-      <main className="container mx-auto px-4">
-        <Button>Click me</Button>
-      </main>
-    </>
+      <Button>Click me</Button>
+    </main>
   );
 }

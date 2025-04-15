@@ -1,7 +1,15 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  /* config options here */
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  webpack: (config: {
+    module: { rules: { test: RegExp; type: string; use: string }[] };
+  }) => {
+    config.module.rules.push({
+      test: /\.json$/,
+      type: "json",
+      use: "json-loader",
+    });
+    return config;
+  },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
