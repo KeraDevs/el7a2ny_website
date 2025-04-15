@@ -1,4 +1,7 @@
 {
+  "common": {
+    "toggleTheme": "Toggle Theme"
+  },
   "nav": {
     "services": "Services",
     "howItWorks": "How It Works",
@@ -6,7 +9,19 @@
     "contact": "Contact",
     "login": "Login / Sign Up"
   },
-  "common": {
-    "toggleTheme": "Toggle Theme"
+  "metadata": {
+    "title": "El7a2ny - Professional Car Repair Services",
+    "shortTitle": "El7a2ny",
+    "description": "Professional car repair and maintenance services. Expert mechanics, quality parts, and reliable service for all car makes and models.",
+    "keywords": [
+      "car repair",
+      "auto service",
+      "mechanic",
+      "vehicle maintenance",
+      "car diagnostics",
+      "auto parts",
+      "car workshop"
+    ],
+    "siteName": "El7a2ny"
   }
 }
