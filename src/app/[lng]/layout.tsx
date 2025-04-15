@@ -12,11 +12,17 @@ async function getTranslations(lng: string) {
   return translations.default;
 }
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
+
 export async function generateMetadata({
-  params: { lng },
+  params,
 }: {
   params: { lng: string };
 }): Promise<Metadata> {
+  const lng = params.lng;
   const t = await getTranslations(lng);
 
   return {
@@ -30,15 +36,11 @@ export async function generateMetadata({
       apple: "/apple-touch-icon.png",
     },
     keywords: t.metadata.keywords,
-    authors: [{ name: "AutoFix Team" }],
-    viewport: {
-      width: "device-width",
-      initialScale: 1,
-    },
+    authors: [{ name: "el7a2ny Team" }],
     openGraph: {
       title: t.metadata.title,
       description: t.metadata.description,
-      url: `https://autofix.com/${lng}`,
+      url: `https://el7a2ny.com/${lng}`,
       siteName: t.metadata.siteName,
       locale: lng,
       type: "website",
@@ -52,10 +54,10 @@ export async function generateMetadata({
       ],
     },
     alternates: {
-      canonical: `https://autofix.com/${lng}`,
+      canonical: `https://el7a2ny.com/${lng}`,
       languages: {
-        en: "https://autofix.com/en",
-        ar: "https://autofix.com/ar",
+        en: "https://el7a2ny.com/en",
+        ar: "https://el7a2ny.com/ar",
       },
     },
   };
@@ -67,20 +69,19 @@ export async function generateStaticParams() {
 
 export default async function RootLayout({
   children,
-  params: { lng },
+  params,
 }: {
   children: React.ReactNode;
   params: { lng: string };
 }) {
+  const lng = params.lng;
+
   return (
     <html
       lang={lng}
       dir={lng === "ar" ? "rtl" : "ltr"}
       suppressHydrationWarning={true}
-      suppressHydrationWarning={true}
     >
-      <body>
-        <ClientProviders lang={lng}>{children}</ClientProviders>
       <body>
         <ClientProviders lang={lng}>{children}</ClientProviders>
       </body>
