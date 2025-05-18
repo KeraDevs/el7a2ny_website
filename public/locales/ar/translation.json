@@ -25,5 +25,25 @@
       "ورشة سيارات"
     ],
     "siteName": "الحقني"
+  },
+  "carousel": {
+    "slides": [
+      {
+        "id": "1",
+        "imageUrl": "/images/slide1.jpg",
+        "title": "مرحباً بكم في منصتنا",
+        "description": "اكتشف ميزات وإمكانيات مذهلة",
+        "ctaLabel": "ابدأ الآن",
+        "ctaUrl": "/get-started"
+      },
+      {
+        "id": "2",
+        "imageUrl": "/images/slide2.jpg",
+        "title": "حلول مبتكرة",
+        "description": "جرب الجيل القادم من التكنولوجيا",
+        "ctaLabel": "اعرف المزيد",
+        "ctaUrl": "/solutions"
+      }
+    ]
   }
 }
