@@ -1,0 +1,303 @@
+"use client";
+
+import React from "react";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import {
+  MapPin,
+  Phone,
+  Mail,
+  Clock,
+  Facebook,
+  Twitter,
+  Instagram,
+  Linkedin,
+  Wrench,
+  Star,
+  ArrowRight,
+  Car,
+} from "lucide-react";
+import { useTranslation } from "react-i18next";
+
+const Footer = () => {
+  const { t } = useTranslation();
+  const currentYear = new Date().getFullYear();
+  const services = [
+    { label: t("footer.services.tuning"), href: "/services/tuning" },
+    { label: t("footer.services.maintenance"), href: "/services/maintenance" },
+    { label: t("footer.services.emergency"), href: "/services/emergency" },
+    { label: t("footer.services.pickup"), href: "/services/pickup" },
+    { label: t("footer.services.workshops"), href: "/services/workshops" },
+  ];
+
+  const quickLinks = [
+    { label: t("footer.links.about"), href: "/about" },
+    { label: t("footer.links.pricing"), href: "/pricing" },
+    { label: t("footer.links.workshops"), href: "/workshops" },
+    { label: t("footer.links.contact"), href: "/contact" },
+    { label: t("footer.links.faq"), href: "/faq" },
+  ];
+
+  const legalLinks = [
+    { label: t("footer.legal.privacy"), href: "/privacy-policy" },
+    { label: t("footer.legal.terms"), href: "/terms-of-service" },
+    { label: t("footer.legal.refund"), href: "/refund-policy" },
+    { label: t("footer.legal.cookies"), href: "/cookie-policy" },
+  ];
+
+  const socialLinks = [
+    { icon: Facebook, href: "https://facebook.com/el7a2ny", label: "Facebook" },
+    { icon: Twitter, href: "https://twitter.com/el7a2ny", label: "Twitter" },
+    {
+      icon: Instagram,
+      href: "https://instagram.com/el7a2ny",
+      label: "Instagram",
+    },
+    {
+      icon: Linkedin,
+      href: "https://linkedin.com/company/el7a2ny",
+      label: "LinkedIn",
+    },
+  ];
+
+  return (
+    <footer className="bg-gradient-to-br from-background via-muted/30 to-accent/10 border-t border-border/50 relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-10 left-10 text-6xl">🔧</div>
+        <div className="absolute top-32 right-20 text-4xl">🚗</div>
+        <div className="absolute bottom-20 left-1/4 text-5xl">⚙️</div>
+        <div className="absolute bottom-32 right-10 text-3xl">🛠️</div>
+      </div>
+
+      <div className="container mx-auto px-4 py-16 relative">
+        {/* Main footer content */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+          {/* Company Info */}
+          <div className="space-y-6">
+            <div className="flex items-center gap-3">
+              <div className="p-2 bg-gradient-to-r from-primary to-orange-500 rounded-xl">
+                <Wrench className="h-6 w-6 text-white" />
+              </div>
+              <span className="text-2xl font-bold bg-gradient-to-r from-primary to-orange-500 bg-clip-text text-transparent">
+                {t("nav.logo")}
+              </span>
+            </div>
+
+            <p className="text-muted-foreground leading-relaxed">
+              {t("footer.description")}
+            </p>
+
+            {/* Rating */}
+            <div className="flex items-center gap-2">
+              <div className="flex text-yellow-500">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="h-4 w-4 fill-current" />
+                ))}
+              </div>
+              <span className="text-sm text-muted-foreground">
+                4.9/5 ({t("footer.reviews")})
+              </span>
+            </div>
+
+            {/* CTA */}
+            <Button className="w-full bg-gradient-to-r from-primary to-orange-500 hover:from-orange-500 hover:to-primary text-white border-0 group">
+              <Car className="h-4 w-4 mr-2 group-hover:rotate-12 transition-transform duration-300" />
+              {t("footer.bookNow")}
+              <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+            </Button>
+          </div>
+
+          {/* Services */}
+          <div className="space-y-6">
+            <h3 className="text-lg font-semibold text-foreground flex items-center gap-2">
+              <div className="w-2 h-2 bg-primary rounded-full"></div>
+              {t("footer.servicesTitle")}
+            </h3>
+            <ul className="space-y-3">
+              {services.map((service, index) => (
+                <li key={index}>
+                  <Link
+                    href={service.href}
+                    className="text-muted-foreground hover:text-primary transition-colors duration-300 flex items-center gap-2 group"
+                  >
+                    <ArrowRight className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-all duration-300 -translate-x-2 group-hover:translate-x-0" />
+                    {service.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Quick Links */}
+          <div className="space-y-6">
+            <h3 className="text-lg font-semibold text-foreground flex items-center gap-2">
+              <div className="w-2 h-2 bg-primary rounded-full"></div>
+              {t("footer.quickLinksTitle")}
+            </h3>
+            <ul className="space-y-3">
+              {quickLinks.map((link, index) => (
+                <li key={index}>
+                  <Link
+                    href={link.href}
+                    className="text-muted-foreground hover:text-primary transition-colors duration-300 flex items-center gap-2 group"
+                  >
+                    <ArrowRight className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-all duration-300 -translate-x-2 group-hover:translate-x-0" />
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact Info */}
+          <div className="space-y-6">
+            <h3 className="text-lg font-semibold text-foreground flex items-center gap-2">
+              <div className="w-2 h-2 bg-primary rounded-full"></div>
+              {t("footer.contactTitle")}
+            </h3>
+
+            <div className="space-y-4">
+              <div className="flex items-start gap-3 group cursor-pointer">
+                <div className="p-2 bg-muted rounded-lg group-hover:bg-primary/10 transition-colors duration-300">
+                  <MapPin className="h-4 w-4 text-primary" />
+                </div>
+                <div>
+                  <p className="text-sm font-medium text-foreground">
+                    {t("footer.address")}
+                  </p>
+                  <p className="text-sm text-muted-foreground">
+                    123 Main St, Cairo, Egypt
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3 group cursor-pointer">
+                <div className="p-2 bg-muted rounded-lg group-hover:bg-primary/10 transition-colors duration-300">
+                  <Phone className="h-4 w-4 text-primary" />
+                </div>
+                <div>
+                  <p className="text-sm font-medium text-foreground">
+                    {t("footer.phone")}
+                  </p>
+                  <p className="text-sm text-muted-foreground">
+                    +20 123 456 789
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3 group cursor-pointer">
+                <div className="p-2 bg-muted rounded-lg group-hover:bg-primary/10 transition-colors duration-300">
+                  <Mail className="h-4 w-4 text-primary" />
+                </div>
+                <div>
+                  <p className="text-sm font-medium text-foreground">
+                    {t("footer.email")}
+                  </p>
+                  <p className="text-sm text-muted-foreground">
+                    info@el7a2ny.com
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3 group cursor-pointer">
+                <div className="p-2 bg-muted rounded-lg group-hover:bg-primary/10 transition-colors duration-300">
+                  <Clock className="h-4 w-4 text-primary" />
+                </div>
+                <div>
+                  <p className="text-sm font-medium text-foreground">
+                    {t("footer.hours")}
+                  </p>
+                  <p className="text-sm text-muted-foreground">
+                    24/7 {t("footer.available")}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* Social Links & Newsletter */}
+        <div className="border-t border-border/50 pt-8 mb-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+            {/* Social Links */}
+            <div className="flex items-center gap-4">
+              <span className="text-sm font-medium text-muted-foreground">
+                {t("footer.followUs")}:
+              </span>
+              <div className="flex gap-3">
+                {socialLinks.map((social, index) => (
+                  <Link
+                    key={index}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 bg-muted hover:bg-primary/10 rounded-lg transition-all duration-300 hover:scale-110 group"
+                    aria-label={social.label}
+                  >
+                    <social.icon className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors duration-300" />
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* Newsletter */}
+            <div className="flex items-center gap-3">
+              <span className="text-sm font-medium text-muted-foreground whitespace-nowrap">
+                {t("footer.newsletter")}:
+              </span>
+              <div className="flex gap-2">
+                <input
+                  type="email"
+                  placeholder={t("footer.emailPlaceholder")}
+                  className="px-3 py-2 bg-muted border border-border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all duration-300"
+                />
+                <Button
+                  size="sm"
+                  className="bg-gradient-to-r from-primary to-orange-500 hover:from-orange-500 hover:to-primary text-white border-0"
+                >
+                  {t("footer.subscribe")}
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>{" "}
+        {/* Bottom Bar */}
+        <div className="border-t border-border/50 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <div className="flex items-center gap-2 text-sm text-muted-foreground">
+              <span>
+                © {currentYear} {t("nav.logo")}.
+              </span>
+              <span>{t("footer.allRightsReserved")}</span>
+            </div>
+
+            <div className="flex items-center gap-6">
+              {legalLinks.map((link, index) => (
+                <Link
+                  key={index}
+                  href={link.href}
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors duration-300"
+                >
+                  {link.label}
+                </Link>
+              ))}
+              <span className="text-sm text-muted-foreground">
+                {t("footer.developedBy")}{" "}
+                <Link
+                  href="https://keradevs.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:text-orange-500 transition-colors duration-300 font-medium"
+                >
+                  KeraDevs
+                </Link>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

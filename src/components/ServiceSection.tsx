@@ -11,28 +11,41 @@ interface ServiceSectionProps {
     description: string;
     ctaText: string;
     ctaLink: string;
+    isVerified?: boolean;
+    isEmergency?: boolean;
   }[];
   title: string;
 }
 
 const ServiceSection: React.FC<ServiceSectionProps> = ({ services, title }) => {
   return (
-    <section className="py-16 px-4 bg-background">
+    <section className="py-20 px-4">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-          {title}
-        </h2>
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent">
+            {title}
+          </h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-primary to-primary/50 mx-auto rounded-full"></div>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service) => (
-            <ServiceCard
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+          {services.map((service, index) => (
+            <div
               key={service.id}
-              image={service.image}
-              title={service.title}
-              description={service.description}
-              ctaText={service.ctaText}
-              ctaLink={service.ctaLink}
-            />
+              className="animate-fade-in-up"
+              style={{ animationDelay: `${index * 150}ms` }}
+            >
+              {" "}
+              <ServiceCard
+                image={service.image}
+                title={service.title}
+                description={service.description}
+                ctaText={service.ctaText}
+                ctaLink={service.ctaLink}
+                isVerified={service.isVerified}
+                isEmergency={service.isEmergency}
+              />
+            </div>
           ))}
         </div>
       </div>

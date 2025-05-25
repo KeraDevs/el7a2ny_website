@@ -45,71 +45,75 @@
 
 :root {
   --radius: 0.625rem;
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.628 0.236 36.54);
+  /* Professional automotive color palette with strategic orange accents */
+  --card: oklch(0.99 0.005 105);
+  --card-foreground: oklch(0.15 0.025 225);
+  --popover: oklch(0.99 0.005 105);
+  --popover-foreground: oklch(0.15 0.025 225);
+  --primary: oklch(
+    0.65 0.19 45
+  ); /* Refined orange - professional but vibrant */
+  --primary-foreground: oklch(0.98 0.005 105);
+  --secondary: oklch(0.95 0.01 220); /* Cool gray-blue */
+  --secondary-foreground: oklch(0.25 0.02 225);
+  --muted: oklch(0.96 0.008 225);
+  --muted-foreground: oklch(0.5 0.015 225);
+  --accent: oklch(0.92 0.02 45); /* Light orange accent */
+  --accent-foreground: oklch(0.25 0.02 225);
+  --destructive: oklch(0.65 0.2 25);
+  --border: oklch(0.9 0.01 225);
+  --input: oklch(0.95 0.01 225);
+  --ring: oklch(0.65 0.19 45);
+  --chart-1: oklch(0.65 0.19 45);
+  --chart-2: oklch(0.6 0.15 200);
+  --chart-3: oklch(0.55 0.12 270);
+  --chart-4: oklch(0.7 0.18 120);
+  --chart-5: oklch(0.75 0.16 300);
+  --sidebar: oklch(0.98 0.005 225);
+  --sidebar-foreground: oklch(0.15 0.025 225);
+  --sidebar-primary: oklch(0.65 0.19 45);
+  --sidebar-primary-foreground: oklch(0.98 0.005 105);
+  --sidebar-accent: oklch(0.92 0.02 45);
+  --sidebar-accent-foreground: oklch(0.25 0.02 225);
+  --sidebar-border: oklch(0.9 0.01 225);
+  --sidebar-ring: oklch(0.65 0.19 45);
+  --background: oklch(0.98 0.005 225); /* Subtle cool background */
+  --foreground: oklch(0.15 0.025 225); /* Dark navy text */
 }
 
 .dark {
-  --background: oklch(0.356 0.056 263.35);
-  --foreground: oklch(0.628 0.236 36.54);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  /* Dark mode with creative blueish automotive theme */
+  --background: oklch(0.08 0.02 240); /* Deep blue-black background */
+  --foreground: oklch(0.95 0.01 240); /* Cool white text */
+  --card: oklch(0.12 0.025 235); /* Dark blue-gray cards */
+  --card-foreground: oklch(0.95 0.01 240);
+  --popover: oklch(0.12 0.025 235);
+  --popover-foreground: oklch(0.95 0.01 240);
+  --primary: oklch(0.75 0.22 45); /* Vibrant orange for contrast */
+  --primary-foreground: oklch(0.08 0.02 240);
+  --secondary: oklch(0.18 0.03 225); /* Steel blue */
+  --secondary-foreground: oklch(0.92 0.01 240);
+  --muted: oklch(0.15 0.02 230);
+  --muted-foreground: oklch(0.65 0.015 225);
+  --accent: oklch(0.2 0.05 45); /* Dark orange accent */
+  --accent-foreground: oklch(0.95 0.01 240);
+  --destructive: oklch(0.75 0.25 25);
+  --border: oklch(0.22 0.025 225);
+  --input: oklch(0.18 0.02 230);
+  --ring: oklch(0.75 0.22 45);
+  --chart-1: oklch(0.8 0.22 45);
+  --chart-2: oklch(0.7 0.2 200);
+  --chart-3: oklch(0.65 0.18 270);
+  --chart-4: oklch(0.75 0.2 120);
+  --chart-5: oklch(0.8 0.18 300);
+  --sidebar: oklch(0.12 0.01 225);
+  --sidebar-foreground: oklch(0.95 0.005 45);
+  --sidebar-primary: oklch(0.8 0.22 45);
+  --sidebar-primary-foreground: oklch(0.05 0.005 225);
+  --sidebar-accent: oklch(0.2 0.03 45);
+  --sidebar-accent-foreground: oklch(0.95 0.005 45);
+  --sidebar-border: oklch(0.2 0.015 225);
+  --sidebar-ring: oklch(0.8 0.22 45);
 }
 
 @layer base {
@@ -117,6 +121,283 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Enhanced typography for automotive industry */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold tracking-tight;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl lg:text-5xl;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+
+  h4 {
+    @apply text-xl md:text-2xl;
+  }
+
+  /* Smooth transitions for better UX */
+  .transition-smooth {
+    @apply transition-all duration-300 ease-in-out;
+  }
+
+  /* Gradient backgrounds for sections */
+  .gradient-primary {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--primary)) 0%,
+      hsl(var(--primary)) 100%
+    );
+  }
+
+  .gradient-secondary {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--background)) 0%,
+      hsl(var(--accent)) 100%
+    );
+  }
+
+  /* Enhanced gradient backgrounds for dark mode */
+  .gradient-dark-primary {
+    background: linear-gradient(
+      135deg,
+      oklch(0.08 0.02 240) 0%,
+      oklch(0.12 0.025 235) 50%,
+      oklch(0.08 0.02 240) 100%
+    );
+  }
+
+  .gradient-dark-secondary {
+    background: linear-gradient(
+      135deg,
+      oklch(0.12 0.025 235) 0%,
+      oklch(0.18 0.03 225) 50%,
+      oklch(0.12 0.025 235) 100%
+    );
+  }
+
+  .gradient-hero {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--background)) 0%,
+      hsl(var(--muted)) 30%,
+      hsl(var(--accent)) 70%,
+      hsl(var(--primary)) 100%
+    );
+  }
+
+  .dark .gradient-hero {
+    background: linear-gradient(
+      135deg,
+      oklch(0.08 0.02 240) 0%,
+      oklch(0.12 0.025 235) 30%,
+      oklch(0.18 0.03 225) 70%,
+      oklch(0.2 0.05 45) 100%
+    );
+  }
+
+  /* Floating WhatsApp button */
+  .whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 999;
+    background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+  }
+
+  .whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
+  }
+
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+    }
+    50% {
+      box-shadow: 0 4px 25px rgba(37, 211, 102, 0.5);
+    }
+    100% {
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+    }
+  }
+
+  /* Glass morphism effect */
+  .glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .dark .glass {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Enhanced animations */
+  @keyframes wrench-rotate {
+    0% {
+      transform: rotate(0deg) scale(1);
+    }
+    50% {
+      transform: rotate(15deg) scale(1.1);
+    }
+    100% {
+      transform: rotate(0deg) scale(1);
+    }
+  }
+
+  .animate-wrench {
+    animation: wrench-rotate 0.6s ease-in-out;
+  }
+
+  /* Verified badge styles - Social media blue theme */
+  .verified-badge {
+    background: linear-gradient(135deg, #1da1f2 0%, #0d8bf0 100%);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(29, 161, 242, 0.3);
+  }
+
+  .verified-badge:hover {
+    box-shadow: 0 4px 12px rgba(29, 161, 242, 0.4);
+    transform: scale(1.05);
+  }
+
+  .verified-badge::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.3),
+      transparent
+    );
+    animation: shimmer 3s infinite;
+  }
+
+  @keyframes shimmer {
+    0% {
+      left: -100%;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+
+  /* Enhanced animations for contact page */
+  @keyframes fade-in-up {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-in-left {
+    0% {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes fade-in-right {
+    0% {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes glow {
+    0%,
+    100% {
+      box-shadow: 0 0 5px rgba(29, 161, 242, 0.5);
+    }
+    50% {
+      box-shadow: 0 0 20px rgba(29, 161, 242, 0.8);
+    }
+  }
+
+  .animate-fade-in-up {
+    animation: fade-in-up 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in-left {
+    animation: fade-in-left 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in-right {
+    animation: fade-in-right 0.6s ease-out forwards;
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite;
+  }
+
+  /* Delay classes */
+  .delay-150 {
+    animation-delay: 150ms;
+  }
+
+  .delay-300 {
+    animation-delay: 300ms;
+  }
+
+  .delay-500 {
+    animation-delay: 500ms;
   }
 }

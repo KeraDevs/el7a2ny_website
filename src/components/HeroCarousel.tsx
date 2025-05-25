@@ -44,66 +44,96 @@ export const HeroCarousel: React.FC<HeroCarouselProps> = ({
 
     return () => clearInterval(timer);
   }, [autoplay, interval]);
-
   return (
-    <div className="relative w-full h-[500px] overflow-hidden">
+    <div className="relative w-full h-[600px] lg:h-[700px] overflow-hidden">
       {slides.map((slide, index) => (
         <div
           key={slide.id}
           className={cn(
-            "absolute inset-0 w-full h-full transition-opacity duration-1000 bg-cover bg-center",
-            currentSlide === index ? "opacity-100" : "opacity-0"
+            "absolute inset-0 w-full h-full transition-all duration-1000 bg-cover bg-center",
+            currentSlide === index
+              ? "opacity-100 scale-100"
+              : "opacity-0 scale-105"
           )}
           style={{ backgroundImage: `url(${slide.imageUrl})` }}
         >
-          <div className="absolute inset-0 bg-black/40" />
+          {/* Enhanced gradient overlay for better text readability */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+
           <div className="absolute inset-0 flex flex-col items-center justify-center px-6 md:px-12 text-center">
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
-              {slide.title}
-            </h2>
-            <p className="text-white text-lg md:text-xl max-w-2xl mb-8">
-              {slide.description}
-            </p>
-            {slide.ctaText && slide.ctaLink && (
-              <Button
-                size="lg"
-                className="bg-primary hover:bg-primary/90 text-white px-8 py-3"
-                asChild
+            {" "}
+            <div className="max-w-4xl mx-auto space-y-6">
+              <h1
+                className={cn(
+                  "text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-[1.1] md:leading-[1.15] lg:leading-[1.2]",
+                  "animate-fade-in-up"
+                )}
               >
-                <a href={slide.ctaLink}>{slide.ctaText}</a>
-              </Button>
-            )}
+                {slide.title}
+              </h1>
+              <p className="text-white/90 text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto mb-8 leading-relaxed">
+                {slide.description}
+              </p>
+              {slide.ctaText && slide.ctaLink && (
+                <Button
+                  size="lg"
+                  className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold shadow-2xl hover:shadow-primary/25 transition-all duration-300 transform hover:scale-105 hover:-translate-y-1"
+                  asChild
+                >
+                  <a
+                    href={slide.ctaLink}
+                    className="inline-flex items-center gap-2"
+                  >
+                    {slide.ctaText}
+                    <svg
+                      className="w-5 h-5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M17 8l4 4m0 0l-4 4m4-4H3"
+                      />
+                    </svg>
+                  </a>
+                </Button>
+              )}
+            </div>
           </div>
         </div>
-      ))}
-
-      {/* Navigation buttons */}
+      ))}{" "}
+      {/* Enhanced navigation buttons */}
       <Button
         variant="ghost"
         size="icon"
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/20 hover:bg-black/40 text-white z-10"
+        className="absolute left-4 lg:left-8 top-1/2 transform -translate-y-1/2 glass text-white hover:bg-white/20 border-white/20 backdrop-blur-md z-10 w-12 h-12 rounded-full transition-all duration-300 hover:scale-110"
         onClick={prevSlide}
       >
-        <ChevronLeft size={24} />
+        <ChevronLeft size={28} />
       </Button>
       <Button
         variant="ghost"
         size="icon"
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/20 hover:bg-black/40 text-white z-10"
+        className="absolute right-4 lg:right-8 top-1/2 transform -translate-y-1/2 glass text-white hover:bg-white/20 border-white/20 backdrop-blur-md z-10 w-12 h-12 rounded-full transition-all duration-300 hover:scale-110"
         onClick={nextSlide}
       >
-        <ChevronRight size={24} />
+        <ChevronRight size={28} />
       </Button>
-
-      {/* Dots indicator */}
-      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
+      {/* Enhanced dots indicator */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3 z-10">
         {slides.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
             className={cn(
-              "w-3 h-3 rounded-full transition-colors cursor-pointer",
-              currentSlide === index ? "bg-white" : "bg-white/50"
+              "transition-all duration-300 cursor-pointer rounded-full",
+              currentSlide === index
+                ? "w-10 h-3 bg-primary shadow-lg shadow-primary/50"
+                : "w-3 h-3 bg-white/60 hover:bg-white/80"
             )}
             aria-label={`Go to slide ${index + 1}`}
           />

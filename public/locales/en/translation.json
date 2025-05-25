@@ -4,6 +4,7 @@
   },
   "nav": {
     "logo": "El7a2ny",
+    "home": "Home",
     "services": "Services",
     "howItWorks": "How It Works",
     "workshops": "For Workshops",
@@ -24,6 +25,45 @@
       "car workshop"
     ],
     "siteName": "El7a2ny"
+  },
+  "footer": {
+    "description": "Professional automotive services with verified workshops and expert technicians. Your trusted partner for car maintenance, emergency assistance, and performance tuning.",
+    "reviews": "1,200+ Reviews",
+    "bookNow": "Book Service Now",
+    "servicesTitle": "Our Services",
+    "services": {
+      "tuning": "Car Tuning & Performance",
+      "maintenance": "Regular Maintenance",
+      "emergency": "Emergency Assistance",
+      "pickup": "Car Pickup Service",
+      "workshops": "Verified Workshops"
+    },
+    "quickLinksTitle": "Quick Links",
+    "links": {
+      "about": "About Us",
+      "pricing": "Pricing",
+      "workshops": "Find Workshops",
+      "contact": "Contact Us",
+      "faq": "FAQ"
+    },
+    "legal": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "refund": "Refund Policy",
+      "cookies": "Cookie Policy"
+    },
+    "contactTitle": "Contact Info",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "hours": "Hours",
+    "available": "Available",
+    "followUs": "Follow Us",
+    "newsletter": "Newsletter",
+    "emailPlaceholder": "Enter your email",
+    "subscribe": "Subscribe",
+    "allRightsReserved": "All rights reserved",
+    "developedBy": "Developed by"
   },
   "carousel": {
     "slides": [
