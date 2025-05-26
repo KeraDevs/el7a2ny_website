@@ -43,7 +43,7 @@
     "quickLinksTitle": "روابط سريعة",
     "links": {
       "about": "من نحن",
-      "pricing": "الأسعار",
+      "howItWorks": "كيف نعمل",
       "workshops": "البحث عن ورش",
       "contact": "اتصل بنا",
       "faq": "الأسئلة الشائعة"
@@ -58,6 +58,7 @@
     "address": "العنوان",
     "phone": "الهاتف",
     "email": "البريد الإلكتروني",
+    "whatsapp": "واتساب",
     "hours": "ساعات العمل",
     "available": "متاح",
     "emergency": "خدمة طوارئ 24/7",

@@ -64,9 +64,10 @@ export const HeroCarousel: React.FC<HeroCarouselProps> = ({
           <div className="absolute inset-0 flex flex-col items-center justify-center px-6 md:px-12 text-center">
             {" "}
             <div className="max-w-4xl mx-auto space-y-6">
+              {" "}
               <h1
                 className={cn(
-                  "text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-[1.1] md:leading-[1.15] lg:leading-[1.2]",
+                  "text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-[1.2] md:leading-[1.25] lg:leading-[1.3]",
                   "animate-fade-in-up"
                 )}
               >

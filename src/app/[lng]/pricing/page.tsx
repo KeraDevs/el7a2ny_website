@@ -406,11 +406,11 @@ const PricingPage = ({ params }: { params: { lng: string } }) => {
             {/* Background decoration */}
             <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl" />
             <div className="absolute bottom-0 left-0 w-48 h-48 bg-orange-400/20 rounded-full blur-2xl" />
-          </div>
+          </div>{" "}
         </div>
       </section>
 
-      <Footer />
+      <Footer lng={params.lng} />
       <WhatsAppButton />
     </div>
   );

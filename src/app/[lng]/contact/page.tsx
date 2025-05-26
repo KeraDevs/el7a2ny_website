@@ -73,8 +73,8 @@ const ContactPage = ({ params }: { params: { lng: string } }) => {
               <span className="text-primary font-medium">
                 {isRtl ? "تواصل معنا" : "Get in Touch"}
               </span>
-            </div>
-            <h1 className="text-5xl md:text-6xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-foreground via-primary to-orange-500 bg-clip-text text-transparent animate-fade-in-up delay-150 leading-tight">
+            </div>{" "}
+            <h1 className="text-5xl md:text-6xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-foreground via-primary to-orange-500 bg-clip-text text-transparent animate-fade-in-up delay-150 leading-[1.2] md:leading-[1.25] lg:leading-[1.3]">
               {isRtl ? "اتصل بنا" : "Contact Us"}
             </h1>{" "}
             <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed animate-fade-in-up delay-300">
@@ -110,7 +110,8 @@ const ContactPage = ({ params }: { params: { lng: string } }) => {
       <section className="py-20 px-4 bg-gradient-to-br from-background via-muted/30 to-accent/10">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent animate-fade-in-up">
+            {" "}
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent animate-fade-in-up leading-[1.3] md:leading-[1.35]">
               {isRtl ? "أرسل لنا رسالة" : "Send us a Message"}
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed animate-fade-in-up delay-150">
@@ -118,7 +119,6 @@ const ContactPage = ({ params }: { params: { lng: string } }) => {
                 ? "املأ النموذج أدناه وسنتواصل معك في أقرب وقت ممكن."
                 : "Fill out the form below and we'll get back to you as soon as possible."}
             </p>
-
             {/* Decorative line */}
             <div className="w-20 h-1 bg-gradient-to-r from-primary to-orange-500 rounded-full mx-auto mt-6" />
           </div>
@@ -150,7 +150,6 @@ const ContactPage = ({ params }: { params: { lng: string } }) => {
                 />
               </div>
             </div>
-
             <div className="group">
               <label className="block text-sm font-semibold text-foreground mb-3 group-focus-within:text-primary transition-colors">
                 {isRtl ? "البريد الإلكتروني" : "Email"}
@@ -163,7 +162,6 @@ const ContactPage = ({ params }: { params: { lng: string } }) => {
                 }
               />
             </div>
-
             <div className="group">
               <label className="block text-sm font-semibold text-foreground mb-3 group-focus-within:text-primary transition-colors">
                 {isRtl ? "رقم الهاتف" : "Phone Number"}
@@ -176,7 +174,6 @@ const ContactPage = ({ params }: { params: { lng: string } }) => {
                 }
               />
             </div>
-
             <div className="group">
               <label className="block text-sm font-semibold text-foreground mb-3 group-focus-within:text-primary transition-colors">
                 {isRtl ? "نوع الخدمة" : "Service Type"}
@@ -201,7 +198,6 @@ const ContactPage = ({ params }: { params: { lng: string } }) => {
                 </option>
               </select>
             </div>
-
             <div className="group">
               <label className="block text-sm font-semibold text-foreground mb-3 group-focus-within:text-primary transition-colors">
                 {isRtl ? "الرسالة" : "Message"}
@@ -213,9 +209,8 @@ const ContactPage = ({ params }: { params: { lng: string } }) => {
                   isRtl ? "اكتب رسالتك هنا..." : "Write your message here..."
                 }
               />
-            </div>
-
-            <Button className="w-full py-4 bg-gradient-to-r from-primary to-orange-500 hover:from-orange-500 hover:to-primary text-white border-0 shadow-xl hover:shadow-2xl transition-all duration-500 group text-lg font-semibold rounded-xl hover:scale-105">
+            </div>{" "}
+            <Button className="w-full py-4 bg-gradient-to-r from-primary to-orange-500 hover:from-orange-500 hover:to-primary text-white border-0 shadow-xl hover:shadow-2xl transition-all duration-500 group text-lg font-semibold rounded-xl hover:scale-[1.02]">
               <Send className="h-5 w-5 mr-3 group-hover:translate-x-1 transition-transform duration-300" />
               {isRtl ? "إرسال الرسالة" : "Send Message"}
             </Button>
@@ -226,7 +221,8 @@ const ContactPage = ({ params }: { params: { lng: string } }) => {
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent animate-fade-in-up">
+            {" "}
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent animate-fade-in-up leading-[1.3] md:leading-[1.35]">
               {isRtl ? "معلومات الاتصال" : "Contact Information"}
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed animate-fade-in-up delay-150">
@@ -235,7 +231,6 @@ const ContactPage = ({ params }: { params: { lng: string } }) => {
                 : "Reach out to us through these channels or visit our main office"}
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {contactInfo.map((info, index) => (
               <div
@@ -272,7 +267,6 @@ const ContactPage = ({ params }: { params: { lng: string } }) => {
               </div>
             ))}
           </div>
-
           {/* Quick Contact Cards, Map & Other Sections */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             {/* Map & Emergency Service */}
@@ -308,8 +302,8 @@ const ContactPage = ({ params }: { params: { lng: string } }) => {
                   {isRtl
                     ? "هل تحتاج مساعدة فورية؟ نحن متاحون 24/7 لحالات الطوارئ."
                     : "Need immediate help? We're available 24/7 for emergencies."}
-                </p>
-                <Button className="w-full bg-white text-red-600 hover:bg-red-50 font-bold py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                </p>{" "}
+                <Button className="w-full bg-white text-red-600 hover:bg-red-50 font-bold py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
                   <Phone className="h-5 w-5 mr-3" />
                   {isRtl
                     ? "اتصال طوارئ: +20 123 456 789"
@@ -425,10 +419,10 @@ const ContactPage = ({ params }: { params: { lng: string } }) => {
                 </div>
               </div>
             </div>
-          </div>
+          </div>{" "}
         </div>
       </section>
-      <Footer />
+      <Footer lng={params.lng} />
       <WhatsAppButton />
     </div>
   );

@@ -20,9 +20,9 @@ export const viewport = {
 export async function generateMetadata({
   params,
 }: {
-  params: { lng: string };
+  params: Promise<{ lng: string }>;
 }): Promise<Metadata> {
-  const lng = params.lng;
+  const { lng } = await params;
   const t = await getTranslations(lng);
 
   return {
@@ -72,9 +72,9 @@ export default async function RootLayout({
   params,
 }: {
   children: React.ReactNode;
-  params: { lng: string };
+  params: Promise<{ lng: string }>;
 }) {
-  const lng = params.lng;
+  const { lng } = await params;
 
   return (
     <html

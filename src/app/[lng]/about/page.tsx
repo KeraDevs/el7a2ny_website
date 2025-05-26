@@ -2,115 +2,127 @@ import React from "react";
 import { Metadata } from "next";
 import {
   Shield,
-  Users,
-  Clock,
-  Award,
-  Wrench,
-  Car,
   CheckCircle,
+  Users,
+  Award,
+  Clock,
   Star,
+  Target,
+  TrendingUp,
+  Car,
+  Wrench,
+  UserCheck,
+  FileCheck,
+  PhoneIncoming,
+  HeartHandshake,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import Navbar from "@/components/Navbar";
+import { MdOutlineVerified, MdSecurity } from "react-icons/md";
 
 export const metadata: Metadata = {
-  title: "About Us | El7a2ny - Professional Automotive Services",
+  title: "About Us | El7a2ny - Trusted Automotive Platform",
   description:
-    "Learn about El7a2ny's mission to provide exceptional automotive services through verified workshops, expert technicians, and customer-first approach.",
+    "Learn about El7a2ny's mission to connect verified automotive professionals with customers. Discover our rigorous verification process and commitment to quality service.",
 };
 
-const AboutPage = ({ params }: { params: { lng: string } }) => {
-  const isRtl = params.lng === "ar";
-
+const AboutPage = async ({ params }: { params: Promise<{ lng: string }> }) => {
+  const { lng } = await params;
+  const isRtl = lng === "ar";
   const stats = [
     {
-      icon: Shield,
+      icon: UserCheck,
+      number: "100%",
+      label: isRtl ? "ورش معتمدة" : "Verified Workshops",
+      description: isRtl
+        ? "فحص شامل وضمان الجودة"
+        : "Complete inspection & quality assurance",
+    },
+    {
+      icon: FileCheck,
       number: "1000+",
-      label: isRtl ? "ورشة معتمدة" : "Verified Workshops",
-      description: isRtl ? "في جميع أنحاء البلاد" : "Across the country",
-    },
-    {
-      icon: Users,
-      number: "500+",
-      label: isRtl ? "فني محترف" : "Professional Technicians",
-      description: isRtl ? "معتمدون ومدربون" : "Certified and trained",
-    },
-    {
-      icon: Car,
-      number: "50,000+",
-      label: isRtl ? "عميل راضٍ" : "Satisfied Customers",
-      description: isRtl ? "خدمات عالية الجودة" : "High-quality services",
-    },
-    {
-      icon: Clock,
-      number: "24/7",
-      label: isRtl ? "خدمة الطوارئ" : "Emergency Service",
+      label: isRtl ? "فني مؤهل" : "Certified Technicians",
       description: isRtl
-        ? "متاح على مدار الساعة"
-        : "Available around the clock",
+        ? "تحقق من المؤهلات والخبرة"
+        : "Qualification & experience verified",
     },
-  ];
-
-  const values = [
+    {
+      icon: MdSecurity,
+      number: "24/7",
+      label: isRtl ? "مراقبة الجودة" : "Quality Monitoring",
+      description: isRtl
+        ? "متابعة مستمرة للأداء"
+        : "Continuous performance tracking",
+    },
     {
       icon: Shield,
-      title: isRtl ? "الجودة والموثوقية" : "Quality & Reliability",
+      number: "50,000+",
+      label: isRtl ? "خدمة موثوقة" : "Trusted Services",
       description: isRtl
-        ? "نضمن أعلى معايير الجودة في جميع خدماتنا مع استخدام قطع غيار أصلية وأحدث التقنيات."
-        : "We guarantee the highest quality standards in all our services using genuine parts and latest technologies.",
-    },
-    {
-      icon: Users,
-      title: isRtl ? "فريق من الخبراء" : "Expert Team",
-      description: isRtl
-        ? "فنيون معتمدون ومدربون على أحدث تقنيات صيانة السيارات مع سنوات من الخبرة."
-        : "Certified technicians trained in the latest automotive technologies with years of experience.",
-    },
-    {
-      icon: CheckCircle,
-      title: isRtl ? "الشفافية" : "Transparency",
-      description: isRtl
-        ? "أسعار واضحة وعادلة بدون رسوم خفية، مع تقارير مفصلة عن حالة سيارتك."
-        : "Clear and fair pricing with no hidden fees, plus detailed reports on your car's condition.",
-    },
-    {
-      icon: Star,
-      title: isRtl ? "رضا العملاء" : "Customer Satisfaction",
-      description: isRtl
-        ? "هدفنا الأول هو رضاكم التام، لذلك نقدم ضماناً شاملاً على جميع خدماتنا."
-        : "Our primary goal is your complete satisfaction, which is why we offer comprehensive warranty on all services.",
+        ? "عمليات مضمونة ومؤمنة"
+        : "Guaranteed & insured operations",
     },
   ];
-
-  const timeline = [
+  const verificationProcess = [
     {
-      year: "2020",
-      title: isRtl ? "بداية الرحلة" : "The Beginning",
+      icon: FileCheck,
+      title: isRtl ? "التحقق من الوثائق" : "Document Verification",
       description: isRtl
-        ? "تأسست الحقني بهدف تغيير تجربة صيانة السيارات في المنطقة"
-        : "El7a2ny was founded with the goal of transforming automotive maintenance experience in the region",
+        ? "نتحقق من جميع التراخيص والشهادات والمؤهلات المهنية للورش والفنيين."
+        : "We verify all licenses, certificates, and professional qualifications of workshops and technicians.",
     },
     {
-      year: "2021",
-      title: isRtl ? "التوسع الأول" : "First Expansion",
+      icon: MdOutlineVerified,
+      title: isRtl ? "تقييم الخبرة" : "Experience Assessment",
       description: isRtl
-        ? "ضممنا أول 100 ورشة معتمدة وأطلقنا خدمة الطوارئ"
-        : "We onboarded our first 100 verified workshops and launched emergency services",
+        ? "نقيم سنوات الخبرة ونراجع الأعمال السابقة وآراء العملاء."
+        : "We assess years of experience and review previous work and customer feedback.",
     },
     {
-      year: "2022",
-      title: isRtl ? "الابتكار التقني" : "Technical Innovation",
+      icon: MdSecurity,
+      title: isRtl ? "فحص الموقع" : "Site Inspection",
       description: isRtl
-        ? "أطلقنا تطبيق الهاتف المحمول وخدمة التشخيص الرقمي"
-        : "We launched our mobile app and digital diagnostic services",
+        ? "نقوم بزيارة الورش شخصياً للتأكد من المعدات والمعايير الأمنية."
+        : "We personally visit workshops to ensure equipment quality and safety standards.",
     },
     {
-      year: "2023",
-      title: isRtl ? "النمو والتطوير" : "Growth & Development",
+      icon: UserCheck,
+      title: isRtl ? "المراقبة المستمرة" : "Continuous Monitoring",
       description: isRtl
-        ? "وصلنا إلى 1000+ ورشة معتمدة و50,000+ عميل راضٍ"
-        : "We reached 1000+ verified workshops and 50,000+ satisfied customers",
+        ? "نراقب الأداء باستمرار ونتابع آراء العملاء لضمان استمرار الجودة."
+        : "We continuously monitor performance and track customer feedback to ensure ongoing quality.",
+    },
+  ];
+  const companyValues = [
+    {
+      icon: Shield,
+      title: isRtl ? "الثقة والأمان" : "Trust & Security",
+      description: isRtl
+        ? "نضمن لك الأمان الكامل في التعامل مع ورشنا المعتمدة والمؤمنة ضد جميع المخاطر."
+        : "We guarantee complete security when dealing with our verified and fully insured workshops.",
+    },
+    {
+      icon: HeartHandshake,
+      title: isRtl ? "الشراكة الحقيقية" : "True Partnership",
+      description: isRtl
+        ? "نؤمن بالشراكة طويلة المدى مع عملائنا وورشنا لضمان النجاح المشترك."
+        : "We believe in long-term partnerships with our customers and workshops to ensure mutual success.",
+    },
+    {
+      icon: Target,
+      title: isRtl ? "التطوير المستمر" : "Continuous Improvement",
+      description: isRtl
+        ? "نسعى باستمرار لتطوير خدماتنا وتحسين معايير الجودة في الصناعة."
+        : "We continuously strive to develop our services and improve quality standards in the industry.",
+    },
+    {
+      icon: PhoneIncoming,
+      title: isRtl ? "الدعم الدائم" : "24/7 Support",
+      description: isRtl
+        ? "فريق الدعم متاح على مدار الساعة لمساعدتك في أي وقت تحتاج فيه المساعدة."
+        : "Our support team is available 24/7 to help you whenever you need assistance.",
     },
   ];
 
@@ -141,7 +153,6 @@ const AboutPage = ({ params }: { params: { lng: string } }) => {
           </div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -168,7 +179,6 @@ const AboutPage = ({ params }: { params: { lng: string } }) => {
           </div>
         </div>
       </section>
-
       {/* Mission & Vision Section */}
       <section className="py-20 px-4 bg-muted/30">
         <div className="max-w-7xl mx-auto">
@@ -232,30 +242,65 @@ const AboutPage = ({ params }: { params: { lng: string } }) => {
             </div>
           </div>
         </div>
-      </section>
-
-      {/* Values Section */}
+      </section>{" "}
+      {/* Verification Process Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent">
-              {isRtl ? "قيمنا الأساسية" : "Our Core Values"}
+              {isRtl
+                ? "عملية التحقق والاعتماد"
+                : "Verification & Certification Process"}
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               {isRtl
-                ? "القيم التي توجه عملنا وتحدد هويتنا كشركة رائدة في مجال خدمات السيارات."
-                : "The values that guide our work and define our identity as a leading automotive services company."}
+                ? "نضمن لك أعلى مستويات الجودة والمهنية من خلال عملية تحقق صارمة لجميع الورش والفنيين."
+                : "We ensure the highest levels of quality and professionalism through rigorous verification of all workshops and technicians."}
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {values.map((value, index) => (
+            {verificationProcess.map((step, index) => (
               <div
                 key={index}
                 className="p-8 rounded-2xl bg-card border border-border/50 hover:shadow-lg transition-all duration-300 group"
               >
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg mb-6 group-hover:bg-primary/20 transition-colors duration-300">
-                  <value.icon className="h-6 w-6 text-primary" />
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-6 group-hover:bg-primary/20 transition-colors duration-300">
+                  <step.icon className="h-8 w-8 text-primary" />
+                </div>
+                <h3 className="text-2xl font-bold text-foreground mb-4">
+                  {step.title}
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  {step.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>{" "}
+      {/* Company Values Section */}
+      <section className="py-20 px-4 bg-muted/30">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent">
+              {isRtl ? "قيمنا وضماناتنا" : "Our Values & Guarantees"}
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              {isRtl
+                ? "ما يميزنا ويجعلنا الخيار الأول للعملاء والورش على حد سواء"
+                : "What sets us apart and makes us the first choice for both customers and workshops"}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {companyValues.map((value, index) => (
+              <div
+                key={index}
+                className="p-8 rounded-2xl bg-card border border-border/50 hover:shadow-lg transition-all duration-300 group"
+              >
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-6 group-hover:bg-primary/20 transition-colors duration-300">
+                  <value.icon className="h-8 w-8 text-primary" />
                 </div>
                 <h3 className="text-2xl font-bold text-foreground mb-4">
                   {value.title}
@@ -268,57 +313,6 @@ const AboutPage = ({ params }: { params: { lng: string } }) => {
           </div>
         </div>
       </section>
-
-      {/* Timeline Section */}
-      <section className="py-20 px-4 bg-muted/30">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent">
-              {isRtl ? "رحلتنا عبر الزمن" : "Our Journey"}
-            </h2>
-            <p className="text-xl text-muted-foreground">
-              {isRtl
-                ? "المحطات المهمة في مسيرة نمونا وتطورنا"
-                : "Key milestones in our growth and development journey"}
-            </p>
-          </div>
-
-          <div className="relative">
-            {/* Timeline line */}
-            <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-primary/20 transform -translate-x-1/2" />
-
-            <div className="space-y-12">
-              {timeline.map((item, index) => (
-                <div
-                  key={index}
-                  className={`relative flex items-center ${
-                    index % 2 === 0 ? "justify-start" : "justify-end"
-                  }`}
-                >
-                  {/* Timeline dot */}
-                  <div className="absolute left-1/2 w-4 h-4 bg-primary rounded-full border-4 border-background transform -translate-x-1/2 z-10" />
-
-                  {/* Content card */}
-                  <div
-                    className={`w-5/12 p-6 rounded-xl bg-card border border-border/50 shadow-sm hover:shadow-lg transition-all duration-300 ${
-                      index % 2 === 0 ? "mr-auto" : "ml-auto"
-                    }`}
-                  >
-                    <div className="text-2xl font-bold text-primary mb-2">
-                      {item.year}
-                    </div>
-                    <h3 className="text-xl font-bold text-foreground mb-3">
-                      {item.title}
-                    </h3>
-                    <p className="text-muted-foreground">{item.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
@@ -347,15 +341,13 @@ const AboutPage = ({ params }: { params: { lng: string } }) => {
                 </Button>
               </div>
             </div>
-
             {/* Background decoration */}
             <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl" />
-            <div className="absolute bottom-0 left-0 w-48 h-48 bg-orange-400/20 rounded-full blur-2xl" />
+            <div className="absolute bottom-0 left-0 w-48 h-48 bg-orange-400/20 rounded-full blur-2xl" />{" "}
           </div>
         </div>
       </section>
-
-      <Footer />
+      <Footer lng={lng} />
       <WhatsAppButton />
     </div>
   );

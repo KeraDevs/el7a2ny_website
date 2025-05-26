@@ -310,7 +310,6 @@ const FAQPage = ({ params }: { params: { lng: string } }) => {
               {isRtl ? "المواضيع الأكثر بحثاً" : "Most Searched Topics"}
             </h2>
           </div>
-
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {[
               isRtl ? "أسعار الخدمات" : "Service Pricing",
@@ -329,11 +328,11 @@ const FAQPage = ({ params }: { params: { lng: string } }) => {
                 {topic}
               </button>
             ))}
-          </div>
+          </div>{" "}
         </div>
       </section>
 
-      <Footer />
+      <Footer lng={params.lng} />
       <WhatsAppButton />
     </div>
   );

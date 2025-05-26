@@ -13,7 +13,7 @@ import {
 } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
-const TermsOfServicePage = () => {
+const TermsOfServicePage = ({ params }: { params: { lng: string } }) => {
   const { t } = useTranslation();
 
   const sections = [
@@ -246,11 +246,11 @@ const TermsOfServicePage = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div>{" "}
         </div>
       </section>
 
-      <Footer />
+      <Footer lng={params.lng} />
     </div>
   );
 };

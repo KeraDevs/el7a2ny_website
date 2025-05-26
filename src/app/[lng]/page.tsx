@@ -9,13 +9,18 @@ import { enServices, arServices } from "@/data/services";
 import DetailedServiceCard from "@/components/DetailedServiceCard";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { MdOutlineVerified } from "react-icons/md";
 
 export async function generateStaticParams() {
   return languages.map((lng) => ({ lng }));
 }
 
-export default async function Home({ params }: { params: { lng: string } }) {
-  const { lng } = params;
+export default async function Home({
+  params,
+}: {
+  params: Promise<{ lng: string }>;
+}) {
+  const { lng } = await params;
 
   // Choose content based on language
   const slides = lng === "ar" ? arSlides : enSlides;
@@ -28,7 +33,6 @@ export default async function Home({ params }: { params: { lng: string } }) {
   return (
     <main className="flex min-h-screen flex-col">
       <Navbar />
-
       <div className="pt-16">
         {/* Hero Carousel Section */}
         <HeroCarousel slides={slides} />
@@ -41,7 +45,8 @@ export default async function Home({ params }: { params: { lng: string } }) {
         <section className="py-20 px-4 md:px-6 bg-gradient-to-br from-background via-muted/20 to-accent/10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent">
+              {" "}
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent leading-[1.3] md:leading-[1.35]">
                 {lng === "ar" ? "خدماتنا المتخصصة" : "Our Specialized Services"}
               </h2>{" "}
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
@@ -49,10 +54,10 @@ export default async function Home({ params }: { params: { lng: string } }) {
                   ? "احصل على عروض أسعار من ورش معتمدة متعددة واختر أفضل خدمة بأفضل سعر. تقييمات الورش واضحة وشفافة لمساعدتك في اتخاذ القرار الصحيح"
                   : "Receive offers from multiple verified workshops and choose the best service at the best price. Workshop ratings are clear and transparent to help you make the right decision"}
               </p>{" "}
-              {/* Features badges */}
+              {/* Features badges */}{" "}
               <div className="flex flex-wrap justify-center gap-4 mt-8">
-                <div className="verified-badge text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
-                  ✓{" "}
+                <div className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2 shadow-lg hover:bg-blue-600 transition-colors duration-300">
+                  <MdOutlineVerified className="h-4 w-4" />
                   {lng === "ar"
                     ? "ورش معتمدة مع تقييمات"
                     : "Verified Workshops with Ratings"}
@@ -108,7 +113,8 @@ export default async function Home({ params }: { params: { lng: string } }) {
           </div>
 
           <div className="max-w-4xl mx-auto text-center px-4 md:px-6 relative">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-orange-500 bg-clip-text text-transparent">
+            {" "}
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-orange-500 bg-clip-text text-transparent leading-[1.3] md:leading-[1.35]">
               {lng === "ar"
                 ? "جاهز لخدمة سيارتك؟"
                 : "Ready to Service Your Car?"}
@@ -173,12 +179,10 @@ export default async function Home({ params }: { params: { lng: string } }) {
             </div>
           </div>
         </section>
-      </div>
-
+      </div>{" "}
       {/* WhatsApp Button */}
       <WhatsAppButton />
-
-      <Footer />
+      <Footer lng={lng} />
     </main>
   );
 }

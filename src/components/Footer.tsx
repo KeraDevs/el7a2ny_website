@@ -19,30 +19,41 @@ import {
 } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
-const Footer = () => {
+interface FooterProps {
+  lng: string;
+}
+
+const Footer = ({ lng }: FooterProps) => {
   const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
   const services = [
-    { label: t("footer.services.tuning"), href: "/services/tuning" },
-    { label: t("footer.services.maintenance"), href: "/services/maintenance" },
-    { label: t("footer.services.emergency"), href: "/services/emergency" },
-    { label: t("footer.services.pickup"), href: "/services/pickup" },
-    { label: t("footer.services.workshops"), href: "/services/workshops" },
+    { label: t("footer.services.tuning"), href: `/${lng}/services/tuning` },
+    {
+      label: t("footer.services.maintenance"),
+      href: `/${lng}/services/maintenance`,
+    },
+    {
+      label: t("footer.services.emergency"),
+      href: `/${lng}/services/emergency`,
+    },
+    { label: t("footer.services.pickup"), href: `/${lng}/services/pickup` },
+    {
+      label: t("footer.services.workshops"),
+      href: `/${lng}/services/workshops`,
+    },
   ];
-
   const quickLinks = [
-    { label: t("footer.links.about"), href: "/about" },
-    { label: t("footer.links.pricing"), href: "/pricing" },
-    { label: t("footer.links.workshops"), href: "/workshops" },
-    { label: t("footer.links.contact"), href: "/contact" },
-    { label: t("footer.links.faq"), href: "/faq" },
+    { label: t("footer.links.about"), href: `/${lng}/about` },
+    { label: t("footer.links.howItWorks"), href: `/${lng}/how-it-works` },
+    { label: t("footer.links.workshops"), href: `/${lng}/workshops` },
+    { label: t("footer.links.contact"), href: `/${lng}/contact` },
+    { label: t("footer.links.faq"), href: `/${lng}/faq` },
   ];
-
   const legalLinks = [
-    { label: t("footer.legal.privacy"), href: "/privacy-policy" },
-    { label: t("footer.legal.terms"), href: "/terms-of-service" },
-    { label: t("footer.legal.refund"), href: "/refund-policy" },
-    { label: t("footer.legal.cookies"), href: "/cookie-policy" },
+    { label: t("footer.legal.privacy"), href: `/${lng}/privacy-policy` },
+    { label: t("footer.legal.terms"), href: `/${lng}/terms-of-service` },
+    { label: t("footer.legal.refund"), href: `/${lng}/refund-policy` },
+    { label: t("footer.legal.cookies"), href: `/${lng}/cookie-policy` },
   ];
 
   const socialLinks = [

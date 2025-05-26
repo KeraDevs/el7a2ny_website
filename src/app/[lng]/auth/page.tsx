@@ -177,7 +177,6 @@ const AuthPage = ({ params }: { params: { lng: string } }) => {
               <div className="absolute -top-2 -right-2 w-4 h-4 bg-primary rounded-full opacity-0 group-hover:opacity-100 animate-ping transition-opacity duration-300" />
             </div>
           </div>
-
           {/* Benefits Section */}
           <div className="mt-20 text-center">
             <h3 className="text-3xl font-bold mb-8 text-foreground">
@@ -221,11 +220,11 @@ const AuthPage = ({ params }: { params: { lng: string } }) => {
                 </p>
               </div>
             </div>
-          </div>
+          </div>{" "}
         </div>
       </section>
 
-      <Footer />
+      <Footer lng={params.lng} />
       <WhatsAppButton />
     </div>
   );

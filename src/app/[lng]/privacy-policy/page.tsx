@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import { Shield, Eye, Lock, UserCheck, Database, Mail } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
-const PrivacyPolicyPage = () => {
+const PrivacyPolicyPage = ({ params }: { params: { lng: string } }) => {
   const { t } = useTranslation();
 
   const sections = [
@@ -210,11 +210,11 @@ const PrivacyPolicyPage = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div>{" "}
         </div>
       </section>
 
-      <Footer />
+      <Footer lng={params.lng} />
     </div>
   );
 };
