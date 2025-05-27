@@ -15,6 +15,7 @@ interface DetailedServiceCardProps {
   ctaText: string;
   ctaLink: string;
   isRtl?: boolean;
+  lng?: string;
 }
 
 const DetailedServiceCard: React.FC<DetailedServiceCardProps> = ({
@@ -26,6 +27,7 @@ const DetailedServiceCard: React.FC<DetailedServiceCardProps> = ({
   ctaText,
   ctaLink,
   isRtl = false,
+  lng = "en",
 }) => {
   return (
     <div className="bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl group transition-all duration-500 hover:-translate-y-2 mb-16 border border-border/50">
@@ -39,8 +41,8 @@ const DetailedServiceCard: React.FC<DetailedServiceCardProps> = ({
           <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent transition-opacity group-hover:from-black/20" />
           {/* Overlay with service type badge */}
           <div className="absolute top-4 left-4">
-            <span className="glass px-4 py-2 rounded-full text-white font-medium text-sm">
-              Premium Service
+            <span className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 py-2 rounded-full font-medium text-sm shadow-lg">
+              {lng === "ar" ? "خدمة مميزة" : "Premium Service"}
             </span>
           </div>
         </div>
@@ -68,7 +70,7 @@ const DetailedServiceCard: React.FC<DetailedServiceCardProps> = ({
             {features && features.length > 0 && (
               <div>
                 <h4 className="text-lg font-semibold mb-4 text-foreground">
-                  ✨ Key Features
+                  ✨ {lng === "ar" ? "الميزات الرئيسية" : "Key Features"}
                 </h4>
                 <ul className={cn("space-y-3", isRtl ? "pr-2" : "pl-2")}>
                   {features.map((feature, index) => (

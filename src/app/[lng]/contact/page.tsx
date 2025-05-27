@@ -20,8 +20,13 @@ export const metadata: Metadata = {
     "Contact El7a2ny for professional car repair services. 24/7 support, emergency assistance, and expert automotive solutions.",
 };
 
-const ContactPage = ({ params }: { params: { lng: string } }) => {
-  const isRtl = params.lng === "ar";
+const ContactPage = async ({
+  params,
+}: {
+  params: Promise<{ lng: string }>;
+}) => {
+  const { lng } = await params;
+  const isRtl = lng === "ar";
 
   const contactInfo = [
     {
@@ -56,7 +61,7 @@ const ContactPage = ({ params }: { params: { lng: string } }) => {
   return (
     <div className={`min-h-screen bg-gradient-hero ${isRtl ? "rtl" : "ltr"}`}>
       <Navbar /> {/* Hero Section */}
-      <section className="relative py-32 px-4 overflow-hidden pt-20">
+      <section className="relative px-4 overflow-hidden pt-20">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
 
         {/* Animated background elements */}
@@ -73,10 +78,10 @@ const ContactPage = ({ params }: { params: { lng: string } }) => {
               <span className="text-primary font-medium">
                 {isRtl ? "تواصل معنا" : "Get in Touch"}
               </span>
-            </div>{" "}
+            </div>
             <h1 className="text-5xl md:text-6xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-foreground via-primary to-orange-500 bg-clip-text text-transparent animate-fade-in-up delay-150 leading-[1.2] md:leading-[1.25] lg:leading-[1.3]">
               {isRtl ? "اتصل بنا" : "Contact Us"}
-            </h1>{" "}
+            </h1>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed animate-fade-in-up delay-300">
               {isRtl
                 ? "نحن هنا لمساعدتك في جميع احتياجات سيارتك. اطلب خدمة واحصل على عروض أسعار من ورش معتمدة متعددة مع تقييمات شفافة لاتخاذ القرار الصحيح."
@@ -105,12 +110,11 @@ const ContactPage = ({ params }: { params: { lng: string } }) => {
             </div>
           </div>
         </div>
-      </section>{" "}
+      </section>
       {/* Contact Form Section - Moved to Top */}
       <section className="py-20 px-4 bg-gradient-to-br from-background via-muted/30 to-accent/10">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
-            {" "}
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent animate-fade-in-up leading-[1.3] md:leading-[1.35]">
               {isRtl ? "أرسل لنا رسالة" : "Send us a Message"}
             </h2>
@@ -209,7 +213,7 @@ const ContactPage = ({ params }: { params: { lng: string } }) => {
                   isRtl ? "اكتب رسالتك هنا..." : "Write your message here..."
                 }
               />
-            </div>{" "}
+            </div>
             <Button className="w-full py-4 bg-gradient-to-r from-primary to-orange-500 hover:from-orange-500 hover:to-primary text-white border-0 shadow-xl hover:shadow-2xl transition-all duration-500 group text-lg font-semibold rounded-xl hover:scale-[1.02]">
               <Send className="h-5 w-5 mr-3 group-hover:translate-x-1 transition-transform duration-300" />
               {isRtl ? "إرسال الرسالة" : "Send Message"}
@@ -221,7 +225,6 @@ const ContactPage = ({ params }: { params: { lng: string } }) => {
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            {" "}
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent animate-fade-in-up leading-[1.3] md:leading-[1.35]">
               {isRtl ? "معلومات الاتصال" : "Contact Information"}
             </h2>
@@ -302,7 +305,7 @@ const ContactPage = ({ params }: { params: { lng: string } }) => {
                   {isRtl
                     ? "هل تحتاج مساعدة فورية؟ نحن متاحون 24/7 لحالات الطوارئ."
                     : "Need immediate help? We're available 24/7 for emergencies."}
-                </p>{" "}
+                </p>
                 <Button className="w-full bg-white text-red-600 hover:bg-red-50 font-bold py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
                   <Phone className="h-5 w-5 mr-3" />
                   {isRtl
@@ -419,7 +422,7 @@ const ContactPage = ({ params }: { params: { lng: string } }) => {
                 </div>
               </div>
             </div>
-          </div>{" "}
+          </div>
         </div>
       </section>
       <Footer lng={params.lng} />

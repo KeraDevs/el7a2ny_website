@@ -10,9 +10,9 @@ export async function generateStaticParams() {
 export default async function ServicesPage({
   params,
 }: {
-  params: { lng: string };
+  params: Promise<{ lng: string }>;
 }) {
-  const { lng } = params;
+  const { lng } = await params;
 
   // Get service details based on language
   const serviceDetails = getServiceDetails(lng);
@@ -28,7 +28,6 @@ export default async function ServicesPage({
       <Navbar />
 
       <div className="pt-16">
-        {" "}
         {/* Add padding to account for the fixed navbar */}
         {/* Hero Section */}
         <section className="bg-primary text-primary-foreground py-16">
@@ -57,6 +56,7 @@ export default async function ServicesPage({
                 ctaText={service.ctaText}
                 ctaLink={service.ctaLink}
                 isRtl={isRtl}
+                lng={lng}
               />
             ))}
           </div>

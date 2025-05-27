@@ -246,7 +246,7 @@ const TermsOfServicePage = ({ params }: { params: { lng: string } }) => {
                 </div>
               </div>
             </div>
-          </div>{" "}
+          </div>
         </div>
       </section>
 

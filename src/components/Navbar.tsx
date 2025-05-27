@@ -44,7 +44,6 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 w-full border-b bg-background/95 backdrop-blur-md z-50 shadow-sm">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-        {" "}
         <Link href={`/${currentLang}`} className="group">
           <span className="text-2xl font-bold bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent group-hover:from-primary/80 group-hover:to-primary transition-all duration-300 flex items-center gap-2">
             {t("nav.logo")}
@@ -86,13 +85,14 @@ const Navbar = () => {
             <ThemeToggle />
             <LanguageSwitcher />
             <Button
+              asChild
               variant="default"
               className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105"
             >
-              {t("nav.login")}
+              <Link href={`/${currentLang}/auth`}>{t("nav.login")}</Link>
             </Button>
           </div>
-        </div>{" "}
+        </div>
         <div className="md:hidden flex items-center gap-3">
           <ThemeToggle />
           <LanguageSwitcher />
@@ -110,7 +110,6 @@ const Navbar = () => {
               align="end"
               className="w-56 bg-background/95 backdrop-blur-md border-border"
             >
-              {" "}
               {routes.map((route) => (
                 <DropdownMenuItem
                   key={route.href}
@@ -130,7 +129,7 @@ const Navbar = () => {
               ))}
               <DropdownMenuItem className="hover:bg-accent transition-colors">
                 <Link
-                  href={`/${currentLang}/login`}
+                  href={`/${currentLang}/auth`}
                   className="w-full text-sm font-medium text-primary"
                 >
                   {t("nav.login")}

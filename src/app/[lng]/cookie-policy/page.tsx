@@ -370,7 +370,7 @@ const CookiePolicyPage = async ({
           <Button size="lg" className="font-semibold">
             <Lock className="h-5 w-5 mr-2" />
             {isRtl ? "تواصل مع فريق الخصوصية" : "Contact Privacy Team"}
-          </Button>{" "}
+          </Button>
         </div>
       </section>
 

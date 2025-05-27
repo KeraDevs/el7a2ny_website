@@ -173,7 +173,7 @@ const WorkshopsPage = ({ params }: { params: { lng: string } }) => {
     <div className={`min-h-screen bg-gradient-hero ${isRtl ? "rtl" : "ltr"}`}>
       <Navbar />
       {/* Hero Section */}
-      <section className="relative py-32 px-4 overflow-hidden pt-20">
+      <section className="relative px-4 overflow-hidden pt-20">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
 
         {/* Animated background elements */}
@@ -330,7 +330,7 @@ const WorkshopsPage = ({ params }: { params: { lng: string } }) => {
             ))}
           </div>
         </div>
-      </section>{" "}
+      </section>
       {/* Platform Features Section */}
       <section className="py-20 px-4 bg-gradient-to-br from-background via-muted/30 to-accent/10">
         <div className="max-w-7xl mx-auto">
@@ -435,7 +435,7 @@ const WorkshopsPage = ({ params }: { params: { lng: string } }) => {
             >
               {isRtl ? "تحدث مع فريق المبيعات" : "Talk to Sales Team"}
             </Button>
-          </div>{" "}
+          </div>
         </div>
       </section>
       <Footer lng={params.lng} />

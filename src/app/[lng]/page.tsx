@@ -36,44 +36,41 @@ export default async function Home({
       <div className="pt-16">
         {/* Hero Carousel Section */}
         <HeroCarousel slides={slides} />
-        {/* Services Overview Section */}
-        <section className="py-20 gradient-hero">
-          <ServiceSection services={services} title={servicesTitle} />
+        <section className="py-12 gradient-hero">
+          <ServiceSection services={services} title={servicesTitle} lng={lng} />
         </section>
-
         {/* Detailed Services Section */}
-        <section className="py-20 px-4 md:px-6 bg-gradient-to-br from-background via-muted/20 to-accent/10">
+        <section className="py-16 px-4 md:px-6 bg-gradient-to-br from-background via-muted/20 to-accent/10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              {" "}
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent leading-[1.3] md:leading-[1.35]">
                 {lng === "ar" ? "خدماتنا المتخصصة" : "Our Specialized Services"}
-              </h2>{" "}
+              </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
                 {lng === "ar"
                   ? "احصل على عروض أسعار من ورش معتمدة متعددة واختر أفضل خدمة بأفضل سعر. تقييمات الورش واضحة وشفافة لمساعدتك في اتخاذ القرار الصحيح"
                   : "Receive offers from multiple verified workshops and choose the best service at the best price. Workshop ratings are clear and transparent to help you make the right decision"}
-              </p>{" "}
-              {/* Features badges */}{" "}
+              </p>
+              {/* Features badges */}
               <div className="flex flex-wrap justify-center gap-4 mt-8">
-                <div className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2 shadow-lg hover:bg-blue-600 transition-colors duration-300">
+                <div className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2 shadow-lg hover:from-orange-600 hover:to-orange-700 transition-colors duration-300">
                   <MdOutlineVerified className="h-4 w-4" />
                   {lng === "ar"
-                    ? "ورش معتمدة مع تقييمات"
-                    : "Verified Workshops with Ratings"}
+                    ? "خدمة مميزة مع تقييمات"
+                    : "Premium Service with Ratings"}
                 </div>
                 <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
-                  💰{" "}
+                  💰
                   {lng === "ar" ? "عروض أسعار متعددة" : "Multiple Price Offers"}
                 </div>
                 <div className="bg-gradient-to-r from-green-500 to-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
-                  🎯{" "}
+                  🎯
                   {lng === "ar"
                     ? "اختر الأفضل لك"
                     : "Choose What's Best for You"}
                 </div>
                 <div className="bg-gradient-to-r from-red-500 to-red-600 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
-                  🚨{" "}
+                  🚨
                   {lng === "ar" ? "خدمة طوارئ 24/7" : "24/7 Emergency Service"}
                 </div>
               </div>
@@ -97,6 +94,7 @@ export default async function Home({
                     ctaText={service.ctaText}
                     ctaLink={service.ctaLink}
                     isRtl={isRtl}
+                    lng={lng}
                   />
                 </div>
               ))}
@@ -104,7 +102,7 @@ export default async function Home({
           </div>
         </section>
         {/* Call-to-Action Section */}
-        <section className="py-20 bg-gradient-to-r from-primary/10 via-accent/20 to-primary/10 relative overflow-hidden">
+        <section className="py-16 bg-gradient-to-r from-primary/10 via-accent/20 to-primary/10 relative overflow-hidden">
           {/* Background decorations */}
           <div className="absolute inset-0 opacity-5">
             <div className="absolute top-10 left-10 text-6xl">🔧</div>
@@ -113,12 +111,11 @@ export default async function Home({
           </div>
 
           <div className="max-w-4xl mx-auto text-center px-4 md:px-6 relative">
-            {" "}
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-orange-500 bg-clip-text text-transparent leading-[1.3] md:leading-[1.35]">
               {lng === "ar"
                 ? "جاهز لخدمة سيارتك؟"
                 : "Ready to Service Your Car?"}
-            </h2>{" "}
+            </h2>
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
               {lng === "ar"
                 ? "اطلب خدمة واحصل على عروض أسعار من ورش معتمدة متعددة. قارن الأسعار والتقييمات واختر الأفضل لك"
@@ -137,7 +134,6 @@ export default async function Home({
                     : "Compare prices and choose the best"}
                 </p>
               </div>
-
               <div className="p-4 bg-white/10 dark:bg-black/20 backdrop-blur-sm rounded-xl border border-white/20 dark:border-white/10">
                 <div className="text-3xl mb-2">⭐</div>
                 <h3 className="font-semibold mb-1">
@@ -149,11 +145,12 @@ export default async function Home({
                     : "Real customer reviews and ratings"}
                 </p>
               </div>
-
               <div className="p-4 bg-white/10 dark:bg-black/20 backdrop-blur-sm rounded-xl border border-white/20 dark:border-white/10">
-                <div className="text-3xl mb-2">✅</div>
+                <div className="text-3xl mb-2">
+                  <MdOutlineVerified className="h-8 w-8 text-blue-500 mx-auto" />
+                </div>
                 <h3 className="font-semibold mb-1">
-                  {lng === "ar" ? "ورش معتمدة" : "Verified Workshops"}
+                  {lng === "ar" ? "خدمة مميزة" : "Premium Service"}
                 </h3>
                 <p className="text-sm text-muted-foreground">
                   {lng === "ar"
@@ -179,7 +176,7 @@ export default async function Home({
             </div>
           </div>
         </section>
-      </div>{" "}
+      </div>
       {/* WhatsApp Button */}
       <WhatsAppButton />
       <Footer lng={lng} />

@@ -242,7 +242,7 @@ const AboutPage = async ({ params }: { params: Promise<{ lng: string }> }) => {
             </div>
           </div>
         </div>
-      </section>{" "}
+      </section>
       {/* Verification Process Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -278,7 +278,7 @@ const AboutPage = async ({ params }: { params: Promise<{ lng: string }> }) => {
             ))}
           </div>
         </div>
-      </section>{" "}
+      </section>
       {/* Company Values Section */}
       <section className="py-20 px-4 bg-muted/30">
         <div className="max-w-7xl mx-auto">
@@ -343,7 +343,7 @@ const AboutPage = async ({ params }: { params: Promise<{ lng: string }> }) => {
             </div>
             {/* Background decoration */}
             <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl" />
-            <div className="absolute bottom-0 left-0 w-48 h-48 bg-orange-400/20 rounded-full blur-2xl" />{" "}
+            <div className="absolute bottom-0 left-0 w-48 h-48 bg-orange-400/20 rounded-full blur-2xl" />
           </div>
         </div>
       </section>

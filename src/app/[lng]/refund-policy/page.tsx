@@ -250,7 +250,7 @@ const RefundPolicyPage = ({ params }: { params: { lng: string } }) => {
               <Mail className="h-5 w-5 mr-2" />
               {isRtl ? "راسلنا" : "Email Us"}
             </Button>
-          </div>{" "}
+          </div>
         </div>
       </section>
 

@@ -15,9 +15,14 @@ interface ServiceSectionProps {
     isEmergency?: boolean;
   }[];
   title: string;
+  lng?: string;
 }
 
-const ServiceSection: React.FC<ServiceSectionProps> = ({ services, title }) => {
+const ServiceSection: React.FC<ServiceSectionProps> = ({
+  services,
+  title,
+  lng = "en",
+}) => {
   return (
     <section className="py-20 px-4">
       <div className="max-w-7xl mx-auto">
@@ -35,7 +40,6 @@ const ServiceSection: React.FC<ServiceSectionProps> = ({ services, title }) => {
               className="animate-fade-in-up"
               style={{ animationDelay: `${index * 150}ms` }}
             >
-              {" "}
               <ServiceCard
                 image={service.image}
                 title={service.title}
@@ -44,6 +48,7 @@ const ServiceSection: React.FC<ServiceSectionProps> = ({ services, title }) => {
                 ctaLink={service.ctaLink}
                 isVerified={service.isVerified}
                 isEmergency={service.isEmergency}
+                lng={lng}
               />
             </div>
           ))}

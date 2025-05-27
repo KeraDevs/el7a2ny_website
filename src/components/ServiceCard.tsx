@@ -14,6 +14,7 @@ interface ServiceCardProps {
   ctaLink: string;
   isEmergency?: boolean;
   isVerified?: boolean;
+  lng?: string;
 }
 
 const ServiceCard: React.FC<ServiceCardProps> = ({
@@ -24,28 +25,28 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   ctaLink,
   isEmergency = false,
   isVerified = true,
+  lng = "en",
 }) => {
   return (
     <div className="group relative bg-card rounded-xl overflow-hidden shadow-lg transition-all duration-500 hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-2 border border-border/50 hover:border-primary/30 glass">
-      {" "}
       {/* Verified badge - Facebook-style blue checkmark */}
       {isVerified && (
         <div className="absolute top-4 left-4 z-10 verified-badge text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center gap-1.5 opacity-90 group-hover:opacity-100 transition-all duration-300 shadow-lg">
           <MdOutlineVerified className="h-3 w-3 fill-current" />
-          Verified Workshop
+          {lng === "ar" ? "خدمة مميزة" : "Premium Service"}
         </div>
       )}
       {/* Emergency badge */}
       {isEmergency && (
         <div className="absolute top-4 right-4 z-10 bg-gradient-to-r from-red-500 to-red-600 text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center gap-1.5 animate-pulse">
           <Clock className="h-3 w-3" />
-          24/7 Emergency
+          {lng === "ar" ? "طوارئ 24/7" : "24/7 Emergency"}
         </div>
       )}
       {/* Premium badge for non-emergency services */}
       {!isEmergency && (
         <div className="absolute top-4 right-4 z-10 bg-gradient-to-r from-primary to-orange-500 text-primary-foreground px-3 py-1 rounded-full text-xs font-semibold opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-2 group-hover:translate-x-0">
-          Premium
+          {lng === "ar" ? "مميز" : "Premium"}
         </div>
       )}
       {/* Image container with overlay gradient */}

@@ -271,7 +271,7 @@ const Footer = ({ lng }: FooterProps) => {
               </div>
             </div>
           </div>
-        </div>{" "}
+        </div>
         {/* Bottom Bar */}
         <div className="border-t border-border/50 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
@@ -293,7 +293,7 @@ const Footer = ({ lng }: FooterProps) => {
                 </Link>
               ))}
               <span className="text-sm text-muted-foreground">
-                {t("footer.developedBy")}{" "}
+                {t("footer.developedBy")}
                 <Link
                   href="https://keradevs.com"
                   target="_blank"

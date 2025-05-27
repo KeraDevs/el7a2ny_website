@@ -56,7 +56,7 @@ export const enServices = [
   {
     id: 4,
     image: "/car-parts1.jpg",
-    title: "Verified Workshop Network",
+    title: "Premium Service Network",
     description:
       "Access to our network of certified and verified automotive workshops.",
     ctaText: "Find Workshops",
@@ -129,7 +129,7 @@ export const arServices = [
   {
     id: 4,
     image: "/car-parts1.jpg",
-    title: "شبكة الورش المُعتمدة",
+    title: "شبكة الخدمة المميزة",
     description: "الوصول إلى شبكتنا من الورش المعتمدة والموثقة للسيارات.",
     ctaText: "العثور على الورش",
     ctaLink: "/ar/workshops",

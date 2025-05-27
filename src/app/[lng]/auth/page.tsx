@@ -24,15 +24,14 @@ export const metadata: Metadata = {
     "Join El7a2ny network as a customer or workshop partner. Access professional car services and grow your automotive business.",
 };
 
-const AuthPage = ({ params }: { params: { lng: string } }) => {
-  const isRtl = params.lng === "ar";
+const AuthPage = async ({ params }: { params: Promise<{ lng: string }> }) => {
+  const { lng } = await params;
+  const isRtl = lng === "ar";
 
   return (
     <div className={`min-h-screen bg-gradient-hero ${isRtl ? "rtl" : "ltr"}`}>
-      <Navbar />
-
-      {/* Hero Section */}
-      <section className="relative py-32 px-4 overflow-hidden pt-24">
+      <Navbar /> {/* Hero Section */}
+      <section className="relative py-16 px-4 overflow-hidden pt-20">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
 
         {/* Animated background elements */}
@@ -63,9 +62,8 @@ const AuthPage = ({ params }: { params: { lng: string } }) => {
           </div>
         </div>
       </section>
-
       {/* Account Type Selection */}
-      <section className="py-20 px-4">
+      <section className="py-12 px-4">
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Customer Card */}
@@ -79,7 +77,7 @@ const AuthPage = ({ params }: { params: { lng: string } }) => {
                 </div>
                 <h2 className="text-3xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
                   {isRtl ? "العملاء" : "Customers"}
-                </h2>{" "}
+                </h2>
                 <p className="text-muted-foreground leading-relaxed">
                   {isRtl
                     ? "احصل على عروض أسعار من ورش معتمدة متعددة واختر أفضل خدمة بأفضل سعر. تقييمات الورش واضحة وشفافة لمساعدتك في اتخاذ القرار الصحيح"
@@ -104,10 +102,19 @@ const AuthPage = ({ params }: { params: { lng: string } }) => {
                     </div>
                   ))}
                 </div>
-                <Button className="w-full py-4 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white border-0 shadow-xl hover:shadow-2xl transition-all duration-500 group/btn text-lg font-semibold rounded-xl hover:scale-105">
-                  <LogIn className="h-5 w-5 mr-3 group-hover/btn:translate-x-1 transition-transform duration-300" />
-                  {isRtl ? "تسجيل دخول العملاء" : "Customer Login"}
-                </Button>
+                <div className="flex flex-col gap-3">
+                  <Button className="w-full py-4 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white border-0 shadow-xl hover:shadow-2xl transition-all duration-500 group/btn text-lg font-semibold rounded-xl hover:scale-105">
+                    <LogIn className="h-5 w-5 mr-3 group-hover/btn:translate-x-1 transition-transform duration-300" />
+                    {isRtl ? "تسجيل دخول العملاء" : "Customer Login"}
+                  </Button>
+                  <Button
+                    variant="outline"
+                    className="w-full py-4 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white border-2 shadow-lg hover:shadow-xl transition-all duration-500 group/btn text-lg font-semibold rounded-xl hover:scale-105"
+                  >
+                    <UserPlus className="h-5 w-5 mr-3 group-hover/btn:translate-x-1 transition-transform duration-300" />
+                    {isRtl ? "إنشاء حساب عميل" : "Customer Sign Up"}
+                  </Button>
+                </div>
               </div>
 
               {/* Animated border gradient */}
@@ -133,7 +140,7 @@ const AuthPage = ({ params }: { params: { lng: string } }) => {
                 </div>
                 <h2 className="text-3xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
                   {isRtl ? "الورش والفنيين" : "Workshops & Workers"}
-                </h2>{" "}
+                </h2>
                 <p className="text-muted-foreground leading-relaxed">
                   {isRtl
                     ? "انضم إلى شبكة الورش المعتمدة وزد من عملائك. قدم عروض أسعار تنافسية واحصل على تقييمات عالية لبناء سمعة قوية"
@@ -164,10 +171,19 @@ const AuthPage = ({ params }: { params: { lng: string } }) => {
                     </div>
                   ))}
                 </div>
-                <Button className="w-full py-4 bg-gradient-to-r from-primary to-orange-500 hover:from-orange-500 hover:to-primary text-white border-0 shadow-xl hover:shadow-2xl transition-all duration-500 group/btn text-lg font-semibold rounded-xl hover:scale-105">
-                  <Building2 className="h-5 w-5 mr-3 group-hover/btn:translate-x-1 transition-transform duration-300" />
-                  {isRtl ? "تسجيل دخول الورش" : "Workshop Login"}
-                </Button>
+                <div className="flex flex-col gap-3">
+                  <Button className="w-full py-4 bg-gradient-to-r from-primary to-orange-500 hover:from-orange-500 hover:to-primary text-white border-0 shadow-xl hover:shadow-2xl transition-all duration-500 group/btn text-lg font-semibold rounded-xl hover:scale-105">
+                    <Building2 className="h-5 w-5 mr-3 group-hover/btn:translate-x-1 transition-transform duration-300" />
+                    {isRtl ? "تسجيل دخول الورش" : "Workshop Login"}
+                  </Button>
+                  <Button
+                    variant="outline"
+                    className="w-full py-4 border-primary text-primary hover:bg-primary hover:text-white border-2 shadow-lg hover:shadow-xl transition-all duration-500 group/btn text-lg font-semibold rounded-xl hover:scale-105"
+                  >
+                    <UserPlus className="h-5 w-5 mr-3 group-hover/btn:translate-x-1 transition-transform duration-300" />
+                    {isRtl ? "إنشاء حساب ورشة" : "Workshop Sign Up"}
+                  </Button>
+                </div>
               </div>
 
               {/* Animated border gradient */}
@@ -220,11 +236,10 @@ const AuthPage = ({ params }: { params: { lng: string } }) => {
                 </p>
               </div>
             </div>
-          </div>{" "}
+          </div>
         </div>
       </section>
-
-      <Footer lng={params.lng} />
+      <Footer lng={lng} />
       <WhatsAppButton />
     </div>
   );

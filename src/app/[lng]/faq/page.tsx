@@ -328,7 +328,7 @@ const FAQPage = ({ params }: { params: { lng: string } }) => {
                 {topic}
               </button>
             ))}
-          </div>{" "}
+          </div>
         </div>
       </section>
 

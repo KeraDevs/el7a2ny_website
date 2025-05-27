@@ -210,7 +210,7 @@ const PrivacyPolicyPage = ({ params }: { params: { lng: string } }) => {
                 </div>
               </div>
             </div>
-          </div>{" "}
+          </div>
         </div>
       </section>
 
