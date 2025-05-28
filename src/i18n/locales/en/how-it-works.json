@@ -1,0 +1,67 @@
+{
+  "title": "How It Works",
+  "subtitle": "Simple steps to get your car serviced",
+  "description": "Getting professional car service has never been easier. Follow these simple steps to book and receive quality automotive care.",
+  "steps": [
+    {
+      "id": 1,
+      "title": "Book Service",
+      "description": "Choose your service type and schedule an appointment online or by phone",
+      "icon": "calendar"
+    },
+    {
+      "id": 2,
+      "title": "Vehicle Pickup",
+      "description": "Our team picks up your vehicle from your location at the scheduled time",
+      "icon": "truck"
+    },
+    {
+      "id": 3,
+      "title": "Professional Service",
+      "description": "Certified technicians perform the service using quality parts and tools",
+      "icon": "wrench"
+    },
+    {
+      "id": 4,
+      "title": "Quality Check",
+      "description": "Thorough inspection and testing to ensure everything meets our standards",
+      "icon": "check"
+    },
+    {
+      "id": 5,
+      "title": "Vehicle Return",
+      "description": "Your serviced vehicle is delivered back to your location, ready to go",
+      "icon": "delivery"
+    }
+  ],
+  "features": {
+    "title": "Why Choose Our Process?",
+    "items": [
+      {
+        "title": "Convenient Pickup & Delivery",
+        "description": "No need to visit workshops - we come to you"
+      },
+      {
+        "title": "Transparent Updates",
+        "description": "Real-time updates throughout the service process"
+      },
+      {
+        "title": "Quality Guarantee",
+        "description": "All work comes with our comprehensive warranty"
+      },
+      {
+        "title": "Verified Workshops",
+        "description": "Only certified and trusted service providers"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Get Started?",
+    "description": "Book your service today and experience the convenience",
+    "button": "Book Service Now"
+  },
+  "metadata": {
+    "title": "How It Works - El7a2ny",
+    "description": "Learn how El7a2ny's simple 5-step process makes car servicing convenient with pickup, professional service, and delivery."
+  }
+}

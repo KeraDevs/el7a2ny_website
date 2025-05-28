@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { useTranslation } from "react-i18next";
+import { useTranslations } from "@/i18n/hooks";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -25,7 +25,7 @@ export const HeroCarousel: React.FC<HeroCarouselProps> = ({
   interval = 5000,
 }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const { t } = useTranslation();
+  const { common } = useTranslations();
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));

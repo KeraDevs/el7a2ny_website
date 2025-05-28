@@ -1,0 +1,72 @@
+{
+  "title": "Car Tuning & Performance",
+  "subtitle": "Get the Best Performance Upgrades from Verified Specialists",
+  "description": "Transform your vehicle's performance with expert tuning services. Compare offers from multiple certified workshops in your area.",
+  "serviceLabel": "Tuning Service",
+  "process": {
+    "title": "How to Get the Best Tuning Offers",
+    "subtitle": "Our simple 4-step process connects you with the best tuning specialists",
+    "steps": [
+      {
+        "title": "1. Tell Us Your Needs",
+        "description": "Share your car details and tuning requirements. Our smart system matches you with suitable specialists in your area."
+      },
+      {
+        "title": "2. Receive Multiple Offers",
+        "description": "Get competitive quotes from verified tuning workshops. Compare prices, services, and customer reviews all in one place."
+      },
+      {
+        "title": "3. Choose Your Specialist",
+        "description": "Select the best offer based on price, location, ratings, and expertise. All workshops are pre-verified for quality assurance."
+      },
+      {
+        "title": "4. Get Your Car Tuned",
+        "description": "Book your appointment and get professional tuning service. Track progress and provide feedback after completion."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Why Choose El7a2ny for Car Tuning?",
+    "items": [
+      {
+        "title": "Verified Specialists",
+        "description": "All tuning workshops are thoroughly vetted and certified for quality and expertise."
+      },
+      {
+        "title": "Best Prices",
+        "description": "Compare multiple offers to find the most competitive pricing for your tuning needs."
+      },
+      {
+        "title": "Quality Guarantee",
+        "description": "All work comes with warranty and our platform's quality assurance guarantee."
+      },
+      {
+        "title": "Convenient Locations",
+        "description": "Find tuning specialists near you with flexible scheduling options."
+      }
+    ]
+  },
+  "services": {
+    "title": "Tuning Services Available",
+    "items": [
+      "Engine Performance Tuning",
+      "ECU Remapping & Chip Tuning",
+      "Exhaust System Upgrades",
+      "Air Intake Modifications",
+      "Suspension Tuning",
+      "Brake System Upgrades",
+      "Turbo & Supercharger Installation",
+      "Custom Performance Packages"
+    ]
+  },
+  "quote": {
+    "title": "Get Free Quote",
+    "description": "Compare prices from multiple workshops and choose the best",
+    "button": "Get Quote Now"
+  },
+  "cta": {
+    "title": "Ready to Boost Your Car's Performance?",
+    "description": "Get instant quotes from verified tuning specialists in your area",
+    "button": "Get Tuning Quotes"
+  }
+}

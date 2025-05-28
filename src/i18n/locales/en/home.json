@@ -1,0 +1,37 @@
+{
+  "hero": {
+    "title": "Professional Car Repair Services",
+    "subtitle": "Expert mechanics, quality parts, and reliable service for all car makes and models",
+    "cta": "Book Service Now",
+    "emergency": "24/7 Emergency"
+  },
+  "features": {
+    "title": "Why Choose El7a2ny?",
+    "items": [
+      {
+        "title": "Certified Technicians",
+        "description": "Experienced professionals with industry certifications"
+      },
+      {
+        "title": "Quality Guarantee",
+        "description": "All our work comes with comprehensive warranty"
+      },
+      {
+        "title": "Transparent Pricing",
+        "description": "No hidden costs, clear pricing before work begins"
+      },
+      {
+        "title": "Emergency Service",
+        "description": "24/7 roadside assistance when you need it most"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "What Our Customers Say",
+    "subtitle": "Read reviews from satisfied customers"
+  },
+  "metadata": {
+    "title": "El7a2ny - Professional Car Repair Services",
+    "description": "Professional car repair and maintenance services. Expert mechanics, quality parts, and reliable service for all car makes and models."
+  }
+}

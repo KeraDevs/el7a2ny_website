@@ -1,0 +1,34 @@
+{
+  "title": "Refund Policy",
+  "lastUpdated": "Last updated: {{date}}",
+  "sections": [
+    {
+      "title": "Refund Eligibility",
+      "content": "Refunds are available for cancelled services before work begins, unsatisfactory service that cannot be corrected, or in case of service provider errors."
+    },
+    {
+      "title": "Refund Process",
+      "content": "To request a refund, contact our customer service within 7 days of service completion. We will review your case and process eligible refunds within 5-10 business days."
+    },
+    {
+      "title": "Non-Refundable Items",
+      "content": "Emergency services, diagnostic fees after service completion, and parts that have been installed cannot be refunded unless there is a warranty issue."
+    },
+    {
+      "title": "Partial Refunds",
+      "content": "In some cases, partial refunds may be offered when only part of the service was unsatisfactory or when services were partially completed."
+    },
+    {
+      "title": "Warranty vs Refund",
+      "content": "Issues covered under warranty will be addressed through repair or replacement rather than refund, unless repair is not possible."
+    },
+    {
+      "title": "Contact for Refunds",
+      "content": "For refund requests or questions, contact our customer service at refunds@el7a2ny.com or call our support hotline."
+    }
+  ],
+  "metadata": {
+    "title": "Refund Policy - El7a2ny",
+    "description": "Learn about El7a2ny's refund policy, including eligibility criteria, process, and timeframes for service refunds."
+  }
+}

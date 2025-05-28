@@ -10,7 +10,7 @@ import "../globals.css";
 // Import translations
 async function getTranslations(lng: string) {
   const translations = await import(
-    `../../../public/locales/${lng}/translation.json`
+    `../../../src/i18n/locales/${lng}/translation.json`
   );
   return translations.default;
 }

@@ -2,11 +2,40 @@ import { HeroCarousel } from "@/components/HeroCarousel";
 import ServiceSection from "@/components/ServiceSection";
 import { languages } from "../../../i18n/settings";
 import { enSlides, arSlides } from "@/data/slides";
-import { enServices, arServices } from "@/data/services";
 import DetailedServiceCard from "@/components/DetailedServiceCard";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { MdOutlineVerified } from "react-icons/md";
+import enServices from "@/i18n/locales/en/services.json";
+import arServices from "@/i18n/locales/ar/services.json";
+
+// Static data for service images and flags
+const serviceStaticData = [
+  {
+    id: 1,
+    image: "/car-repair1.jpg",
+    isVerified: true,
+    isEmergency: false,
+  },
+  {
+    id: 2,
+    image: "/car-repair2.jpg",
+    isVerified: true,
+    isEmergency: false,
+  },
+  {
+    id: 3,
+    image: "/emergency-car1.jpg",
+    isVerified: true,
+    isEmergency: true,
+  },
+  {
+    id: 4,
+    image: "/car-parts1.jpg",
+    isVerified: true,
+    isEmergency: false,
+  },
+];
 
 export async function generateStaticParams() {
   return languages.map((lng) => ({ lng }));
@@ -18,14 +47,22 @@ export default async function Home({
   params: Promise<{ lng: string }>;
 }) {
   const { lng } = await params;
-
   // Choose content based on language
   const slides = lng === "ar" ? arSlides : enSlides;
-  const services = lng === "ar" ? arServices : enServices;
   const servicesTitle = lng === "ar" ? "خدماتنا" : "Our Services";
 
-  const serviceDetails = lng === "ar" ? arServices : enServices;
+  // Use statically imported translation data
+  const translation = lng === "ar" ? arServices : enServices;
+  const services = (translation.services || []).map(
+    (service: any, index: number) => ({
+      ...service,
+      image: serviceStaticData[index]?.image || "/default-service.jpg",
+      isVerified: serviceStaticData[index]?.isVerified ?? true,
+      isEmergency: serviceStaticData[index]?.isEmergency ?? false,
+    })
+  );
 
+  const serviceDetails = services;
   const isRtl = lng === "ar";
   return (
     <main className="flex min-h-screen flex-col">

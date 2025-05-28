@@ -12,192 +12,21 @@ import {
   Award,
   Calendar,
 } from "lucide-react";
+import { useTranslations } from "@/i18n/hooks";
 
-export default async function MaintenanceServicePage({
+export default function MaintenanceServicePage({
   params,
 }: {
   params: Promise<{ lng: string }>;
 }) {
-  const { lng } = await params;
+  const { lng } = React.use(params);
   const isRtl = lng === "ar";
+  const { t } = useTranslations();
+  const maintenance = t("maintenance") as any;
 
-  const content = {
-    en: {
-      title: "Car Maintenance Services",
-      subtitle: "Keep Your Car Running Smoothly with Expert Maintenance",
-      description:
-        "Regular maintenance from certified professionals. Compare offers from multiple verified workshops and choose the best service for your vehicle.",
-      process: {
-        title: "How to Get the Best Maintenance Offers",
-        subtitle:
-          "Our platform connects you with top-rated maintenance specialists",
-        steps: [
-          {
-            icon: Search,
-            title: "1. Schedule Your Service",
-            description:
-              "Tell us your car model, mileage, and maintenance needs. Our system finds the best workshops in your area.",
-          },
-          {
-            icon: MessageSquare,
-            title: "2. Compare Workshop Offers",
-            description:
-              "Receive detailed quotes from verified maintenance specialists. See pricing, services included, and customer reviews.",
-          },
-          {
-            icon: CheckCircle,
-            title: "3. Book Your Appointment",
-            description:
-              "Choose the workshop that offers the best value and convenience. Book directly through our platform with flexible scheduling.",
-          },
-          {
-            icon: Wrench,
-            title: "4. Get Expert Service",
-            description:
-              "Enjoy professional maintenance service with quality guarantee. Track your service history and get maintenance reminders.",
-          },
-        ],
-      },
-      benefits: {
-        title: "Why Choose El7a2ny for Car Maintenance?",
-        items: [
-          {
-            icon: Shield,
-            title: "Certified Workshops",
-            description:
-              "All maintenance providers are thoroughly vetted and certified for quality standards.",
-          },
-          {
-            icon: TrendingUp,
-            title: "Competitive Pricing",
-            description:
-              "Compare multiple offers to ensure you get the best value for your maintenance needs.",
-          },
-          {
-            icon: Calendar,
-            title: "Flexible Scheduling",
-            description:
-              "Book appointments that fit your schedule with convenient time slots and reminders.",
-          },
-          {
-            icon: Award,
-            title: "Quality Assurance",
-            description:
-              "All maintenance work comes with warranty and our platform's satisfaction guarantee.",
-          },
-        ],
-      },
-      services: {
-        title: "Maintenance Services Available",
-        items: [
-          "Oil Change & Filter Replacement",
-          "Brake Inspection & Service",
-          "Tire Rotation & Alignment",
-          "Battery Testing & Replacement",
-          "Air Filter Replacement",
-          "Transmission Service",
-          "Cooling System Maintenance",
-          "Complete Vehicle Inspection",
-          "Scheduled Maintenance Programs",
-          "Preventive Care Services",
-        ],
-      },
-      cta: {
-        title: "Keep Your Car in Perfect Condition",
-        description:
-          "Get instant maintenance quotes from certified workshops near you",
-        button: "Schedule Maintenance",
-      },
-    },
-    ar: {
-      title: "خدمات صيانة السيارات",
-      subtitle: "حافظ على سيارتك تعمل بسلاسة مع الصيانة المتخصصة",
-      description:
-        "صيانة منتظمة من محترفين معتمدين. قارن العروض من ورش معتمدة متعددة واختر أفضل خدمة لسيارتك.",
-      process: {
-        title: "كيفية الحصول على أفضل عروض الصيانة",
-        subtitle: "منصتنا تربطك بأفضل متخصصي الصيانة المقيمين",
-        steps: [
-          {
-            icon: Search,
-            title: "1. جدول خدمتك",
-            description:
-              "أخبرنا بطراز سيارتك والمسافة المقطوعة واحتياجات الصيانة. نظامنا يجد أفضل الورش في منطقتك.",
-          },
-          {
-            icon: MessageSquare,
-            title: "2. قارن عروض الورش",
-            description:
-              "تلقى عروض أسعار مفصلة من متخصصي الصيانة المعتمدين. شاهد الأسعار والخدمات المتضمنة وتقييمات العملاء.",
-          },
-          {
-            icon: CheckCircle,
-            title: "3. احجز موعدك",
-            description:
-              "اختر الورشة التي تقدم أفضل قيمة وراحة. احجز مباشرة من خلال منصتنا مع جدولة مرنة.",
-          },
-          {
-            icon: Wrench,
-            title: "4. احصل على خدمة متخصصة",
-            description:
-              "استمتع بخدمة صيانة احترافية مع ضمان الجودة. تتبع تاريخ خدماتك واحصل على تذكيرات الصيانة.",
-          },
-        ],
-      },
-      benefits: {
-        title: "لماذا تختار الحقني لصيانة السيارة؟",
-        items: [
-          {
-            icon: Shield,
-            title: "ورش معتمدة",
-            description:
-              "جميع مقدمي خدمات الصيانة مفحوصون ومعتمدون بدقة لمعايير الجودة.",
-          },
-          {
-            icon: TrendingUp,
-            title: "أسعار تنافسية",
-            description:
-              "قارن عروضاً متعددة لضمان حصولك على أفضل قيمة لاحتياجات الصيانة.",
-          },
-          {
-            icon: Calendar,
-            title: "جدولة مرنة",
-            description:
-              "احجز مواعيد تناسب جدولك مع فترات زمنية مريحة وتذكيرات.",
-          },
-          {
-            icon: Award,
-            title: "ضمان الجودة",
-            description: "جميع أعمال الصيانة تأتي مع ضمان وضمان رضا المنصة.",
-          },
-        ],
-      },
-      services: {
-        title: "خدمات الصيانة المتاحة",
-        items: [
-          "تغيير الزيت وفلتر الزيت",
-          "فحص وخدمة المكابح",
-          "دوران الإطارات والمحاذاة",
-          "فحص واستبدال البطارية",
-          "استبدال فلتر الهواء",
-          "خدمة ناقل الحركة",
-          "صيانة نظام التبريد",
-          "فحص شامل للسيارة",
-          "برامج الصيانة المجدولة",
-          "خدمات الرعاية الوقائية",
-        ],
-      },
-      cta: {
-        title: "حافظ على سيارتك في حالة مثالية",
-        description:
-          "احصل على عروض أسعار فورية للصيانة من ورش معتمدة بالقرب منك",
-        button: "جدول الصيانة",
-      },
-    },
-  };
-
-  const currentContent = content[lng as keyof typeof content] || content.en;
-
+  // Icon arrays for dynamic rendering
+  const processIcons = [Search, MessageSquare, CheckCircle, Wrench];
+  const benefitIcons = [Shield, TrendingUp, Calendar, Award];
   return (
     <div className={`min-h-screen bg-gradient-hero ${isRtl ? "rtl" : "ltr"}`}>
       {/* Hero Section */}
@@ -211,18 +40,15 @@ export default async function MaintenanceServicePage({
               <span className="text-primary font-medium">
                 {lng === "ar" ? "خدمة الصيانة" : "Maintenance Service"}
               </span>
-            </div>
-
+            </div>{" "}
             <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-foreground via-primary to-orange-500 bg-clip-text text-transparent">
-              {currentContent.title}
+              {maintenance.title}
             </h1>
-
             <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto mb-8">
-              {currentContent.subtitle}
+              {maintenance.subtitle}
             </p>
-
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              {currentContent.description}
+              {maintenance.description}
             </p>
           </div>
         </div>
@@ -231,22 +57,25 @@ export default async function MaintenanceServicePage({
       {/* Process Section */}
       <section className="py-20 px-4 bg-background">
         <div className="max-w-7xl mx-auto">
+          {" "}
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
-              {currentContent.process.title}
+              {maintenance.process.title}
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              {currentContent.process.subtitle}
+              {maintenance.process.subtitle}
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {currentContent.process.steps.map((step, index) => (
+            {maintenance.process.steps.map((step: any, index: number) => (
               <div key={index} className="relative group">
                 <div className="bg-card rounded-2xl p-8 border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-xl">
+                  {" "}
                   <div className="text-center">
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-primary to-orange-500 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
-                      <step.icon className="h-8 w-8 text-white" />
+                      {React.createElement(processIcons[index], {
+                        className: "h-8 w-8 text-white",
+                      })}
                     </div>
                     <h3 className="text-xl font-semibold mb-4 text-foreground">
                       {step.title}
@@ -257,7 +86,7 @@ export default async function MaintenanceServicePage({
                   </div>
                 </div>
 
-                {index < currentContent.process.steps.length - 1 && (
+                {index < maintenance.process.steps.length - 1 && (
                   <div className="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2">
                     <ArrowRight className="h-6 w-6 text-primary/30" />
                   </div>
@@ -271,17 +100,19 @@ export default async function MaintenanceServicePage({
       {/* Benefits Section */}
       <section className="py-20 px-4 bg-muted/30">
         <div className="max-w-7xl mx-auto">
+          {" "}
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
-              {currentContent.benefits.title}
+              {maintenance.benefits.title}
             </h2>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {currentContent.benefits.items.map((benefit, index) => (
+            {maintenance.benefits.items.map((benefit: any, index: number) => (
               <div key={index} className="text-center group">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-primary to-orange-500 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <benefit.icon className="h-8 w-8 text-white" />
+                  {React.createElement(benefitIcons[index], {
+                    className: "h-8 w-8 text-white",
+                  })}
                 </div>
                 <h3 className="text-xl font-semibold mb-4 text-foreground">
                   {benefit.title}
@@ -299,25 +130,27 @@ export default async function MaintenanceServicePage({
       <section className="py-20 px-4 bg-background">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            {" "}
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
-                {currentContent.services.title}
+                {maintenance.services.title}
               </h2>
               <div className="grid grid-cols-1 gap-4">
-                {currentContent.services.items.map((service, index) => (
-                  <div
-                    key={index}
-                    className="flex items-center gap-3 p-4 bg-card rounded-xl border border-border/50"
-                  >
-                    <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
-                    <span className="text-foreground font-medium">
-                      {service}
-                    </span>
-                  </div>
-                ))}
+                {maintenance.services.items.map(
+                  (service: any, index: number) => (
+                    <div
+                      key={index}
+                      className="flex items-center gap-3 p-4 bg-card rounded-xl border border-border/50"
+                    >
+                      <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
+                      <span className="text-foreground font-medium">
+                        {service}
+                      </span>
+                    </div>
+                  )
+                )}
               </div>
             </div>
-
             <div className="relative">
               <div className="bg-gradient-to-br from-primary/10 to-orange-500/10 rounded-3xl p-8 border border-border/50">
                 <div className="text-center">
@@ -344,12 +177,13 @@ export default async function MaintenanceServicePage({
 
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-primary to-orange-500">
+        {" "}
         <div className="max-w-4xl mx-auto text-center text-white">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            {currentContent.cta.title}
+            {maintenance.cta.title}
           </h2>
           <p className="text-xl mb-8 opacity-90">
-            {currentContent.cta.description}
+            {maintenance.cta.description}
           </p>
           <Link href={`/${lng}/contact`}>
             <Button
@@ -358,7 +192,7 @@ export default async function MaintenanceServicePage({
               className="bg-white text-primary hover:bg-white/90"
             >
               <Calendar className="h-5 w-5 mr-2" />
-              {currentContent.cta.button}
+              {maintenance.cta.button}
               <ArrowRight className="h-5 w-5 ml-2" />
             </Button>
           </Link>

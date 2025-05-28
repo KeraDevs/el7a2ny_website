@@ -1,0 +1,38 @@
+{
+  "title": "Terms of Service",
+  "lastUpdated": "Last updated: {{date}}",
+  "sections": [
+    {
+      "title": "Acceptance of Terms",
+      "content": "By accessing and using El7a2ny services, you accept and agree to be bound by the terms and provision of this agreement."
+    },
+    {
+      "title": "Service Description",
+      "content": "El7a2ny provides a platform connecting vehicle owners with certified automotive service providers for maintenance, repair, and emergency services."
+    },
+    {
+      "title": "User Responsibilities",
+      "content": "Users are responsible for providing accurate information, maintaining account security, and using services in accordance with applicable laws."
+    },
+    {
+      "title": "Service Availability",
+      "content": "Services are subject to availability and may be limited by geographic location, time, and service provider capacity."
+    },
+    {
+      "title": "Payment Terms",
+      "content": "Payment for services is due upon completion unless otherwise agreed. We accept various payment methods as indicated on our platform."
+    },
+    {
+      "title": "Limitation of Liability",
+      "content": "El7a2ny's liability is limited to the amount paid for services. We are not liable for indirect, incidental, or consequential damages."
+    },
+    {
+      "title": "Termination",
+      "content": "We reserve the right to terminate or suspend access to our services at our sole discretion, without notice, for any reason."
+    }
+  ],
+  "metadata": {
+    "title": "Terms of Service - El7a2ny",
+    "description": "Read El7a2ny's terms of service to understand the rules and guidelines for using our automotive service platform."
+  }
+}

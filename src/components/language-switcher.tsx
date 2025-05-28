@@ -11,18 +11,17 @@ import {
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
 import { Languages } from "lucide-react";
-import { useTranslation } from "react-i18next";
+import { useTranslations } from "@/i18n/hooks";
 
 export function LanguageSwitcher() {
   const pathname = usePathname();
   const router = useRouter();
-  const { i18n } = useTranslation();
+  const { language } = useTranslations();
 
   const currentLang = pathname.split("/")[1];
 
-  const handleLanguageChange = async (lng: string) => {
+  const handleLanguageChange = (lng: string) => {
     const newPathname = pathname.replace(`/${currentLang}`, `/${lng}`);
-    await i18n.changeLanguage(lng);
     router.push(newPathname);
   };
 

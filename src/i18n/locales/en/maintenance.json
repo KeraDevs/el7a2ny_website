@@ -1,0 +1,69 @@
+{
+  "title": "Car Maintenance Services",
+  "subtitle": "Keep Your Car Running Smoothly with Expert Maintenance",
+  "description": "Regular maintenance from certified professionals. Compare offers from multiple verified workshops and choose the best service for your vehicle.",
+  "serviceLabel": "Maintenance Service",
+  "process": {
+    "title": "How to Get the Best Maintenance Offers",
+    "subtitle": "Our platform connects you with top-rated maintenance specialists",
+    "steps": [
+      {
+        "title": "1. Schedule Your Service",
+        "description": "Tell us your car model, mileage, and maintenance needs. Our system finds the best workshops in your area."
+      },
+      {
+        "title": "2. Compare Workshop Offers",
+        "description": "Receive detailed quotes from verified maintenance specialists. See pricing, services included, and customer reviews."
+      },
+      {
+        "title": "3. Book Your Appointment",
+        "description": "Choose the workshop that offers the best value and convenience. Book directly through our platform with flexible scheduling."
+      },
+      {
+        "title": "4. Get Expert Service",
+        "description": "Enjoy professional maintenance service with quality guarantee. Track your service history and get maintenance reminders."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Why Choose El7a2ny for Car Maintenance?",
+    "items": [
+      {
+        "title": "Certified Workshops",
+        "description": "All maintenance providers are thoroughly vetted and certified for quality standards."
+      },
+      {
+        "title": "Competitive Pricing",
+        "description": "Compare multiple offers to ensure you get the best value for your maintenance needs."
+      },
+      {
+        "title": "Flexible Scheduling",
+        "description": "Book appointments that fit your schedule with convenient time slots and reminders."
+      },
+      {
+        "title": "Quality Assurance",
+        "description": "All maintenance work comes with warranty and our platform's satisfaction guarantee."
+      }
+    ]
+  },
+  "services": {
+    "title": "Maintenance Services Available",
+    "items": [
+      "Oil Change & Filter Replacement",
+      "Brake Inspection & Service",
+      "Tire Rotation & Alignment",
+      "Battery Testing & Replacement",
+      "Air Filter Replacement",
+      "Transmission Service",
+      "Cooling System Maintenance",
+      "Complete Vehicle Inspection",
+      "Scheduled Maintenance Programs",
+      "Preventive Care Services"
+    ]
+  },
+  "cta": {
+    "title": "Keep Your Car in Perfect Condition",
+    "description": "Get instant maintenance quotes from certified workshops near you",
+    "button": "Schedule Maintenance"
+  }
+}

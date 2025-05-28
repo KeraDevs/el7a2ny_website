@@ -13,31 +13,31 @@ import { Menu } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { ThemeToggle } from "./theme/theme-toggle";
 import { LanguageSwitcher } from "./language-switcher";
-import { useTranslation } from "react-i18next";
+import { useTranslations } from "@/i18n/hooks";
 
 const Navbar = () => {
   const pathname = usePathname();
-  const { t } = useTranslation();
+  const { navbar } = useTranslations();
   const currentLang = pathname.split("/")[1];
   const routes = [
     {
-      label: t("nav.home"),
+      label: navbar.home,
       href: "",
     },
     {
-      label: t("nav.services"),
+      label: navbar.services,
       href: "/services",
     },
     {
-      label: t("nav.howItWorks"),
+      label: navbar.howItWorks,
       href: "/how-it-works",
     },
     {
-      label: t("nav.workshops"),
+      label: navbar.workshops,
       href: "/workshops",
     },
     {
-      label: t("nav.contact"),
+      label: navbar.contact,
       href: "/contact",
     },
   ];
@@ -45,8 +45,9 @@ const Navbar = () => {
     <nav className="fixed top-0 w-full border-b bg-background/95 backdrop-blur-md z-50 shadow-sm">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         <Link href={`/${currentLang}`} className="group">
+          {" "}
           <span className="text-2xl font-bold bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent group-hover:from-primary/80 group-hover:to-primary transition-all duration-300 flex items-center gap-2">
-            {t("nav.logo")}
+            {navbar.logo}
             <span className="inline-block transition-all duration-300 group-hover:animate-wrench">
               🔧
             </span>
@@ -89,7 +90,7 @@ const Navbar = () => {
               variant="default"
               className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105"
             >
-              <Link href={`/${currentLang}/auth`}>{t("nav.login")}</Link>
+              <Link href={`/${currentLang}/auth`}>{navbar.login}</Link>
             </Button>
           </div>
         </div>
@@ -132,7 +133,7 @@ const Navbar = () => {
                   href={`/${currentLang}/auth`}
                   className="w-full text-sm font-medium text-primary"
                 >
-                  {t("nav.login")}
+                  {navbar.login}
                 </Link>
               </DropdownMenuItem>
             </DropdownMenuContent>

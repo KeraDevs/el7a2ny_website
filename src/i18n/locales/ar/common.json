@@ -1,0 +1,22 @@
+{
+  "toggleTheme": "تبديل السمة",
+  "loading": "جاري التحميل...",
+  "error": "خطأ",
+  "success": "نجح",
+  "cancel": "إلغاء",
+  "confirm": "تأكيد",
+  "save": "حفظ",
+  "edit": "تعديل",
+  "delete": "حذف",
+  "back": "عودة",
+  "next": "التالي",
+  "previous": "السابق",
+  "close": "إغلاق",
+  "search": "بحث",
+  "submit": "إرسال",
+  "reset": "إعادة تعيين",
+  "select": "اختيار",
+  "viewMore": "عرض المزيد",
+  "readMore": "قراءة المزيد",
+  "showLess": "عرض أقل"
+}

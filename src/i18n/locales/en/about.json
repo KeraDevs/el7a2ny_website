@@ -1,0 +1,45 @@
+{
+  "title": "About El7a2ny",
+  "subtitle": "Your trusted automotive service partner",
+  "story": {
+    "title": "Our Story",
+    "content": "El7a2ny was founded with a simple mission: to provide reliable, professional automotive services that car owners can trust. We understand that your vehicle is more than just transportation—it's your freedom, your reliability, and often a significant investment."
+  },
+  "mission": {
+    "title": "Our Mission",
+    "content": "To revolutionize the automotive service industry by connecting car owners with verified, professional workshops and technicians, ensuring quality service, transparent pricing, and exceptional customer experience."
+  },
+  "vision": {
+    "title": "Our Vision",
+    "content": "To become the leading automotive service platform, known for reliability, quality, and innovation in car maintenance and repair services across the region."
+  },
+  "values": {
+    "title": "Our Values",
+    "items": [
+      {
+        "title": "Quality First",
+        "description": "We never compromise on the quality of our services or parts"
+      },
+      {
+        "title": "Transparency",
+        "description": "Clear communication and honest pricing in every interaction"
+      },
+      {
+        "title": "Reliability",
+        "description": "Dependable service you can count on, when you need it most"
+      },
+      {
+        "title": "Innovation",
+        "description": "Constantly improving our services through technology and expertise"
+      }
+    ]
+  },
+  "team": {
+    "title": "Our Team",
+    "subtitle": "Meet the professionals behind El7a2ny"
+  },
+  "metadata": {
+    "title": "About Us - El7a2ny",
+    "description": "Learn about El7a2ny's mission to provide reliable, professional automotive services. Meet our team and discover our values."
+  }
+}

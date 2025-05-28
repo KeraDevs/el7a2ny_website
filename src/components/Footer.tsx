@@ -17,43 +17,43 @@ import {
   ArrowRight,
   Car,
 } from "lucide-react";
-import { useTranslation } from "react-i18next";
+import { useTranslations } from "@/i18n/hooks";
 
 interface FooterProps {
   lng: string;
 }
 
 const Footer = ({ lng }: FooterProps) => {
-  const { t } = useTranslation();
+  const { footer, navbar } = useTranslations();
   const currentYear = new Date().getFullYear();
   const services = [
-    { label: t("footer.services.tuning"), href: `/${lng}/services/tuning` },
+    { label: footer.services?.tuning, href: `/${lng}/services/tuning` },
     {
-      label: t("footer.services.maintenance"),
+      label: footer.services?.maintenance,
       href: `/${lng}/services/maintenance`,
     },
     {
-      label: t("footer.services.emergency"),
+      label: footer.services?.emergency,
       href: `/${lng}/services/emergency`,
     },
-    { label: t("footer.services.pickup"), href: `/${lng}/services/pickup` },
+    { label: footer.services?.pickup, href: `/${lng}/services/pickup` },
     {
-      label: t("footer.services.workshops"),
+      label: footer.services?.workshops,
       href: `/${lng}/services/workshops`,
     },
   ];
   const quickLinks = [
-    { label: t("footer.links.about"), href: `/${lng}/about` },
-    { label: t("footer.links.howItWorks"), href: `/${lng}/how-it-works` },
-    { label: t("footer.links.workshops"), href: `/${lng}/workshops` },
-    { label: t("footer.links.contact"), href: `/${lng}/contact` },
-    { label: t("footer.links.faq"), href: `/${lng}/faq` },
+    { label: footer.links?.about, href: `/${lng}/about` },
+    { label: footer.links?.howItWorks, href: `/${lng}/how-it-works` },
+    { label: footer.links?.workshops, href: `/${lng}/workshops` },
+    { label: footer.links?.contact, href: `/${lng}/contact` },
+    { label: footer.links?.faq, href: `/${lng}/faq` },
   ];
   const legalLinks = [
-    { label: t("footer.legal.privacy"), href: `/${lng}/privacy-policy` },
-    { label: t("footer.legal.terms"), href: `/${lng}/terms-of-service` },
-    { label: t("footer.legal.refund"), href: `/${lng}/refund-policy` },
-    { label: t("footer.legal.cookies"), href: `/${lng}/cookie-policy` },
+    { label: footer.legal?.privacy, href: `/${lng}/privacy-policy` },
+    { label: footer.legal?.terms, href: `/${lng}/terms-of-service` },
+    { label: footer.legal?.refund, href: `/${lng}/refund-policy` },
+    { label: footer.legal?.cookies, href: `/${lng}/cookie-policy` },
   ];
 
   const socialLinks = [
@@ -89,16 +89,14 @@ const Footer = ({ lng }: FooterProps) => {
             <div className="flex items-center gap-3">
               <div className="p-2 bg-gradient-to-r from-primary to-orange-500 rounded-xl">
                 <Wrench className="h-6 w-6 text-white" />
-              </div>
+              </div>{" "}
               <span className="text-2xl font-bold bg-gradient-to-r from-primary to-orange-500 bg-clip-text text-transparent">
-                {t("nav.logo")}
+                {navbar.logo}
               </span>
-            </div>
-
+            </div>{" "}
             <p className="text-muted-foreground leading-relaxed">
-              {t("footer.description")}
+              {footer.description}
             </p>
-
             {/* Rating */}
             <div className="flex items-center gap-2">
               <div className="flex text-yellow-500">
@@ -107,23 +105,23 @@ const Footer = ({ lng }: FooterProps) => {
                 ))}
               </div>
               <span className="text-sm text-muted-foreground">
-                4.9/5 ({t("footer.reviews")})
+                4.9/5 ({footer.reviews})
               </span>
             </div>
-
             {/* CTA */}
             <Button className="w-full bg-gradient-to-r from-primary to-orange-500 hover:from-orange-500 hover:to-primary text-white border-0 group">
               <Car className="h-4 w-4 mr-2 group-hover:rotate-12 transition-transform duration-300" />
-              {t("footer.bookNow")}
+              {footer.bookNow}
               <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
             </Button>
           </div>
 
           {/* Services */}
           <div className="space-y-6">
+            {" "}
             <h3 className="text-lg font-semibold text-foreground flex items-center gap-2">
               <div className="w-2 h-2 bg-primary rounded-full"></div>
-              {t("footer.servicesTitle")}
+              {footer.servicesTitle}
             </h3>
             <ul className="space-y-3">
               {services.map((service, index) => (
@@ -142,9 +140,10 @@ const Footer = ({ lng }: FooterProps) => {
 
           {/* Quick Links */}
           <div className="space-y-6">
+            {" "}
             <h3 className="text-lg font-semibold text-foreground flex items-center gap-2">
               <div className="w-2 h-2 bg-primary rounded-full"></div>
-              {t("footer.quickLinksTitle")}
+              {footer.quickLinksTitle}
             </h3>
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
@@ -163,19 +162,19 @@ const Footer = ({ lng }: FooterProps) => {
 
           {/* Contact Info */}
           <div className="space-y-6">
+            {" "}
             <h3 className="text-lg font-semibold text-foreground flex items-center gap-2">
               <div className="w-2 h-2 bg-primary rounded-full"></div>
-              {t("footer.contactTitle")}
+              {footer.contactTitle}
             </h3>
-
             <div className="space-y-4">
               <div className="flex items-start gap-3 group cursor-pointer">
                 <div className="p-2 bg-muted rounded-lg group-hover:bg-primary/10 transition-colors duration-300">
                   <MapPin className="h-4 w-4 text-primary" />
-                </div>
+                </div>{" "}
                 <div>
                   <p className="text-sm font-medium text-foreground">
-                    {t("footer.address")}
+                    {footer.address}
                   </p>
                   <p className="text-sm text-muted-foreground">
                     123 Main St, Cairo, Egypt
@@ -189,7 +188,7 @@ const Footer = ({ lng }: FooterProps) => {
                 </div>
                 <div>
                   <p className="text-sm font-medium text-foreground">
-                    {t("footer.phone")}
+                    {footer.phone}
                   </p>
                   <p className="text-sm text-muted-foreground">
                     +20 123 456 789
@@ -203,7 +202,7 @@ const Footer = ({ lng }: FooterProps) => {
                 </div>
                 <div>
                   <p className="text-sm font-medium text-foreground">
-                    {t("footer.email")}
+                    {footer.email}
                   </p>
                   <p className="text-sm text-muted-foreground">
                     info@el7a2ny.com
@@ -217,10 +216,10 @@ const Footer = ({ lng }: FooterProps) => {
                 </div>
                 <div>
                   <p className="text-sm font-medium text-foreground">
-                    {t("footer.hours")}
+                    {footer.hours}
                   </p>
                   <p className="text-sm text-muted-foreground">
-                    24/7 {t("footer.available")}
+                    24/7 {footer.available}
                   </p>
                 </div>
               </div>
@@ -230,10 +229,10 @@ const Footer = ({ lng }: FooterProps) => {
         {/* Social Links & Newsletter */}
         <div className="border-t border-border/50 pt-8 mb-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            {/* Social Links */}
+            {/* Social Links */}{" "}
             <div className="flex items-center gap-4">
               <span className="text-sm font-medium text-muted-foreground">
-                {t("footer.followUs")}:
+                {footer.followUs}:
               </span>
               <div className="flex gap-3">
                 {socialLinks.map((social, index) => (
@@ -250,23 +249,22 @@ const Footer = ({ lng }: FooterProps) => {
                 ))}
               </div>
             </div>
-
-            {/* Newsletter */}
+            {/* Newsletter */}{" "}
             <div className="flex items-center gap-3">
               <span className="text-sm font-medium text-muted-foreground whitespace-nowrap">
-                {t("footer.newsletter")}:
+                {footer.newsletter}:
               </span>
               <div className="flex gap-2">
                 <input
                   type="email"
-                  placeholder={t("footer.emailPlaceholder")}
+                  placeholder={footer.emailPlaceholder}
                   className="px-3 py-2 bg-muted border border-border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all duration-300"
                 />
                 <Button
                   size="sm"
                   className="bg-gradient-to-r from-primary to-orange-500 hover:from-orange-500 hover:to-primary text-white border-0"
                 >
-                  {t("footer.subscribe")}
+                  {footer.subscribe}
                 </Button>
               </div>
             </div>
@@ -275,13 +273,13 @@ const Footer = ({ lng }: FooterProps) => {
         {/* Bottom Bar */}
         <div className="border-t border-border/50 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            {" "}
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <span>
-                © {currentYear} {t("nav.logo")}.
+                © {currentYear} {navbar.logo}.
               </span>
-              <span>{t("footer.allRightsReserved")}</span>
+              <span>{footer.allRightsReserved}</span>
             </div>
-
             <div className="flex items-center gap-6">
               {legalLinks.map((link, index) => (
                 <Link
@@ -293,7 +291,7 @@ const Footer = ({ lng }: FooterProps) => {
                 </Link>
               ))}
               <span className="text-sm text-muted-foreground">
-                {t("footer.developedBy")}
+                {footer.developedBy}
                 <Link
                   href="https://keradevs.com"
                   target="_blank"
