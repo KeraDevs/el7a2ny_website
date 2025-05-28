@@ -70,7 +70,7 @@ export async function generateStaticParams() {
   return languages.map((lng) => ({ lng }));
 }
 
-export default async function RootLayout({
+export default async function LanguageLayout({
   children,
   params,
 }: {
@@ -78,20 +78,13 @@ export default async function RootLayout({
   params: Promise<{ lng: string }>;
 }) {
   const { lng } = await params;
+  
   return (
-    <html
-      lang={lng}
-      dir={lng === "ar" ? "rtl" : "ltr"}
-      suppressHydrationWarning={true}
-    >
-      <body suppressHydrationWarning={true}>
-        <ClientProviders lang={lng}>
-          <Navbar />
-          <main>{children}</main>
-          <Footer lng={lng} />
-          <WhatsAppButton />
-        </ClientProviders>
-      </body>
-    </html>
+    <ClientProviders lang={lng}>
+      <Navbar />
+      <main>{children}</main>
+      <Footer lng={lng} />
+      <WhatsAppButton />
+    </ClientProviders>
   );
 }

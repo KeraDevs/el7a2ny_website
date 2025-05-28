@@ -18,7 +18,7 @@ i18nInstance.init({
     order: ["path", "htmlTag"],
   },
   react: {
-    useSuspense: false, // This is important
+    useSuspense: false,
   },
 });
 
@@ -35,6 +35,12 @@ export function LanguageProvider({
     setMounted(true);
     if (i18nInstance.language !== lang) {
       i18nInstance.changeLanguage(lang);
+    }
+    
+    // Update HTML attributes dynamically
+    if (typeof document !== 'undefined') {
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
     }
   }, [lang]);
 
