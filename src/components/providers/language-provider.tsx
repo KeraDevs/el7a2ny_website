@@ -36,11 +36,11 @@ export function LanguageProvider({
     if (i18nInstance.language !== lang) {
       i18nInstance.changeLanguage(lang);
     }
-    
+
     // Update HTML attributes dynamically
-    if (typeof document !== 'undefined') {
+    if (typeof document !== "undefined") {
       document.documentElement.lang = lang;
-      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+      document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
     }
   }, [lang]);
 

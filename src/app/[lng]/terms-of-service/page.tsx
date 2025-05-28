@@ -11,7 +11,11 @@ import {
 } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
-const TermsOfServicePage = ({ params }: { params: Promise<{ lng: string }> }) => {
+const TermsOfServicePage = ({
+  params,
+}: {
+  params: Promise<{ lng: string }>;
+}) => {
   const { t } = useTranslation();
 
   React.useEffect(() => {

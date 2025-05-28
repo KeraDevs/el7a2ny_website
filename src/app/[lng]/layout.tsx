@@ -78,7 +78,7 @@ export default async function LanguageLayout({
   params: Promise<{ lng: string }>;
 }) {
   const { lng } = await params;
-  
+
   return (
     <ClientProviders lang={lng}>
       <Navbar />
