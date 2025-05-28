@@ -3,9 +3,6 @@ import { Metadata } from "next";
 import { User, Building2, Phone, MapPin, LogIn, UserPlus } from "lucide-react";
 import { MdOutlineVerified } from "react-icons/md";
 import { Button } from "@/components/ui/button";
-import Footer from "@/components/Footer";
-import WhatsAppButton from "@/components/WhatsAppButton";
-import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
   title: "Login / Sign Up | El7a2ny - Join Our Network",
@@ -19,7 +16,6 @@ const AuthPage = async ({ params }: { params: Promise<{ lng: string }> }) => {
 
   return (
     <div className={`min-h-screen bg-gradient-hero ${isRtl ? "rtl" : "ltr"}`}>
-      <Navbar /> {/* Hero Section */}
       <section className="relative py-16 px-4 overflow-hidden pt-20">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
 
@@ -228,8 +224,6 @@ const AuthPage = async ({ params }: { params: Promise<{ lng: string }> }) => {
           </div>
         </div>
       </section>
-      <Footer lng={lng} />
-      <WhatsAppButton />
     </div>
   );
 };

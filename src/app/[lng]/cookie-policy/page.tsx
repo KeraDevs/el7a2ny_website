@@ -12,8 +12,6 @@ import {
   X,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import Footer from "@/components/Footer";
-import WhatsAppButton from "@/components/WhatsAppButton";
 
 export const metadata: Metadata = {
   title: "Cookie Policy | El7a2ny - How We Use Cookies",
@@ -372,9 +370,6 @@ const CookiePolicyPage = async ({
           </Button>
         </div>
       </section>
-
-      <Footer lng={lng} />
-      <WhatsAppButton />
     </div>
   );
 };

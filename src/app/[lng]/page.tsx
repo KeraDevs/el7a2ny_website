@@ -1,6 +1,3 @@
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import WhatsAppButton from "@/components/WhatsAppButton";
 import { HeroCarousel } from "@/components/HeroCarousel";
 import ServiceSection from "@/components/ServiceSection";
 import { languages } from "../../../i18n/settings";
@@ -32,7 +29,6 @@ export default async function Home({
   const isRtl = lng === "ar";
   return (
     <main className="flex min-h-screen flex-col">
-      <Navbar />
       <div className="pt-16">
         {/* Hero Carousel Section */}
         <HeroCarousel slides={slides} />
@@ -177,9 +173,6 @@ export default async function Home({
           </div>
         </section>
       </div>
-      {/* WhatsApp Button */}
-      <WhatsAppButton />
-      <Footer lng={lng} />
     </main>
   );
 }

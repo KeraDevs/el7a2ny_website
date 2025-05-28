@@ -10,8 +10,6 @@ import {
   Mail,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import Footer from "@/components/Footer";
-import WhatsAppButton from "@/components/WhatsAppButton";
 
 export const metadata: Metadata = {
   title: "Refund Policy | El7a2ny - Fair & Transparent Refunds",
@@ -256,9 +254,6 @@ const RefundPolicyPage = async ({
           </div>
         </div>
       </section>
-
-      <Footer lng={lng} />
-      <WhatsAppButton />
     </div>
   );
 };

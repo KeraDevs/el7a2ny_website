@@ -1,25 +1,14 @@
 import React from "react";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import WhatsAppButton from "@/components/WhatsAppButton";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import {
-  Clock,
   CheckCircle,
-  Users,
   Star,
   ArrowRight,
-  Car,
   Building2,
   Search,
   MessageSquare,
-  CreditCard,
-  MapPin,
   Shield,
-  TrendingUp,
-  Award,
-  Phone,
   UserCheck,
   Target,
   Handshake,
@@ -235,8 +224,6 @@ export default async function WorkshopsServicePage({
 
   return (
     <div className={`min-h-screen bg-gradient-hero ${isRtl ? "rtl" : "ltr"}`}>
-      <Navbar />
-
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden pt-24">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-orange-500/5" />
@@ -440,9 +427,6 @@ export default async function WorkshopsServicePage({
           </Link>
         </div>
       </section>
-
-      <Footer lng={lng} />
-      <WhatsAppButton />
     </div>
   );
 }

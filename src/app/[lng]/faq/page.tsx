@@ -8,8 +8,6 @@ import {
   MessageSquare,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import Footer from "@/components/Footer";
-import WhatsAppButton from "@/components/WhatsAppButton";
 
 export const metadata: Metadata = {
   title: "FAQ | El7a2ny - Frequently Asked Questions",
@@ -332,9 +330,6 @@ const FAQPage = async ({ params }: { params: Promise<{ lng: string }> }) => {
           </div>
         </div>
       </section>
-
-      <Footer lng={lng} />
-      <WhatsAppButton />
     </div>
   );
 };

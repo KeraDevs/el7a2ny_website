@@ -13,9 +13,6 @@ import {
   Phone,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import Footer from "@/components/Footer";
-import WhatsAppButton from "@/components/WhatsAppButton";
-import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
   title: "How It Works | El7a2ny - Simple Car Service Process",
@@ -120,8 +117,6 @@ const HowItWorksPage = async ({
   ];
   return (
     <div className={`min-h-screen bg-gradient-hero ${isRtl ? "rtl" : "ltr"}`}>
-      <Navbar />
-
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
@@ -302,9 +297,6 @@ const HowItWorksPage = async ({
           </div>
         </div>
       </section>
-
-      <Footer lng={lng} />
-      <WhatsAppButton />
     </div>
   );
 };

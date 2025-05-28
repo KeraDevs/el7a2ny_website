@@ -11,8 +11,6 @@ import {
   HeartHandshake,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import Footer from "@/components/Footer";
-import WhatsAppButton from "@/components/WhatsAppButton";
 import { MdOutlineVerified, MdSecurity } from "react-icons/md";
 
 export const metadata: Metadata = {
@@ -340,8 +338,6 @@ const AboutPage = async ({ params }: { params: Promise<{ lng: string }> }) => {
           </div>
         </div>
       </section>
-      <Footer lng={lng} />
-      <WhatsAppButton />
     </div>
   );
 };
