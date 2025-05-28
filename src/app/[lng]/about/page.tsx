@@ -4,13 +4,7 @@ import {
   Shield,
   CheckCircle,
   Users,
-  Award,
-  Clock,
-  Star,
   Target,
-  TrendingUp,
-  Car,
-  Wrench,
   UserCheck,
   FileCheck,
   PhoneIncoming,
@@ -19,7 +13,6 @@ import {
 import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import Navbar from "@/components/Navbar";
 import { MdOutlineVerified, MdSecurity } from "react-icons/md";
 
 export const metadata: Metadata = {

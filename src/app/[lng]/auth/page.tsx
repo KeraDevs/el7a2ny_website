@@ -1,17 +1,6 @@
 import React from "react";
 import { Metadata } from "next";
-import {
-  User,
-  Building2,
-  Mail,
-  Lock,
-  Phone,
-  MapPin,
-  Eye,
-  EyeOff,
-  LogIn,
-  UserPlus,
-} from "lucide-react";
+import { User, Building2, Phone, MapPin, LogIn, UserPlus } from "lucide-react";
 import { MdOutlineVerified } from "react-icons/md";
 import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer";

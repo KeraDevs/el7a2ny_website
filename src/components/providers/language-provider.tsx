@@ -6,26 +6,14 @@ import i18next from "i18next";
 import { I18nextProvider, initReactI18next } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 import { getOptions } from "../../../i18n/settings";
-
-// Import translations
-import enTranslation from "../../../public/locales/en/translation.json";
-import arTranslation from "../../../public/locales/ar/translation.json";
-
-const resources = {
-  en: {
-    translation: enTranslation,
-  },
-  ar: {
-    translation: arTranslation,
-  },
-};
+import { translations } from "../../i18n/translations";
 
 // Initialize i18next instance
 const i18nInstance = i18next.use(initReactI18next).use(LanguageDetector);
 
 i18nInstance.init({
   ...getOptions(),
-  resources,
+  resources: translations,
   detection: {
     order: ["path", "htmlTag"],
   },

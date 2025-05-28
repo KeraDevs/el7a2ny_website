@@ -5,20 +5,16 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import {
-  Clock,
   CheckCircle,
-  Users,
   Star,
   ArrowRight,
   Car,
   Settings,
   Search,
   MessageSquare,
-  CreditCard,
   MapPin,
   Shield,
   TrendingUp,
-  Award,
 } from "lucide-react";
 
 export default async function TuningServicePage({

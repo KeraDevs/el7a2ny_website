@@ -11,7 +11,6 @@ import {
   Star,
   ArrowRight,
   Phone,
-  MapPin,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer";
@@ -24,8 +23,13 @@ export const metadata: Metadata = {
     "Learn how El7a2ny makes car repair simple. Easy booking, verified workshops, expert service, and satisfaction guaranteed.",
 };
 
-const HowItWorksPage = ({ params }: { params: { lng: string } }) => {
-  const isRtl = params.lng === "ar";
+const HowItWorksPage = async ({
+  params,
+}: {
+  params: Promise<{ lng: string }>;
+}) => {
+  const { lng } = await params;
+  const isRtl = lng === "ar";
 
   const steps = [
     {
@@ -299,7 +303,7 @@ const HowItWorksPage = ({ params }: { params: { lng: string } }) => {
         </div>
       </section>
 
-      <Footer lng={params.lng} />
+      <Footer lng={lng} />
       <WhatsAppButton />
     </div>
   );

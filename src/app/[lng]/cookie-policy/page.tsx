@@ -14,7 +14,6 @@ import {
 import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
   title: "Cookie Policy | El7a2ny - How We Use Cookies",

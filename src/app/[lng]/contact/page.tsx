@@ -10,9 +10,6 @@ import {
   MessageSquare,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import Footer from "@/components/Footer";
-import WhatsAppButton from "@/components/WhatsAppButton";
-import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
   title: "Contact Us | El7a2ny - Get in Touch",
@@ -60,7 +57,7 @@ const ContactPage = async ({
   ];
   return (
     <div className={`min-h-screen bg-gradient-hero ${isRtl ? "rtl" : "ltr"}`}>
-      <Navbar /> {/* Hero Section */}
+      {/* Hero Section */}
       <section className="relative px-4 overflow-hidden pt-20">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
 
@@ -314,7 +311,6 @@ const ContactPage = async ({
                 </Button>
               </div>
             </div>
-
             {/* Quick Contact Cards & Why Choose Us */}
             <div className="space-y-8 animate-fade-in-up delay-300">
               {/* Quick Contact Cards */}
@@ -421,12 +417,10 @@ const ContactPage = async ({
                   ))}
                 </div>
               </div>
-            </div>
+            </div>{" "}
           </div>
         </div>
       </section>
-      <Footer lng={params.lng} />
-      <WhatsAppButton />
     </div>
   );
 };

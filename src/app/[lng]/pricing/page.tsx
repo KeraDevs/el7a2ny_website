@@ -11,8 +11,6 @@ import {
   Phone,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import Footer from "@/components/Footer";
-import WhatsAppButton from "@/components/WhatsAppButton";
 
 export const metadata: Metadata = {
   title: "Pricing | El7a2ny - Transparent & Fair Automotive Service Pricing",
@@ -20,8 +18,13 @@ export const metadata: Metadata = {
     "Discover El7a2ny's transparent pricing for automotive services. No hidden fees, competitive rates, and quality guaranteed.",
 };
 
-const PricingPage = ({ params }: { params: { lng: string } }) => {
-  const isRtl = params.lng === "ar";
+const PricingPage = async ({
+  params,
+}: {
+  params: Promise<{ lng: string }>;
+}) => {
+  const { lng } = await params;
+  const isRtl = lng === "ar";
 
   const pricingPlans = [
     {
@@ -402,16 +405,12 @@ const PricingPage = ({ params }: { params: { lng: string } }) => {
                 </Button>
               </div>
             </div>
-
             {/* Background decoration */}
             <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl" />
-            <div className="absolute bottom-0 left-0 w-48 h-48 bg-orange-400/20 rounded-full blur-2xl" />
+            <div className="absolute bottom-0 left-0 w-48 h-48 bg-orange-400/20 rounded-full blur-2xl" />{" "}
           </div>
         </div>
       </section>
-
-      <Footer lng={params.lng} />
-      <WhatsAppButton />
     </div>
   );
 };

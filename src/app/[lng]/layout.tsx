@@ -1,5 +1,8 @@
 import { Metadata } from "next";
 import { ClientProviders } from "@/components/providers/client-providers";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 import { languages } from "../../../i18n/settings";
 import "../globals.css";
@@ -75,7 +78,6 @@ export default async function RootLayout({
   params: Promise<{ lng: string }>;
 }) {
   const { lng } = await params;
-
   return (
     <html
       lang={lng}
@@ -83,7 +85,12 @@ export default async function RootLayout({
       suppressHydrationWarning={true}
     >
       <body>
-        <ClientProviders lang={lng}>{children}</ClientProviders>
+        <ClientProviders lang={lng}>
+          <Navbar />
+          <main>{children}</main>
+          <Footer lng={lng} />
+          <WhatsAppButton />
+        </ClientProviders>
       </body>
     </html>
   );

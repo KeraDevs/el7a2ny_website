@@ -6,14 +6,12 @@ import {
   Clock,
   AlertTriangle,
   CreditCard,
-  FileText,
   Phone,
   Mail,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
   title: "Refund Policy | El7a2ny - Fair & Transparent Refunds",
@@ -21,8 +19,13 @@ export const metadata: Metadata = {
     "Learn about El7a2ny's refund policy. We ensure fair and transparent refund processes for all our automotive services.",
 };
 
-const RefundPolicyPage = ({ params }: { params: { lng: string } }) => {
-  const isRtl = params.lng === "ar";
+const RefundPolicyPage = async ({
+  params,
+}: {
+  params: Promise<{ lng: string }>;
+}) => {
+  const { lng } = await params;
+  const isRtl = lng === "ar";
 
   const refundConditions = [
     {
@@ -254,7 +257,7 @@ const RefundPolicyPage = ({ params }: { params: { lng: string } }) => {
         </div>
       </section>
 
-      <Footer lng={params.lng} />
+      <Footer lng={lng} />
       <WhatsAppButton />
     </div>
   );

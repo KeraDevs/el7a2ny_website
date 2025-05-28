@@ -12,12 +12,8 @@ import {
   CheckCircle,
   ArrowRight,
   Wrench,
-  Award,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import Footer from "@/components/Footer";
-import WhatsAppButton from "@/components/WhatsAppButton";
-import Navbar from "@/components/Navbar";
 import { MdOutlineVerified } from "react-icons/md";
 
 export const metadata: Metadata = {
@@ -26,9 +22,13 @@ export const metadata: Metadata = {
     "Join El7a2ny's network of verified workshops. Increase revenue, reach more customers, and grow your automotive business with our platform.",
 };
 
-const WorkshopsPage = ({ params }: { params: { lng: string } }) => {
-  const isRtl = params.lng === "ar";
-
+const WorkshopsPage = async ({
+  params,
+}: {
+  params: Promise<{ lng: string }>;
+}) => {
+  const { lng } = await params;
+  const isRtl = lng === "ar";
   const benefits = [
     {
       icon: Users,
@@ -168,10 +168,8 @@ const WorkshopsPage = ({ params }: { params: { lng: string } }) => {
       highlight: isRtl ? "إدارة سهلة" : "Easy Management",
     },
   ];
-
   return (
     <div className={`min-h-screen bg-gradient-hero ${isRtl ? "rtl" : "ltr"}`}>
-      <Navbar />
       {/* Hero Section */}
       <section className="relative px-4 overflow-hidden pt-20">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
@@ -434,12 +432,10 @@ const WorkshopsPage = ({ params }: { params: { lng: string } }) => {
               className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-4 text-lg font-semibold transition-all duration-300 backdrop-blur-sm"
             >
               {isRtl ? "تحدث مع فريق المبيعات" : "Talk to Sales Team"}
-            </Button>
+            </Button>{" "}
           </div>
         </div>
       </section>
-      <Footer lng={params.lng} />
-      <WhatsAppButton />
     </div>
   );
 };

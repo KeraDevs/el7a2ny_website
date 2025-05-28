@@ -1,8 +1,6 @@
 "use client";
 
 import React from "react";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import {
   FileText,
   Users,
@@ -14,6 +12,7 @@ import {
 import { useTranslation } from "react-i18next";
 
 const TermsOfServicePage = ({ params }: { params: { lng: string } }) => {
+  const { lng } = params;
   const { t } = useTranslation();
 
   const sections = [
@@ -48,11 +47,8 @@ const TermsOfServicePage = ({ params }: { params: { lng: string } }) => {
       content: t("terms.sections.governing.content"),
     },
   ];
-
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
-
       {/* Hero Section */}
       <section className="pt-24 pb-16 bg-gradient-to-br from-primary/5 via-background to-accent/5 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
@@ -93,7 +89,6 @@ const TermsOfServicePage = ({ params }: { params: { lng: string } }) => {
                 {t("terms.introduction.content")}
               </p>
             </div>
-
             {/* Terms Sections */}
             <div className="space-y-12">
               {sections.map((section, index) => (
@@ -119,7 +114,6 @@ const TermsOfServicePage = ({ params }: { params: { lng: string } }) => {
                 </div>
               ))}
             </div>
-
             {/* Service Guidelines */}
             <div className="mt-16 p-8 bg-gradient-to-br from-accent/10 to-primary/5 rounded-2xl border border-border/50">
               <h2 className="text-2xl font-bold mb-6 text-foreground">
@@ -150,7 +144,6 @@ const TermsOfServicePage = ({ params }: { params: { lng: string } }) => {
                 </div>
               </div>
             </div>
-
             {/* Prohibited Activities */}
             <div className="mt-16 p-8 bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20 rounded-2xl border border-red-200 dark:border-red-800">
               <h2 className="text-2xl font-bold mb-6 text-foreground flex items-center gap-3">
@@ -200,7 +193,6 @@ const TermsOfServicePage = ({ params }: { params: { lng: string } }) => {
                 </div>
               </div>
             </div>
-
             {/* Warranty & Disclaimers */}
             <div className="mt-16 p-8 bg-gradient-to-br from-primary/5 to-orange-500/5 rounded-2xl border border-border/50">
               <h2 className="text-2xl font-bold mb-6 text-foreground">
@@ -225,7 +217,6 @@ const TermsOfServicePage = ({ params }: { params: { lng: string } }) => {
                 </div>
               </div>
             </div>
-
             {/* Contact Section */}
             <div className="mt-16 text-center p-8 bg-gradient-to-r from-muted/30 to-accent/20 rounded-2xl border border-border/50">
               <h2 className="text-2xl font-bold mb-4 text-foreground">
@@ -245,12 +236,10 @@ const TermsOfServicePage = ({ params }: { params: { lng: string } }) => {
                   <span className="text-foreground">Legal Department</span>
                 </div>
               </div>
-            </div>
+            </div>{" "}
           </div>
         </div>
       </section>
-
-      <Footer lng={params.lng} />
     </div>
   );
 };

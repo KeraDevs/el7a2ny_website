@@ -5,17 +5,11 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import {
-  Clock,
   CheckCircle,
-  Users,
-  Star,
   ArrowRight,
-  Car,
   Wrench,
   Search,
   MessageSquare,
-  CreditCard,
-  MapPin,
   Shield,
   TrendingUp,
   Award,

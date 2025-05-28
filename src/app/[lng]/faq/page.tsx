@@ -17,8 +17,9 @@ export const metadata: Metadata = {
     "Find answers to common questions about El7a2ny automotive services, pricing, warranties, and more.",
 };
 
-const FAQPage = ({ params }: { params: { lng: string } }) => {
-  const isRtl = params.lng === "ar";
+const FAQPage = async ({ params }: { params: Promise<{ lng: string }> }) => {
+  const { lng } = await params;
+  const isRtl = lng === "ar";
 
   const faqCategories = [
     {
@@ -332,7 +333,7 @@ const FAQPage = ({ params }: { params: { lng: string } }) => {
         </div>
       </section>
 
-      <Footer lng={params.lng} />
+      <Footer lng={lng} />
       <WhatsAppButton />
     </div>
   );
