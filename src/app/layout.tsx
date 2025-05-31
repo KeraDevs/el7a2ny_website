@@ -1,8 +1,13 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Roboto } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
+const roboto = Roboto({
+  weight: ["400", "500", "700"],
+  subsets: ["latin", "latin-ext"],
+  variable: "--font-roboto",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://el7a2ny.com"),
@@ -18,7 +23,10 @@ export default function RootLayout({
 }>) {
   return (
     <html suppressHydrationWarning={true}>
-      <body suppressHydrationWarning={true} className={inter.className}>
+      <body
+        suppressHydrationWarning={true}
+        className={`${inter.className} ${roboto.variable}`}
+      >
         {children}
       </body>
     </html>

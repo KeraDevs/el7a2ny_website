@@ -396,8 +396,13 @@
   .delay-300 {
     animation-delay: 300ms;
   }
-
   .delay-500 {
     animation-delay: 500ms;
   }
+}
+
+/* Custom font utilities */
+.font-roboto {
+  font-family: var(--font-roboto), -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, sans-serif;
 }

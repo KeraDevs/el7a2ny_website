@@ -37,10 +37,56 @@ export function LanguageProvider({
       i18nInstance.changeLanguage(lang);
     }
 
-    // Update HTML attributes dynamically
+    // Complete page state management for RTL transitions
     if (typeof document !== "undefined") {
-      document.documentElement.lang = lang;
-      document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+      const html = document.documentElement;
+      const body = document.body;
+      const isRTL = lang === "ar";
+      const wasRTL = html.dir === "rtl";
+
+      // If direction is changing, implement comprehensive fix
+      if ((isRTL && !wasRTL) || (!isRTL && wasRTL)) {
+        // Step 1: Preserve scroll position
+        const scrollY = window.scrollY;
+        const scrollX = window.scrollX;
+
+        // Step 2: Add transition class and force layout stability
+        html.classList.add("direction-changing");
+        body.style.setProperty("overflow-x", "hidden", "important");
+        body.style.setProperty("width", "100vw", "important");
+        body.style.setProperty("max-width", "100vw", "important");
+
+        // Step 3: Change direction and language
+        html.lang = lang;
+        // Step 3: Change direction and language
+        html.lang = lang;
+        html.dir = isRTL ? "rtl" : "ltr";
+        html.classList.remove("dir-ltr", "dir-rtl");
+        html.classList.add(isRTL ? "dir-rtl" : "dir-ltr");
+
+        // Step 4: Force layout recalculation
+        requestAnimationFrame(() => {
+          // Force reflow
+          void body.offsetHeight;
+
+          // Restore scroll position
+          window.scrollTo(scrollX, scrollY);
+
+          // Clean up after transition
+          setTimeout(() => {
+            html.classList.remove("direction-changing");
+            body.style.removeProperty("overflow-x");
+            body.style.removeProperty("width");
+            body.style.removeProperty("max-width");
+          }, 100);
+        });
+      } else {
+        // No direction change, just update attributes
+        html.lang = lang;
+        html.dir = isRTL ? "rtl" : "ltr";
+        html.classList.remove("dir-ltr", "dir-rtl");
+        html.classList.add(isRTL ? "dir-rtl" : "dir-ltr");
+      }
     }
   }, [lang]);
 

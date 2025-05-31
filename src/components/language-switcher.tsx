@@ -2,49 +2,34 @@
 "use client";
 
 import { usePathname, useRouter } from "next/navigation";
-import { languages } from "../../i18n/settings";
 import { Button } from "./ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "./ui/dropdown-menu";
-import { Languages } from "lucide-react";
 import { useTranslations } from "@/i18n/hooks";
 
 export function LanguageSwitcher() {
   const pathname = usePathname();
   const router = useRouter();
-  const { language } = useTranslations();
+  const { common } = useTranslations();
 
   const currentLang = pathname.split("/")[1];
+  const isArabic = currentLang === "ar";
 
-  const handleLanguageChange = (lng: string) => {
-    const newPathname = pathname.replace(`/${currentLang}`, `/${lng}`);
+  const handleLanguageToggle = () => {
+    const newLang = isArabic ? "en" : "ar";
+    const newPathname = pathname.replace(`/${currentLang}`, `/${newLang}`);
     router.push(newPathname);
   };
 
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="icon" className="cursor-pointer">
-          <Languages className="h-5 w-5" />
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
-        {languages.map((lng) => (
-          <DropdownMenuItem
-            key={lng}
-            onClick={() => handleLanguageChange(lng)}
-            className={`cursor-pointer ${
-              currentLang === lng ? "bg-accent" : ""
-            }`}
-          >
-            {lng === "en" ? "English" : "العربية"}
-          </DropdownMenuItem>
-        ))}
-      </DropdownMenuContent>
-    </DropdownMenu>
+    <Button
+      variant="ghost"
+      size="icon"
+      onClick={handleLanguageToggle}
+      className="cursor-pointer min-w-[2.5rem] font-semibold"
+    >
+      <span className={`text-sm font-bold ${isArabic ? "" : "font-roboto"}`}>
+        {isArabic ? "EN" : "ع"}
+      </span>
+      <span className="sr-only">{common.toggleLanguage}</span>
+    </Button>
   );
 }
