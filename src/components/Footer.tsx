@@ -38,7 +38,7 @@ const Footer = ({ lng }: FooterProps) => {
     { label: footer.services?.pickup, href: `/${lng}/services/pickup` },
     {
       label: footer.services?.workshops,
-      href: `/${lng}/services/workshops`,
+      href: `/${lng}/verified`,
     },
   ];
   const quickLinks = [
