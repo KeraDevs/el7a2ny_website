@@ -27,7 +27,6 @@ const Footer = ({ lng }: FooterProps) => {
   const { footer, navbar } = useTranslations();
   const currentYear = new Date().getFullYear();
   const services = [
-    { label: footer.services?.tuning, href: `/${lng}/services/tuning` },
     {
       label: footer.services?.maintenance,
       href: `/${lng}/services/maintenance`,
