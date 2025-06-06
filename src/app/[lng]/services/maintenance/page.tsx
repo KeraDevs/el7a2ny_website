@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -18,11 +20,33 @@ export default function MaintenanceServicePage({
   params,
 }: {
   params: Promise<{ lng: string }>;
-}) {
-  const { lng } = React.use(params);
+}) {  const { lng } = React.use(params);
   const isRtl = lng === "ar";
   const { t } = useTranslations();
-  const maintenance = t("maintenance") as any;
+  const maintenance = t("maintenance") as unknown as {
+    title: string;
+    subtitle: string;
+    description: string;
+    serviceLabel: string;
+    process: {
+      title: string;
+      subtitle: string;
+      steps: Array<{ title: string; description: string }>;
+    };
+    benefits: {
+      title: string;
+      items: Array<{ title: string; description: string }>;
+    };
+    services: {
+      title: string;
+      items: string[];
+    };
+    cta: {
+      title: string;
+      description: string;
+      button: string;
+    };
+  };
 
   // Icon arrays for dynamic rendering
   const processIcons = [Search, MessageSquare, CheckCircle, Wrench];
@@ -65,7 +89,7 @@ export default function MaintenanceServicePage({
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {maintenance.process.steps.map((step: any, index: number) => (
+            {maintenance.process.steps.map((step: { title: string; description: string }, index: number) => (
               <div key={index} className="relative group">
                 <div className="bg-card rounded-2xl p-8 border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-xl">
                   {" "}
@@ -103,7 +127,7 @@ export default function MaintenanceServicePage({
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {maintenance.benefits.items.map((benefit: any, index: number) => (
+            {maintenance.benefits.items.map((benefit: { title: string; description: string }, index: number) => (
               <div key={index} className="text-center group">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-primary to-orange-500 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
                   {React.createElement(benefitIcons[index], {
@@ -131,7 +155,7 @@ export default function MaintenanceServicePage({
               </h2>
               <div className="grid grid-cols-1 gap-4">
                 {maintenance.services.items.map(
-                  (service: any, index: number) => (
+                  (service: string, index: number) => (
                     <div
                       key={index}
                       className="flex items-center gap-3 p-4 bg-card rounded-xl border border-border/50"

@@ -1,7 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
-import { useTranslations } from "@/i18n/hooks";
+import React, { useState, useEffect, useCallback } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -25,16 +24,13 @@ export const HeroCarousel: React.FC<HeroCarouselProps> = ({
   interval = 5000,
 }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const { common } = useTranslations();
-
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
-  };
+  }, [slides.length]);
 
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
   };
-
   useEffect(() => {
     if (!autoplay) return;
 
@@ -43,7 +39,7 @@ export const HeroCarousel: React.FC<HeroCarouselProps> = ({
     }, interval);
 
     return () => clearInterval(timer);
-  }, [autoplay, interval]);
+  }, [autoplay, interval, nextSlide]);
   return (
     <div className="relative w-full h-[600px] lg:h-[700px] overflow-hidden">
       {slides.map((slide, index) => (

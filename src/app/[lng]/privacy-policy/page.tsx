@@ -6,7 +6,12 @@ import { useTranslations } from "@/i18n/hooks";
 
 const PrivacyPolicyPage = () => {
   const { t } = useTranslations();
-  const privacyPolicy = t("privacy-policy") as any;
+  const privacyPolicy = t("privacy-policy") as unknown as {
+    title: string;
+    lastUpdated: string;
+    sections: Array<{ title: string; content: string }>;
+    metadata: { title: string; description: string };
+  };
 
   const sections = [
     {

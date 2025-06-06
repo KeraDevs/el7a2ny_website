@@ -13,7 +13,12 @@ import { useTranslations } from "@/i18n/hooks";
 
 const TermsOfServicePage = () => {
   const { t } = useTranslations();
-  const termsOfService = t("terms-of-service") as any;
+  const termsOfService = t("terms-of-service") as unknown as {
+    title: string;
+    lastUpdated: string;
+    sections: Array<{ title: string; content: string }>;
+    metadata: { title: string; description: string };
+  };
 
   const sections = [
     {

@@ -50,11 +50,10 @@ export default async function Home({
   // Choose content based on language
   const slides = lng === "ar" ? arSlides : enSlides;
   const servicesTitle = lng === "ar" ? "خدماتنا" : "Our Services";
-
   // Use statically imported translation data
   const translation = lng === "ar" ? arServices : enServices;
   const services = (translation.services || []).map(
-    (service: any, index: number) => ({
+    (service: { id: number; title: string; description: string; ctaText: string; ctaLink: string; features: string[] }, index: number) => ({
       ...service,
       image: serviceStaticData[index]?.image || "/default-service.jpg",
       isVerified: serviceStaticData[index]?.isVerified ?? true,

@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -20,10 +22,33 @@ export default function EmergencyServicePage({
   params,
 }: {
   params: Promise<{ lng: string }>;
-}) {
-  const { lng } = React.use(params);
+}) {  const { lng } = React.use(params);
   const { t } = useTranslations();
-  const emergency = t("emergency") as any;
+  const emergency = t("emergency") as unknown as {
+    title: string;
+    subtitle: string;
+    description: string;
+    serviceLabel: string;
+    hotline: { title: string; number: string; availability: string };
+    process: {
+      title: string;
+      subtitle: string;
+      steps: Array<{ title: string; description: string }>;
+    };
+    benefits: {
+      title: string;
+      items: Array<{ title: string; description: string }>;
+    };
+    services: {
+      title: string;
+      items: string[];
+    };
+    cta: {
+      title: string;
+      description: string;
+      button: string;
+    };
+  };
   const isRtl = lng === "ar";
 
   // Icon arrays for dynamic rendering
@@ -55,7 +80,7 @@ export default function EmergencyServicePage({
             {/* Emergency Contact */}
             <div className="mt-8 p-6 bg-red-500/10 rounded-2xl border border-red-500/20 max-w-md mx-auto">
               <h3 className="text-lg font-semibold text-red-600 mb-2">
-                {emergency.hotline.label}
+                {emergency.hotline.title}
               </h3>
               <div className="text-2xl font-bold text-red-600 mb-2">
                 {emergency.hotline.number}
@@ -78,7 +103,7 @@ export default function EmergencyServicePage({
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {emergency.process.steps.map((step: any, index: number) => (
+            {emergency.process.steps.map((step: { title: string; description: string }, index: number) => (
               <div key={index} className="relative group">
                 <div className="bg-card rounded-2xl p-8 border border-border/50 hover:border-red-500/50 transition-all duration-300 hover:shadow-xl">
                   {" "}
@@ -115,7 +140,7 @@ export default function EmergencyServicePage({
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {emergency.benefits.items.map((benefit: any, index: number) => (
+            {emergency.benefits.items.map((benefit: { title: string; description: string }, index: number) => (
               <div key={index} className="text-center group">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
                   {React.createElement(benefitIcons[index], {
@@ -141,7 +166,7 @@ export default function EmergencyServicePage({
                 {emergency.services.title}
               </h2>
               <div className="grid grid-cols-1 gap-4">
-                {emergency.services.items.map((service: any, index: number) => (
+                {emergency.services.items.map((service: string, index: number) => (
                   <div
                     key={index}
                     className="flex items-center gap-3 p-4 bg-card rounded-xl border border-border/50"
