@@ -3,6 +3,7 @@ import { ClientProviders } from "@/components/providers/client-providers";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import ScrollToTopButton from "@/components/ScrollToTopButton";
 
 import { languages } from "../../../i18n/settings";
 import "../globals.css";
@@ -78,13 +79,13 @@ export default async function LanguageLayout({
   params: Promise<{ lng: string }>;
 }) {
   const { lng } = await params;
-
   return (
     <ClientProviders lang={lng}>
       <Navbar />
       <main>{children}</main>
       <Footer lng={lng} />
       <WhatsAppButton />
+      <ScrollToTopButton />
     </ClientProviders>
   );
 }

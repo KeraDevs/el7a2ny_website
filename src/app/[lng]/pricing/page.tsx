@@ -67,7 +67,7 @@ const PricingPage = async ({
       icon: Car,
     },
     {
-      name: isRtl ? "التطوير والتيونينغ" : "Performance Tuning",
+      name: isRtl ? "التطوير والتيونينج" : "Performance Tuning",
       price: isRtl ? "1299" : "1299",
       currency: isRtl ? "جنيه" : "EGP",
       period: isRtl ? "للخدمة" : "per service",
@@ -187,8 +187,7 @@ const PricingPage = async ({
                 <div className="text-center mb-8">
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
                     <plan.icon className="h-8 w-8 text-primary" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-foreground mb-2">
+                  </div>                  <h3 className="text-2xl font-bold text-foreground dark:text-white mb-2">
                     {plan.name}
                   </h3>
                   <p className="text-muted-foreground mb-4">
@@ -239,8 +238,7 @@ const PricingPage = async ({
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent">
               {isRtl ? "خدمات الطوارئ" : "Emergency Services"}
-            </h2>
-            <p className="text-xl text-muted-foreground">
+            </h2>            <p className="text-xl text-muted-foreground dark:text-white/90">
               {isRtl
                 ? "خدمات سريعة ومتاحة على مدار الساعة"
                 : "Fast services available 24/7"}
@@ -256,10 +254,11 @@ const PricingPage = async ({
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-red-500/10 rounded-full mb-4">
                   <Phone className="h-6 w-6 text-red-500" />
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-2">
+                
+                <h3 className="text-xl font-bold text-foreground mb-2 dark:text-white">
                   {service.name}
                 </h3>
-                <p className="text-muted-foreground mb-4">
+                <p className="text-muted-foreground mb-4 dark:text-white/90">
                   {service.description}
                 </p>
                 <div className="text-2xl font-bold text-red-500 mb-4">
@@ -299,8 +298,7 @@ const PricingPage = async ({
               >
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-full mb-4">
                   <Car className="h-6 w-6 text-primary" />
-                </div>
-                <h3 className="text-xl font-bold text-foreground mb-2">
+                </div>                <h3 className="text-xl font-bold text-foreground dark:text-white mb-2">
                   {service.name}
                 </h3>
                 <p className="text-muted-foreground mb-4">
@@ -366,8 +364,7 @@ const PricingPage = async ({
               >
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-full mb-4">
                   <item.icon className="h-6 w-6 text-primary" />
-                </div>
-                <h3 className="text-lg font-bold text-foreground mb-2">
+                </div>                <h3 className="text-lg font-bold text-foreground dark:text-white mb-2">
                   {item.title}
                 </h3>
                 <p className="text-sm text-muted-foreground">

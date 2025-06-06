@@ -54,22 +54,20 @@ const DetailedServiceCard: React.FC<DetailedServiceCardProps> = ({
             isRtl ? "text-right" : "text-left"
           )}
         >
-          <div className="space-y-6">
-            <div>
-              <h3 className="text-3xl lg:text-4xl font-bold mb-4 transition-colors group-hover:text-primary bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text">
+          <div className="space-y-6">            <div>
+              <h3 className="text-3xl lg:text-4xl font-bold mb-4 transition-colors group-hover:text-primary bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text dark:text-white">
                 {title}
               </h3>
-              <p className="text-xl font-medium text-primary mb-4">
+              <p className="text-xl font-medium text-primary mb-4 dark:text-white">
                 {description}
               </p>
-              <p className="text-muted-foreground text-lg leading-relaxed">
+              <p className="text-muted-foreground text-lg leading-relaxed dark:text-white/90">
                 {longDescription}
               </p>
             </div>
 
-            {features && features.length > 0 && (
-              <div>
-                <h4 className="text-lg font-semibold mb-4 text-foreground">
+            {features && features.length > 0 && (              <div>
+                <h4 className="text-lg font-semibold mb-4 text-foreground dark:text-white">
                   ✨ {lng === "ar" ? "الميزات الرئيسية" : "Key Features"}
                 </h4>
                 <ul className={cn("space-y-3", isRtl ? "pr-2" : "pl-2")}>
@@ -85,8 +83,7 @@ const DetailedServiceCard: React.FC<DetailedServiceCardProps> = ({
                     >
                       <div className="flex-shrink-0 w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center mt-0.5">
                         <Check className="text-primary" size={14} />
-                      </div>
-                      <span className="text-muted-foreground group-hover/item:text-foreground transition-colors">
+                      </div>                      <span className="text-muted-foreground group-hover/item:text-foreground transition-colors dark:text-white/90 dark:group-hover/item:text-white">
                         {feature}
                       </span>
                     </li>

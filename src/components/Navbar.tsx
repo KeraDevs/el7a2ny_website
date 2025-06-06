@@ -40,9 +40,8 @@ const Navbar = () => {
       label: navbar.contact,
       href: "/contact",
     },
-  ];
-  return (
-    <nav className="fixed top-0 w-full border-b bg-background/95 backdrop-blur-md z-50 shadow-sm">
+  ];  return (
+    <nav className="fixed top-0 w-full border-b bg-background/98 backdrop-blur-md z-50 shadow-sm dark:border-border/50">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         <Link href={`/${currentLang}`} className="group">
           {" "}
@@ -63,11 +62,11 @@ const Navbar = () => {
                   : `/${currentLang}${route.href}`
               }
               className={cn(
-                "text-sm font-medium transition-all duration-300 hover:text-primary relative group",
+                "text-sm font-medium transition-all duration-300 hover:text-primary relative group dark:text-white",
                 (route.href === "" && pathname === `/${currentLang}`) ||
                   pathname === `/${currentLang}${route.href}`
-                  ? "text-primary"
-                  : "text-muted-foreground hover:text-foreground"
+                  ? "text-primary dark:text-primary"
+                  : "text-muted-foreground hover:text-foreground dark:text-white dark:hover:text-primary"
               )}
             >
               {route.label}
@@ -88,13 +87,12 @@ const Navbar = () => {
             <Button
               asChild
               variant="default"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105"
+              className="bg-primary hover:bg-primary/90 text-white dark:text-white shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105"
             >
               <Link href={`/${currentLang}/auth`}>{navbar.login}</Link>
             </Button>
           </div>
-        </div>
-        <div className="md:hidden flex items-center gap-3">
+        </div>        <div className="md:hidden flex items-center gap-3">
           <ThemeToggle />
           <LanguageSwitcher />
           <DropdownMenu>
@@ -102,19 +100,19 @@ const Navbar = () => {
               <Button
                 variant="ghost"
                 size="icon"
-                className="hover:bg-accent transition-colors"
+                className="hover:bg-accent transition-colors dark:text-white dark:hover:bg-accent/20"
               >
                 <Menu className="h-5 w-5" />
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent
               align="end"
-              className="w-56 bg-background/95 backdrop-blur-md border-border"
+              className="w-56 bg-background/98 backdrop-blur-md border-border dark:bg-card/95"
             >
               {routes.map((route) => (
                 <DropdownMenuItem
                   key={route.href}
-                  className="hover:bg-accent transition-colors"
+                  className="hover:bg-accent transition-colors dark:hover:bg-accent/20"
                 >
                   <Link
                     href={
@@ -122,16 +120,16 @@ const Navbar = () => {
                         ? `/${currentLang}`
                         : `/${currentLang}${route.href}`
                     }
-                    className="w-full text-sm font-medium flex items-center gap-2"
+                    className="w-full text-sm font-medium flex items-center gap-2 dark:text-white"
                   >
                     {route.label}
                   </Link>
                 </DropdownMenuItem>
               ))}
-              <DropdownMenuItem className="hover:bg-accent transition-colors">
+              <DropdownMenuItem className="hover:bg-accent transition-colors dark:hover:bg-accent/20">
                 <Link
                   href={`/${currentLang}/auth`}
-                  className="w-full text-sm font-medium text-primary"
+                  className="w-full text-sm font-medium text-primary dark:text-primary"
                 >
                   {navbar.login}
                 </Link>

@@ -83,8 +83,7 @@ const PrivacyPolicyPage = () => {
                     <div className="flex-shrink-0 p-3 bg-gradient-to-r from-primary/10 to-orange-500/10 rounded-xl group-hover:from-primary/20 group-hover:to-orange-500/20 transition-all duration-300">
                       <section.icon className="h-6 w-6 text-primary" />
                     </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-semibold mb-4 text-foreground group-hover:text-primary transition-colors duration-300">
+                    <div className="flex-1">                      <h3 className="text-xl font-semibold mb-4 text-foreground dark:text-white group-hover:text-primary transition-colors duration-300">
                         {section.title}
                       </h3>
                       <div className="prose prose-gray dark:prose-invert">
@@ -99,8 +98,7 @@ const PrivacyPolicyPage = () => {
             </div>
 
             {/* Contact Section */}
-            <div className="mt-16 text-center p-8 bg-gradient-to-r from-muted/30 to-accent/20 rounded-2xl border border-border/50">
-              <h2 className="text-2xl font-bold mb-4 text-foreground">
+            <div className="mt-16 text-center p-8 bg-gradient-to-r from-muted/30 to-accent/20 rounded-2xl border border-border/50">              <h2 className="text-2xl font-bold mb-4 text-foreground dark:text-white">
                 {privacyPolicy.sections[5].title}
               </h2>
               <p className="text-muted-foreground mb-6">
@@ -109,12 +107,11 @@ const PrivacyPolicyPage = () => {
               <div className="flex flex-col sm:flex-row justify-center items-center gap-4 text-sm">
                 <div className="flex items-center gap-2">
                   <Mail className="h-4 w-4 text-primary" />
-                  <span className="text-foreground">privacy@el7a2ny.com</span>
+                  <span className="text-foreground dark:text-white">privacy@el7a2ny.com</span>
                 </div>
                 <div className="hidden sm:block w-px h-4 bg-border"></div>
                 <div className="flex items-center gap-2">
-                  <Shield className="h-4 w-4 text-primary" />
-                  <span className="text-foreground">
+                  <Shield className="h-4 w-4 text-primary" />                  <span className="text-foreground dark:text-white">
                     Data Protection Officer
                   </span>
                 </div>

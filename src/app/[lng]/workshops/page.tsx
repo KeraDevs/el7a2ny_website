@@ -250,8 +250,8 @@ const WorkshopsPage = async ({
                     </div>
                     <div className="absolute inset-0 bg-gradient-to-r from-primary to-orange-500 rounded-2xl blur-lg opacity-0 group-hover:opacity-50 transition-opacity duration-500" />
                   </div>
-
-                  <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
+                  
+                  <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300 dark:text-white">
                     {benefit.title}
                   </h3>
 
@@ -259,12 +259,12 @@ const WorkshopsPage = async ({
                     <div className="text-2xl font-bold text-primary mb-1">
                       {benefit.value}
                     </div>
-                    <div className="text-xs text-muted-foreground mb-3">
+                    <div className="text-xs text-muted-foreground mb-3 dark:text-white/80">
                       {benefit.metric}
                     </div>
                   </div>
 
-                  <p className="text-sm text-muted-foreground leading-relaxed">
+                  <p className="text-sm text-muted-foreground leading-relaxed dark:text-white/90">
                     {benefit.description}
                   </p>
                 </div>
@@ -306,9 +306,7 @@ const WorkshopsPage = async ({
                       <div className="absolute -top-3 -right-3 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center text-sm font-bold">
                         {step.step}
                       </div>
-                    </div>
-
-                    <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
+                    </div>                    <h3 className="text-xl font-bold text-foreground dark:text-white group-hover:text-primary transition-colors duration-300">
                       {step.title}
                     </h3>
 
@@ -361,8 +359,7 @@ const WorkshopsPage = async ({
                   <div className="text-center">
                     <div className="text-sm font-bold text-primary mb-2 bg-primary/10 px-3 py-1 rounded-full">
                       {feature.highlight}
-                    </div>
-                    <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors duration-300 mb-3">
+                    </div>                    <h3 className="text-lg font-bold text-foreground dark:text-white group-hover:text-primary transition-colors duration-300 mb-3">
                       {feature.title}
                     </h3>
                   </div>

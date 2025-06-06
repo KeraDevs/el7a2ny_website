@@ -71,15 +71,14 @@ export default async function Home({
         <HeroCarousel slides={slides} />
         <section className="py-12 gradient-hero">
           <ServiceSection services={services} title={servicesTitle} lng={lng} />
-        </section>
-        {/* Detailed Services Section */}
-        <section className="py-16 px-4 md:px-6 bg-gradient-to-br from-background via-muted/20 to-accent/10">
+        </section>        {/* Detailed Services Section */}
+        <section className="py-16 px-4 md:px-6 bg-gradient-to-br from-background via-muted/20 to-accent/10 dark:from-background dark:via-card/30 dark:to-accent/20">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent leading-[1.3] md:leading-[1.35]">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent leading-[1.3] md:leading-[1.35] dark:from-white dark:to-orange-400">
                 {lng === "ar" ? "خدماتنا المتخصصة" : "Our Specialized Services"}
               </h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed dark:text-white/90">
                 {lng === "ar"
                   ? "احصل على عروض أسعار من ورش معتمدة متعددة واختر أفضل خدمة بأفضل سعر. تقييمات الورش واضحة وشفافة لمساعدتك في اتخاذ القرار الصحيح"
                   : "Receive offers from multiple verified workshops and choose the best service at the best price. Workshop ratings are clear and transparent to help you make the right decision"}
@@ -133,59 +132,53 @@ export default async function Home({
               ))}
             </div>
           </div>
-        </section>
-        {/* Call-to-Action Section */}
-        <section className="py-16 bg-gradient-to-r from-primary/10 via-accent/20 to-primary/10 relative overflow-hidden">
+        </section>        {/* Call-to-Action Section */}
+        <section className="py-16 bg-gradient-to-r from-primary/10 via-accent/20 to-primary/10 relative overflow-hidden dark:from-background dark:via-card/30 dark:to-accent/20">
           {/* Background decorations */}
-          <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0 opacity-5 dark:opacity-10">
             <div className="absolute top-10 left-10 text-6xl">🔧</div>
             <div className="absolute top-20 right-20 text-5xl">🚗</div>
             <div className="absolute bottom-10 left-1/4 text-4xl">⚙️</div>
-          </div>
-
-          <div className="max-w-4xl mx-auto text-center px-4 md:px-6 relative">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-orange-500 bg-clip-text text-transparent leading-[1.3] md:leading-[1.35]">
+          </div>          <div className="max-w-4xl mx-auto text-center px-4 md:px-6 relative">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-orange-500 bg-clip-text text-transparent leading-[1.3] md:leading-[1.35] dark:from-orange-400 dark:to-orange-300">
               {lng === "ar"
                 ? "جاهز لخدمة سيارتك؟"
                 : "Ready to Service Your Car?"}
             </h2>
-            <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+            <p className="text-xl text-muted-foreground mb-8 leading-relaxed dark:text-white/90">
               {lng === "ar"
                 ? "اطلب خدمة واحصل على عروض أسعار من ورش معتمدة متعددة. قارن الأسعار والتقييمات واختر الأفضل لك"
                 : "Request a service and receive price offers from multiple verified workshops. Compare prices and ratings to choose what's best for you"}
             </p>
             {/* Enhanced features grid */}
-            <div className="grid md:grid-cols-3 gap-6 mb-8">
-              <div className="p-4 bg-white/10 dark:bg-black/20 backdrop-blur-sm rounded-xl border border-white/20 dark:border-white/10">
+            <div className="grid md:grid-cols-3 gap-6 mb-8">              <div className="p-4 bg-white/10 dark:bg-black/20 backdrop-blur-sm rounded-xl border border-white/20 dark:border-white/10">
                 <div className="text-3xl mb-2">💰</div>
-                <h3 className="font-semibold mb-1">
+                <h3 className="font-semibold mb-1 dark:text-white">
                   {lng === "ar" ? "عروض متعددة" : "Multiple Offers"}
                 </h3>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-sm text-muted-foreground dark:text-white/70">
                   {lng === "ar"
                     ? "قارن الأسعار واختر الأفضل"
                     : "Compare prices and choose the best"}
                 </p>
-              </div>
-              <div className="p-4 bg-white/10 dark:bg-black/20 backdrop-blur-sm rounded-xl border border-white/20 dark:border-white/10">
+              </div>              <div className="p-4 bg-white/10 dark:bg-black/20 backdrop-blur-sm rounded-xl border border-white/20 dark:border-white/10">
                 <div className="text-3xl mb-2">⭐</div>
-                <h3 className="font-semibold mb-1">
+                <h3 className="font-semibold mb-1 dark:text-white">
                   {lng === "ar" ? "تقييمات شفافة" : "Transparent Ratings"}
                 </h3>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-sm text-muted-foreground dark:text-white/70">
                   {lng === "ar"
                     ? "تقييمات حقيقية من العملاء"
                     : "Real customer reviews and ratings"}
                 </p>
-              </div>
-              <div className="p-4 bg-white/10 dark:bg-black/20 backdrop-blur-sm rounded-xl border border-white/20 dark:border-white/10">
+              </div>              <div className="p-4 bg-white/10 dark:bg-black/20 backdrop-blur-sm rounded-xl border border-white/20 dark:border-white/10">
                 <div className="text-3xl mb-2">
                   <MdOutlineVerified className="h-8 w-8 text-blue-500 mx-auto" />
                 </div>
-                <h3 className="font-semibold mb-1">
+                <h3 className="font-semibold mb-1 dark:text-white">
                   {lng === "ar" ? "خدمة مميزة" : "Premium Service"}
                 </h3>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-sm text-muted-foreground dark:text-white/70">
                   {lng === "ar"
                     ? "ورش موثقة ومعتمدة فقط"
                     : "Only authenticated and verified workshops"}

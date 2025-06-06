@@ -43,14 +43,13 @@ export default function EmergencyServicePage({
               <span className="text-red-500 font-medium">
                 {emergency.serviceLabel}
               </span>
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-foreground via-red-500 to-orange-500 bg-clip-text text-transparent">
+            </div>            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-foreground via-red-500 to-orange-500 bg-clip-text text-transparent dark:text-white">
               {emergency.title}
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto mb-8">
+            <p className="text-xl md:text-2xl text-muted-foreground dark:text-white/90 max-w-4xl mx-auto mb-8">
               {emergency.subtitle}
             </p>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-lg text-muted-foreground dark:text-white/80 max-w-3xl mx-auto">
               {emergency.description}
             </p>
             {/* Emergency Contact */}
@@ -60,8 +59,7 @@ export default function EmergencyServicePage({
               </h3>
               <div className="text-2xl font-bold text-red-600 mb-2">
                 {emergency.hotline.number}
-              </div>
-              <p className="text-sm text-muted-foreground">
+              </div>              <p className="text-sm text-muted-foreground dark:text-white/70">
                 {emergency.hotline.availability}
               </p>
             </div>
@@ -72,11 +70,10 @@ export default function EmergencyServicePage({
       <section className="py-20 px-4 bg-background">
         <div className="max-w-7xl mx-auto">
           {" "}
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
+          <div className="text-center mb-16">            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground dark:text-white">
               {emergency.process.title}
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl text-muted-foreground dark:text-white/90 max-w-3xl mx-auto">
               {emergency.process.subtitle}
             </p>
           </div>
@@ -90,11 +87,10 @@ export default function EmergencyServicePage({
                       {React.createElement(processIcons[index], {
                         className: "h-8 w-8 text-white",
                       })}
-                    </div>
-                    <h3 className="text-xl font-semibold mb-4 text-foreground">
+                    </div>                    <h3 className="text-xl font-semibold mb-4 text-foreground dark:text-white">
                       {step.title}
                     </h3>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <p className="text-muted-foreground dark:text-white/80 leading-relaxed">
                       {step.description}
                     </p>
                   </div>
@@ -114,8 +110,7 @@ export default function EmergencyServicePage({
       <section className="py-20 px-4 bg-muted/30">
         <div className="max-w-7xl mx-auto">
           {" "}
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
+          <div className="text-center mb-16">            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground dark:text-white">
               {emergency.benefits.title}
             </h2>
           </div>
@@ -126,11 +121,10 @@ export default function EmergencyServicePage({
                   {React.createElement(benefitIcons[index], {
                     className: "h-8 w-8 text-white",
                   })}
-                </div>
-                <h3 className="text-xl font-semibold mb-4 text-foreground">
+                </div>                <h3 className="text-xl font-semibold mb-4 text-foreground dark:text-white">
                   {benefit.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground dark:text-white/80 leading-relaxed">
                   {benefit.description}
                 </p>
               </div>
@@ -143,8 +137,7 @@ export default function EmergencyServicePage({
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {" "}
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
+            <div>              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground dark:text-white">
                 {emergency.services.title}
               </h2>
               <div className="grid grid-cols-1 gap-4">
@@ -153,8 +146,7 @@ export default function EmergencyServicePage({
                     key={index}
                     className="flex items-center gap-3 p-4 bg-card rounded-xl border border-border/50"
                   >
-                    <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
-                    <span className="text-foreground font-medium">
+                    <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />                    <span className="text-foreground dark:text-white font-medium">
                       {service}
                     </span>
                   </div>
@@ -164,11 +156,10 @@ export default function EmergencyServicePage({
             <div className="relative">
               <div className="bg-gradient-to-br from-red-500/10 to-orange-500/10 rounded-3xl p-8 border border-border/50">
                 <div className="text-center">
-                  <AlertTriangle className="h-20 w-20 mx-auto mb-6 text-red-500" />
-                  <h3 className="text-2xl font-bold mb-4 text-foreground">
+                  <AlertTriangle className="h-20 w-20 mx-auto mb-6 text-red-500" />                  <h3 className="text-2xl font-bold mb-4 text-foreground dark:text-white">
                     {lng === "ar" ? "مساعدة فورية" : "Immediate Help"}
                   </h3>
-                  <p className="text-muted-foreground mb-6">
+                  <p className="text-muted-foreground dark:text-white/80 mb-6">
                     {lng === "ar"
                       ? "فريقنا جاهز للاستجابة لحالات الطوارئ"
                       : "Our team is ready to respond to emergencies"}

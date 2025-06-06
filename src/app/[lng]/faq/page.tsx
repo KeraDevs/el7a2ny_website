@@ -194,8 +194,7 @@ const FAQPage = async ({ params }: { params: Promise<{ lng: string }> }) => {
                 <div className="flex items-center gap-4 mb-8">
                   <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg">
                     <category.icon className="h-6 w-6 text-primary" />
-                  </div>
-                  <h2 className="text-3xl font-bold text-foreground">
+                  </div>                  <h2 className="text-3xl font-bold text-foreground dark:text-white">
                     {category.title}
                   </h2>
                 </div>
@@ -207,8 +206,7 @@ const FAQPage = async ({ params }: { params: Promise<{ lng: string }> }) => {
                       key={faqIndex}
                       className="group bg-card border border-border/50 rounded-xl hover:shadow-lg transition-all duration-300"
                     >
-                      <summary className="flex items-center justify-between p-6 cursor-pointer select-none">
-                        <h3 className="text-lg font-semibold text-foreground pr-4">
+                      <summary className="flex items-center justify-between p-6 cursor-pointer select-none">                        <h3 className="text-lg font-semibold text-foreground dark:text-white pr-4">
                           {faq.question}
                         </h3>
                         <ChevronDown className="h-5 w-5 text-muted-foreground group-open:rotate-180 transition-transform duration-300 flex-shrink-0" />
@@ -248,8 +246,7 @@ const FAQPage = async ({ params }: { params: Promise<{ lng: string }> }) => {
             <div className="text-center p-6 rounded-xl bg-card border border-border/50 hover:shadow-lg transition-all duration-300">
               <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-full mb-4">
                 <Phone className="h-6 w-6 text-primary" />
-              </div>
-              <h3 className="text-lg font-bold text-foreground mb-2">
+              </div>              <h3 className="text-lg font-bold text-foreground dark:text-white mb-2">
                 {isRtl ? "اتصل بنا" : "Call Us"}
               </h3>
               <p className="text-muted-foreground mb-4">
@@ -264,8 +261,7 @@ const FAQPage = async ({ params }: { params: Promise<{ lng: string }> }) => {
             <div className="text-center p-6 rounded-xl bg-card border border-border/50 hover:shadow-lg transition-all duration-300">
               <div className="inline-flex items-center justify-center w-12 h-12 bg-green-500/10 rounded-full mb-4">
                 <MessageSquare className="h-6 w-6 text-green-500" />
-              </div>
-              <h3 className="text-lg font-bold text-foreground mb-2">
+              </div>              <h3 className="text-lg font-bold text-foreground dark:text-white mb-2">
                 {isRtl ? "واتساب" : "WhatsApp"}
               </h3>
               <p className="text-muted-foreground mb-4">
@@ -283,8 +279,7 @@ const FAQPage = async ({ params }: { params: Promise<{ lng: string }> }) => {
             <div className="text-center p-6 rounded-xl bg-card border border-border/50 hover:shadow-lg transition-all duration-300">
               <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-500/10 rounded-full mb-4">
                 <MessageSquare className="h-6 w-6 text-blue-500" />
-              </div>
-              <h3 className="text-lg font-bold text-foreground mb-2">
+              </div>              <h3 className="text-lg font-bold text-foreground dark:text-white mb-2">
                 {isRtl ? "البريد الإلكتروني" : "Email"}
               </h3>
               <p className="text-muted-foreground mb-4">

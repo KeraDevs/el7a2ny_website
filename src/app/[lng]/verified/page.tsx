@@ -346,9 +346,7 @@ const VerificationPage = async ({
                       <item.icon className="h-8 w-8 text-white" />
                     </div>
                     <div className="absolute inset-0 bg-gradient-to-r from-primary to-orange-500 rounded-2xl blur-lg opacity-0 group-hover:opacity-50 transition-opacity duration-500" />
-                  </div>
-
-                  <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
+                  </div>                  <h3 className="text-xl font-bold text-foreground dark:text-white group-hover:text-primary transition-colors duration-300">
                     {item.title}
                   </h3>
 
@@ -397,8 +395,7 @@ const VerificationPage = async ({
                       </div>
                     </div>
 
-                    <div className="text-center">
-                      <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300 mb-2">
+                    <div className="text-center">                      <h3 className="text-xl font-bold text-foreground dark:text-white group-hover:text-primary transition-colors duration-300 mb-2">
                         {step.title}
                       </h3>
                       <div className="text-sm text-primary font-medium bg-primary/10 px-3 py-1 rounded-full inline-block mb-4">
@@ -456,8 +453,7 @@ const VerificationPage = async ({
                     <div className="p-4 bg-gradient-to-r from-primary to-orange-500 rounded-xl group-hover:scale-110 transition-transform duration-500 flex-shrink-0">
                       <criteria.icon className="h-6 w-6 text-white" />
                     </div>
-                    <div className="flex-1 min-w-0">
-                      <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors duration-300 leading-tight">
+                    <div className="flex-1 min-w-0">                      <h3 className="text-lg font-bold text-foreground dark:text-white group-hover:text-primary transition-colors duration-300 leading-tight">
                         {criteria.title}
                       </h3>
                     </div>
@@ -521,9 +517,7 @@ const VerificationPage = async ({
                       <benefit.icon className="h-8 w-8 text-white" />
                     </div>
                     <div className="absolute inset-0 bg-gradient-to-r from-primary to-orange-500 rounded-2xl blur-lg opacity-0 group-hover:opacity-50 transition-opacity duration-500" />
-                  </div>
-
-                  <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
+                  </div>                  <h3 className="text-xl font-bold text-foreground dark:text-white group-hover:text-primary transition-colors duration-300">
                     {benefit.title}
                   </h3>
 

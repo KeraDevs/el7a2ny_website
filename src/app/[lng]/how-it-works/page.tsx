@@ -167,9 +167,7 @@ const HowItWorksPage = async ({
                     <div className="p-4 bg-gradient-to-r from-primary to-orange-500 rounded-xl">
                       <step.icon className="h-6 w-6 text-white" />
                     </div>
-                  </div>
-
-                  <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+                  </div>                  <h2 className="text-3xl md:text-4xl font-bold text-foreground dark:text-white">
                     {step.title}
                   </h2>
 
@@ -244,9 +242,7 @@ const HowItWorksPage = async ({
                 <div className="text-center space-y-4">
                   <div className="mx-auto w-16 h-16 bg-gradient-to-r from-primary to-orange-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     <benefit.icon className="h-8 w-8 text-white" />
-                  </div>
-
-                  <h3 className="text-lg font-semibold text-foreground">
+                  </div>                  <h3 className="text-lg font-semibold text-foreground dark:text-white">
                     {benefit.title}
                   </h3>
 

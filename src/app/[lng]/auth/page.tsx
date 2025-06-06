@@ -59,8 +59,7 @@ const AuthPage = async ({ params }: { params: Promise<{ lng: string }> }) => {
                     <User className="h-16 w-16 text-white" />
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-600 rounded-3xl blur-lg opacity-0 group-hover:opacity-50 transition-opacity duration-500" />
-                </div>
-                <h2 className="text-3xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
+                </div>                <h2 className="text-3xl font-bold text-foreground dark:text-white group-hover:text-primary transition-colors duration-300">
                   {isRtl ? "العملاء" : "Customers"}
                 </h2>
                 <p className="text-muted-foreground leading-relaxed">
@@ -122,8 +121,7 @@ const AuthPage = async ({ params }: { params: Promise<{ lng: string }> }) => {
                   <div className="absolute -top-2 -right-2 bg-blue-500 p-2 rounded-full shadow-lg">
                     <MdOutlineVerified className="h-6 w-6 text-white" />
                   </div>
-                </div>
-                <h2 className="text-3xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
+                </div>                <h2 className="text-3xl font-bold text-foreground dark:text-white group-hover:text-primary transition-colors duration-300">
                   {isRtl ? "الورش والفنيين" : "Workshops & Workers"}
                 </h2>
                 <p className="text-muted-foreground leading-relaxed">
@@ -179,8 +177,7 @@ const AuthPage = async ({ params }: { params: Promise<{ lng: string }> }) => {
             </div>
           </div>
           {/* Benefits Section */}
-          <div className="mt-20 text-center">
-            <h3 className="text-3xl font-bold mb-8 text-foreground">
+          <div className="mt-20 text-center">            <h3 className="text-3xl font-bold mb-8 text-foreground dark:text-white">
               {isRtl ? "لماذا تختار الحقني؟" : "Why Choose El7a2ny?"}
             </h3>
 
@@ -216,8 +213,8 @@ const AuthPage = async ({ params }: { params: Promise<{ lng: string }> }) => {
                 </h4>
                 <p className="text-sm text-muted-foreground">
                   {isRtl
-                    ? "خدمة في جميع أنحاء المدينة"
-                    : "Service coverage across the city"}
+                    ? "خدماتنا في القاهرة، الجيزة والإسكندرية والساحل الشمالي والجونة"
+                    : "Service coverage across Cairo, Giza, Alexandria, North Coast, and El Gouna"}
                 </p>
               </div>
             </div>

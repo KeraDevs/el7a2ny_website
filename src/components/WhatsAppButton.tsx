@@ -15,7 +15,7 @@ const WhatsAppButton = () => {
   return (
     <button
       onClick={handleWhatsAppClick}
-      className="whatsapp-float group"
+      className="whatsapp-float group cursor-pointer"
       aria-label="Contact us on WhatsApp"
     >
       {/* WhatsApp SVG Icon */}

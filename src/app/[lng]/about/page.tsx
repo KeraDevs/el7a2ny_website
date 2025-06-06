@@ -155,8 +155,7 @@ const AboutPage = async ({ params }: { params: Promise<{ lng: string }> }) => {
               >
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4 group-hover:bg-primary/20 transition-colors duration-300">
                   <stat.icon className="h-8 w-8 text-primary" />
-                </div>
-                <h3 className="text-3xl font-bold text-foreground mb-2">
+                </div>                <h3 className="text-3xl font-bold text-foreground dark:text-white mb-2">
                   {stat.number}
                 </h3>
                 <p className="text-lg font-semibold text-primary mb-1">
@@ -185,9 +184,7 @@ const AboutPage = async ({ params }: { params: Promise<{ lng: string }> }) => {
                     ? "توفير خدمات صيانة السيارات عالية الجودة من خلال شبكة من الورش المعتمدة والموثوقة، مع ضمان تجربة عملاء استثنائية وأسعار عادلة وشفافة."
                     : "To provide high-quality automotive maintenance services through a network of verified and trusted workshops, ensuring exceptional customer experience with fair and transparent pricing."}
                 </p>
-              </div>
-
-              <div className="space-y-4">
+              </div>              <div className="space-y-4">
                 {[
                   isRtl ? "جودة الخدمة المضمونة" : "Guaranteed service quality",
                   isRtl ? "أسعار عادلة وشفافة" : "Fair and transparent pricing",
@@ -195,7 +192,7 @@ const AboutPage = async ({ params }: { params: Promise<{ lng: string }> }) => {
                 ].map((item, index) => (
                   <div key={index} className="flex items-center gap-3">
                     <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                    <span className="text-muted-foreground">{item}</span>
+                    <span className="text-muted-foreground dark:text-white/90">{item}</span>
                   </div>
                 ))}
               </div>
@@ -203,11 +200,10 @@ const AboutPage = async ({ params }: { params: Promise<{ lng: string }> }) => {
 
             {/* Vision */}
             <div className="space-y-6">
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent">
+              <div>                <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent dark:text-white">
                   {isRtl ? "رؤيتنا" : "Our Vision"}
                 </h2>
-                <p className="text-lg text-muted-foreground leading-relaxed">
+                <p className="text-lg text-muted-foreground leading-relaxed dark:text-white/90">
                   {isRtl
                     ? "أن نصبح المنصة الرائدة في المنطقة لخدمات السيارات، معروفة بالابتكار والجودة والموثوقية، ونساهم في تطوير صناعة صيانة السيارات."
                     : "To become the leading platform in the region for automotive services, known for innovation, quality, and reliability, contributing to the development of the automotive maintenance industry."}
@@ -258,8 +254,7 @@ const AboutPage = async ({ params }: { params: Promise<{ lng: string }> }) => {
               >
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-6 group-hover:bg-primary/20 transition-colors duration-300">
                   <step.icon className="h-8 w-8 text-primary" />
-                </div>
-                <h3 className="text-2xl font-bold text-foreground mb-4">
+                </div>                <h3 className="text-2xl font-bold text-foreground dark:text-white mb-4">
                   {step.title}
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -292,8 +287,7 @@ const AboutPage = async ({ params }: { params: Promise<{ lng: string }> }) => {
               >
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-6 group-hover:bg-primary/20 transition-colors duration-300">
                   <value.icon className="h-8 w-8 text-primary" />
-                </div>
-                <h3 className="text-2xl font-bold text-foreground mb-4">
+                </div>                <h3 className="text-2xl font-bold text-foreground dark:text-white mb-4">
                   {value.title}
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">

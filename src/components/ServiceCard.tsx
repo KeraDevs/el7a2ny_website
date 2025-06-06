@@ -67,11 +67,11 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       <div className="p-6 relative">
         {/* Decorative line */}
         <div className="absolute top-0 left-0 w-0 h-1 bg-gradient-to-r from-primary to-orange-500 group-hover:w-full transition-all duration-500" />
-
-        <h3 className="text-xl font-bold mb-3 text-foreground group-hover:text-primary transition-colors duration-300">
+        
+        <h3 className="text-xl font-bold mb-3 text-foreground group-hover:text-primary transition-colors duration-300 dark:text-white">
           {title}
         </h3>
-        <p className="text-muted-foreground mb-6 leading-relaxed">
+        <p className="text-muted-foreground mb-6 leading-relaxed dark:text-white/90">
           {description}
         </p>
 

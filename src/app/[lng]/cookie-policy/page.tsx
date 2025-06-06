@@ -195,24 +195,21 @@ const CookiePolicyPage = async ({
                   <div className="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
                     <cookie.icon className="h-6 w-6 text-primary" />
                   </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold text-foreground mb-3">
+                  <div className="flex-1">                    <h3 className="text-xl font-bold text-foreground dark:text-white mb-3">
                       {cookie.type}
                     </h3>
                     <p className="text-muted-foreground mb-4 leading-relaxed">
                       {cookie.description}
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div>
-                        <h4 className="font-semibold text-foreground mb-2">
+                      <div>                        <h4 className="font-semibold text-foreground dark:text-white mb-2">
                           {isRtl ? "أمثلة:" : "Examples:"}
                         </h4>
                         <p className="text-sm text-muted-foreground">
                           {cookie.examples}
                         </p>
                       </div>
-                      <div>
-                        <h4 className="font-semibold text-foreground mb-2">
+                      <div>                        <h4 className="font-semibold text-foreground dark:text-white mb-2">
                           {isRtl ? "مدة الحفظ:" : "Duration:"}
                         </h4>
                         <p className="text-sm text-muted-foreground">
@@ -250,8 +247,7 @@ const CookiePolicyPage = async ({
               >
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-6">
                   <control.icon className="h-8 w-8 text-primary" />
-                </div>
-                <h3 className="text-xl font-bold text-foreground mb-4">
+                </div>                <h3 className="text-xl font-bold text-foreground dark:text-white mb-4">
                   {control.title}
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -284,7 +280,7 @@ const CookiePolicyPage = async ({
                 className="flex items-center justify-between p-6 rounded-xl bg-card border border-border/50"
               >
                 <div>
-                  <h3 className="text-lg font-bold text-foreground mb-2">
+                  <h3 className="text-lg font-bold text-foreground mb-2 dark:text-white">
                     {service.name}
                   </h3>
                   <p className="text-muted-foreground">{service.purpose}</p>

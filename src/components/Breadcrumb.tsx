@@ -40,8 +40,7 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ items, isRtl = false }) => {
               />
             )}
 
-            {index === items.length - 1 ? (
-              <span className="font-medium text-foreground" aria-current="page">
+            {index === items.length - 1 ? (              <span className="font-medium text-foreground dark:text-white" aria-current="page">
                 {item.label}
               </span>
             ) : (

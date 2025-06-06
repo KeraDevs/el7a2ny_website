@@ -82,23 +82,22 @@ const ContactPage = async ({
                 ? "نحن هنا لمساعدتك في جميع احتياجات سيارتك. اطلب خدمة واحصل على عروض أسعار من ورش معتمدة متعددة مع تقييمات شفافة لاتخاذ القرار الصحيح."
                 : "We're here to help with all your automotive needs. Request a service and receive offers from multiple verified workshops with transparent ratings to make the right decision."}
             </p>
-            {/* Contact stats */}
-            <div className="flex flex-wrap justify-center gap-8 mt-12 animate-fade-in-up delay-500">
+            {/* Contact stats */}            <div className="flex flex-wrap justify-center gap-8 mt-12 animate-fade-in-up delay-500">
               <div className="text-center">
                 <div className="text-3xl font-bold text-primary">24/7</div>
-                <div className="text-sm text-muted-foreground">
+                <div className="text-sm text-muted-foreground dark:text-white/80">
                   {isRtl ? "دعم فني" : "Support"}
                 </div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-primary">500+</div>
-                <div className="text-sm text-muted-foreground">
+                <div className="text-sm text-muted-foreground dark:text-white/80">
                   {isRtl ? "ورشة معتمدة" : "Workshops"}
                 </div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-primary">1000+</div>
-                <div className="text-sm text-muted-foreground">
+                <div className="text-sm text-muted-foreground dark:text-white/80">
                   {isRtl ? "عميل راضي" : "Happy Clients"}
                 </div>
               </div>
@@ -124,8 +123,7 @@ const ContactPage = async ({
 
           <form className="space-y-6 bg-card/50 backdrop-blur-sm rounded-2xl p-8 border border-border/50 shadow-xl animate-fade-in-up delay-300">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="group">
-                <label className="block text-sm font-semibold text-foreground mb-3 group-focus-within:text-primary transition-colors">
+              <div className="group">                <label className="block text-sm font-semibold text-foreground dark:text-white mb-3 group-focus-within:text-primary transition-colors">
                   {isRtl ? "الاسم الأول" : "First Name"}
                 </label>
                 <input
@@ -136,8 +134,7 @@ const ContactPage = async ({
                   }
                 />
               </div>
-              <div className="group">
-                <label className="block text-sm font-semibold text-foreground mb-3 group-focus-within:text-primary transition-colors">
+              <div className="group">                <label className="block text-sm font-semibold text-foreground dark:text-white mb-3 group-focus-within:text-primary transition-colors">
                   {isRtl ? "الاسم الأخير" : "Last Name"}
                 </label>
                 <input
@@ -149,8 +146,7 @@ const ContactPage = async ({
                 />
               </div>
             </div>
-            <div className="group">
-              <label className="block text-sm font-semibold text-foreground mb-3 group-focus-within:text-primary transition-colors">
+            <div className="group">              <label className="block text-sm font-semibold text-foreground dark:text-white mb-3 group-focus-within:text-primary transition-colors">
                 {isRtl ? "البريد الإلكتروني" : "Email"}
               </label>
               <input
@@ -161,8 +157,7 @@ const ContactPage = async ({
                 }
               />
             </div>
-            <div className="group">
-              <label className="block text-sm font-semibold text-foreground mb-3 group-focus-within:text-primary transition-colors">
+            <div className="group">              <label className="block text-sm font-semibold text-foreground dark:text-white mb-3 group-focus-within:text-primary transition-colors">
                 {isRtl ? "رقم الهاتف" : "Phone Number"}
               </label>
               <input
@@ -173,8 +168,7 @@ const ContactPage = async ({
                 }
               />
             </div>
-            <div className="group">
-              <label className="block text-sm font-semibold text-foreground mb-3 group-focus-within:text-primary transition-colors">
+            <div className="group">              <label className="block text-sm font-semibold text-foreground dark:text-white mb-3 group-focus-within:text-primary transition-colors">
                 {isRtl ? "نوع الخدمة" : "Service Type"}
               </label>
               <select className="w-full px-4 py-4 bg-card border-2 border-border rounded-xl focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/20 transition-all duration-300 hover:border-primary/50">
@@ -197,8 +191,7 @@ const ContactPage = async ({
                 </option>
               </select>
             </div>
-            <div className="group">
-              <label className="block text-sm font-semibold text-foreground mb-3 group-focus-within:text-primary transition-colors">
+            <div className="group">              <label className="block text-sm font-semibold text-foreground dark:text-white mb-3 group-focus-within:text-primary transition-colors">
                 {isRtl ? "الرسالة" : "Message"}
               </label>
               <textarea
@@ -242,9 +235,7 @@ const ContactPage = async ({
                       <info.icon className="h-8 w-8 text-white" />
                     </div>
                     <div className="absolute inset-0 bg-gradient-to-r from-primary to-orange-500 rounded-2xl blur-lg opacity-0 group-hover:opacity-50 transition-opacity duration-500" />
-                  </div>
-
-                  <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
+                  </div>                  <h3 className="text-xl font-bold text-foreground dark:text-white group-hover:text-primary transition-colors duration-300">
                     {info.title}
                   </h3>
 

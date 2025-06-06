@@ -139,8 +139,7 @@ const RefundPolicyPage = async ({
               >
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg mb-6">
                   <condition.icon className="h-6 w-6 text-primary" />
-                </div>
-                <h3 className="text-xl font-bold text-foreground mb-4">
+                </div>                <h3 className="text-xl font-bold text-foreground dark:text-white mb-4">
                   {condition.title}
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -175,8 +174,7 @@ const RefundPolicyPage = async ({
                 <div className="flex-shrink-0 w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold text-lg">
                   {step.step}
                 </div>
-                <div className="flex-1">
-                  <h3 className="text-xl font-bold text-foreground mb-2">
+                <div className="flex-1">                  <h3 className="text-xl font-bold text-foreground dark:text-white mb-2">
                     {step.title}
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
