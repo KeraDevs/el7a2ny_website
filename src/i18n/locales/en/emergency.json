@@ -1,0 +1,74 @@
+{
+  "title": "24/7 Emergency Car Service",
+  "subtitle": "Fast Response When You Need Help Most",
+  "description": "Stranded on the road? Get immediate assistance from our network of emergency service providers. Available 24/7 across the city with rapid response times.",
+  "serviceLabel": "Emergency Service",
+  "hotline": {
+    "title": "Emergency Hotline",
+    "number": "+20 123 456 789",
+    "availability": "Available 24/7"
+  },
+  "process": {
+    "title": "How Our Emergency Service Works",
+    "subtitle": "Quick and reliable assistance when you need it most",
+    "steps": [
+      {
+        "title": "1. Call for Help",
+        "description": "Contact us immediately through our hotline or app. Share your location and describe the emergency situation."
+      },
+      {
+        "title": "2. Dispatch Nearest Team",
+        "description": "Our system automatically finds the closest available emergency team to your location for fastest response."
+      },
+      {
+        "title": "3. Professional Assistance",
+        "description": "Certified emergency technicians arrive with proper equipment to handle your specific situation safely."
+      },
+      {
+        "title": "4. Problem Resolved",
+        "description": "Get back on the road quickly or receive safe transportation to the nearest service center."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Why Choose El7a2ny for Emergency Service?",
+    "items": [
+      {
+        "title": "Rapid Response",
+        "description": "Average response time of 15-30 minutes across all covered areas in the city."
+      },
+      {
+        "title": "24/7 Availability",
+        "description": "Round-the-clock emergency service, 365 days a year including holidays."
+      },
+      {
+        "title": "Professional Teams",
+        "description": "Certified emergency technicians with proper equipment and safety protocols."
+      },
+      {
+        "title": "Wide Coverage",
+        "description": "Complete city coverage with strategically positioned emergency response teams."
+      }
+    ]
+  },
+  "services": {
+    "title": "Emergency Services Available",
+    "items": [
+      "Vehicle Breakdown Assistance",
+      "Battery Jump Start Service",
+      "Flat Tire Replacement",
+      "Fuel Delivery Service",
+      "Lockout Assistance",
+      "Accident Recovery",
+      "Towing Service",
+      "On-Road Repairs",
+      "Emergency Diagnostic",
+      "Safe Transportation"
+    ]
+  },
+  "cta": {
+    "title": "Need Emergency Help Right Now?",
+    "description": "Don't wait - get immediate assistance from our emergency response team",
+    "button": "Call Emergency Hotline"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "title": "Privacy Policy",
+  "lastUpdated": "Last updated: {{date}}",
+  "sections": [
+    {
+      "title": "Information We Collect",
+      "content": "We collect information you provide directly to us, such as when you create an account, book a service, or contact us for support."
+    },
+    {
+      "title": "How We Use Your Information",
+      "content": "We use the information we collect to provide, maintain, and improve our services, process transactions, and communicate with you."
+    },
+    {
+      "title": "Information Sharing",
+      "content": "We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except as described in this policy."
+    },
+    {
+      "title": "Data Security",
+      "content": "We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction."
+    },
+    {
+      "title": "Your Rights",
+      "content": "You have the right to access, update, or delete your personal information. You may also opt out of certain communications from us."
+    },
+    {
+      "title": "Contact Us",
+      "content": "If you have any questions about this Privacy Policy, please contact us at privacy@el7a2ny.com"
+    }
+  ],
+  "metadata": {
+    "title": "Privacy Policy - El7a2ny",
+    "description": "Learn how El7a2ny collects, uses, and protects your personal information. Read our privacy policy for complete details."
+  }
+}

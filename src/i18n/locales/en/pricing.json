@@ -1,0 +1,99 @@
+{
+  "title": "Service Pricing",
+  "subtitle": "Transparent pricing for all automotive services",
+  "description": "Get quality service at competitive prices. All prices include labor, and we provide detailed quotes before starting any work.",
+  "note": "Prices may vary based on vehicle make, model, and specific requirements. Contact us for accurate quotes.",
+  "categories": [
+    {
+      "id": "maintenance",
+      "title": "Regular Maintenance",
+      "description": "Keep your vehicle running smoothly",
+      "services": [
+        {
+          "name": "Oil Change & Filter",
+          "price": "From $30",
+          "duration": "30 min",
+          "description": "Premium oil and filter replacement"
+        },
+        {
+          "name": "Brake Inspection",
+          "price": "From $50",
+          "duration": "45 min",
+          "description": "Complete brake system check"
+        },
+        {
+          "name": "Engine Diagnostics",
+          "price": "From $80",
+          "duration": "60 min",
+          "description": "Computerized engine analysis"
+        }
+      ]
+    },
+    {
+      "id": "repair",
+      "title": "Repair Services",
+      "description": "Professional repair solutions",
+      "services": [
+        {
+          "name": "Engine Repair",
+          "price": "Quote Required",
+          "duration": "2-4 hours",
+          "description": "Complete engine diagnostics and repair"
+        },
+        {
+          "name": "Transmission Service",
+          "price": "From $200",
+          "duration": "3-5 hours",
+          "description": "Transmission inspection and repair"
+        },
+        {
+          "name": "AC System Repair",
+          "price": "From $120",
+          "duration": "1-2 hours",
+          "description": "Air conditioning system service"
+        }
+      ]
+    },
+    {
+      "id": "emergency",
+      "title": "Emergency Services",
+      "description": "24/7 roadside assistance",
+      "services": [
+        {
+          "name": "Towing Service",
+          "price": "From $60",
+          "duration": "30-45 min",
+          "description": "Professional vehicle towing"
+        },
+        {
+          "name": "Jump Start",
+          "price": "$40",
+          "duration": "15 min",
+          "description": "Battery jump start service"
+        },
+        {
+          "name": "Tire Change",
+          "price": "$35",
+          "duration": "20 min",
+          "description": "Roadside tire replacement"
+        }
+      ]
+    }
+  ],
+  "features": [
+    "No hidden fees",
+    "Upfront pricing",
+    "Quality guarantee",
+    "Certified technicians",
+    "Transparent billing"
+  ],
+  "cta": {
+    "title": "Need a Custom Quote?",
+    "description": "Contact us for personalized pricing based on your specific needs",
+    "button": "Get Quote"
+  },
+  "metadata": {
+    "title": "Pricing - El7a2ny",
+    "description": "View transparent pricing for automotive services including maintenance, repair, and emergency assistance. Get quality service at competitive rates."
+  }
+}

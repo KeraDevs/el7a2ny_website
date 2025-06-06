@@ -1,0 +1,81 @@
+{
+  "title": "Verified Workshop Network",
+  "subtitle": "Connect with the Best Automotive Workshops in Your Area",
+  "description": "Access our curated network of certified workshops. Compare offers from multiple verified providers and choose the best service that meets your needs and budget.",
+  "serviceLabel": "Workshop Network",
+  "process": {
+    "title": "How to Find the Perfect Workshop",
+    "subtitle": "Our platform makes it easy to connect with the right workshop for your needs",
+    "steps": [
+      {
+        "title": "1. Search & Filter",
+        "description": "Browse workshops by location, services, ratings, and specialties. Use our advanced filters to find exactly what you need."
+      },
+      {
+        "title": "2. Compare & Review",
+        "description": "Read genuine customer reviews, compare services and pricing. See detailed profiles of workshops and their certifications."
+      },
+      {
+        "title": "3. Connect & Book",
+        "description": "Contact workshops directly through our platform. Book appointments and communicate your specific requirements."
+      },
+      {
+        "title": "4. Quality Service",
+        "description": "Enjoy professional service with our quality guarantee. Rate your experience to help other customers."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Why Use El7a2ny Workshop Network?",
+    "items": [
+      {
+        "title": "Verified Partners",
+        "description": "All workshops undergo thorough verification for licensing, insurance, and quality standards."
+      },
+      {
+        "title": "Rated & Reviewed",
+        "description": "Access transparent ratings and reviews from real customers to make informed decisions."
+      },
+      {
+        "title": "Best Match",
+        "description": "Our smart matching system connects you with workshops that specialize in your car's needs."
+      },
+      {
+        "title": "Protected Service",
+        "description": "All bookings include platform protection and dispute resolution support."
+      }
+    ]
+  },
+  "services": {
+    "title": "Workshop Specialties Available",
+    "items": [
+      "General Auto Repair Workshops",
+      "Specialized Engine Repair Centers",
+      "Transmission Service Specialists",
+      "Brake & Suspension Experts",
+      "Electrical System Specialists",
+      "Body Work & Paint Shops",
+      "Performance Tuning Centers",
+      "Luxury Car Service Centers",
+      "Quick Service & Maintenance",
+      "Mobile Workshop Services"
+    ]
+  },
+  "workshopBenefits": {
+    "title": "Benefits for Workshop Partners",
+    "subtitle": "Join our network and grow your business",
+    "items": [
+      "Increased customer reach and visibility",
+      "Digital booking and payment system",
+      "Customer review and rating platform",
+      "Marketing and promotional support",
+      "Business analytics and insights",
+      "Quality certification program"
+    ]
+  },
+  "cta": {
+    "title": "Ready to Find Your Perfect Workshop?",
+    "description": "Browse our verified workshop network and get the best service for your car",
+    "button": "Browse Workshops"
+  }
+}

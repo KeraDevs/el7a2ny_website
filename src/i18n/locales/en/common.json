@@ -1,0 +1,23 @@
+{
+  "toggleTheme": "Toggle Theme",
+  "toggleLanguage": "Toggle Language",
+  "loading": "Loading...",
+  "error": "Error",
+  "success": "Success",
+  "cancel": "Cancel",
+  "confirm": "Confirm",
+  "save": "Save",
+  "edit": "Edit",
+  "delete": "Delete",
+  "back": "Back",
+  "next": "Next",
+  "previous": "Previous",
+  "close": "Close",
+  "search": "Search",
+  "submit": "Submit",
+  "reset": "Reset",
+  "select": "Select",
+  "viewMore": "View More",
+  "readMore": "Read More",
+  "showLess": "Show Less"
+}

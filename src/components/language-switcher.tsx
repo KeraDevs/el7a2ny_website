@@ -1,41 +1,35 @@
+// language-switcher.tsx
 "use client";
 
-import { Button } from "@/components/ui/button";
-import { Languages } from "lucide-react";
-import { useRouter } from "next/navigation";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { languages } from "../../i18n/settings";
+import { usePathname, useRouter } from "next/navigation";
+import { Button } from "./ui/button";
+import { useTranslations } from "@/i18n/hooks";
 
 export function LanguageSwitcher() {
+  const pathname = usePathname();
   const router = useRouter();
+  const { common } = useTranslations();
 
-  const handleLanguageChange = (locale: string) => {
-    router.push(`/${locale}`);
+  const currentLang = pathname.split("/")[1];
+  const isArabic = currentLang === "ar";
+
+  const handleLanguageToggle = () => {
+    const newLang = isArabic ? "en" : "ar";
+    const newPathname = pathname.replace(`/${currentLang}`, `/${newLang}`);
+    router.push(newPathname);
   };
 
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="icon" className="cursor-pointer">
-          <Languages className="h-[1.2rem] w-[1.2rem]" />
-          <span className="sr-only">Switch Language</span>
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
-        {languages.map((locale) => (
-          <DropdownMenuItem
-            key={locale}
-            onClick={() => handleLanguageChange(locale)}
-          >
-            {locale === "en" ? "English" : "العربية"}
-          </DropdownMenuItem>
-        ))}
-      </DropdownMenuContent>
-    </DropdownMenu>
+    <Button
+      variant="ghost"
+      size="icon"
+      onClick={handleLanguageToggle}
+      className="cursor-pointer min-w-[2.5rem] font-semibold"
+    >
+      <span className={`text-sm font-bold ${isArabic ? "" : "font-roboto"}`}>
+        {isArabic ? "EN" : "ع"}
+      </span>
+      <span className="sr-only">{common.toggleLanguage}</span>
+    </Button>
   );
 }

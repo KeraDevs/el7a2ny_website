@@ -1,0 +1,177 @@
+{
+  "metadata": {
+    "title": "Workshop Verification | El7a2ny - Trusted & Verified Network",
+    "description": "Learn about El7a2ny's comprehensive workshop verification process. We ensure all workshops meet our quality standards before joining our platform."
+  },
+  "hero": {
+    "badge": "Certified Verification Process",
+    "title": "Comprehensive Verification for Quality Assurance",
+    "subtitle": "We verify every workshop before joining our platform to ensure you get the best service. A comprehensive process including documents, field visits, and professional standards",
+    "stats": {
+      "verified": "Verified & Certified Workshops",
+      "criteria": "Verification Criteria",
+      "days": "Days Average Verification"
+    }
+  },
+  "whyVerification": {
+    "title": "Why Do We Verify Workshops?",
+    "subtitle": "Comprehensive verification ensures you get the best service from trusted and certified workshops",
+    "items": [
+      {
+        "title": "Customer Protection",
+        "description": "We ensure all workshops comply with highest quality and safety standards"
+      },
+      {
+        "title": "Service Quality",
+        "description": "Verification ensures customers receive high-quality service every time"
+      },
+      {
+        "title": "Building Trust",
+        "description": "We build customer trust through a reliable network of verified workshops"
+      },
+      {
+        "title": "Global Standards",
+        "description": "We apply global verification standards to ensure the best customer experience"
+      }
+    ]
+  },
+  "verificationProcess": {
+    "title": "Verification Process Steps",
+    "subtitle": "A comprehensive 6-step process to ensure quality and reliability of all workshops on the platform",
+    "steps": [
+      {
+        "title": "Initial Application",
+        "description": "Fill out the initial application form with basic information about your workshop",
+        "duration": "10 minutes"
+      },
+      {
+        "title": "Document Submission",
+        "description": "Submit commercial registration, licenses, and required certificates",
+        "duration": "1 day"
+      },
+      {
+        "title": "Initial Review",
+        "description": "Our team reviews the submitted documents and information",
+        "duration": "2-3 days"
+      },
+      {
+        "title": "Field Visit",
+        "description": "Certified inspector visits the workshop to verify standards",
+        "duration": "1 day"
+      },
+      {
+        "title": "Final Review",
+        "description": "Comprehensive evaluation of all criteria and final decision",
+        "duration": "1-2 days"
+      },
+      {
+        "title": "Activation & Launch",
+        "description": "Workshop activation on platform and start receiving requests",
+        "duration": "Instant"
+      }
+    ]
+  },
+  "verificationCriteria": {
+    "title": "Comprehensive Verification Criteria",
+    "subtitle": "We apply strict criteria to ensure all workshops meet the highest standards of quality and professionalism",
+    "criteria": [
+      {
+        "title": "Licenses & Documents",
+        "description": "Valid commercial registration and required municipal licenses",
+        "requirements": [
+          "Commercial Registration",
+          "Municipal License",
+          "Safety License",
+          "Quality Certificate"
+        ]
+      },
+      {
+        "title": "Location & Space",
+        "description": "Suitable location and adequate space to provide high-quality services",
+        "requirements": [
+          "Clear Location",
+          "Adequate Space",
+          "Easy Access",
+          "Safe Environment"
+        ]
+      },
+      {
+        "title": "Equipment & Tools",
+        "description": "Modern equipment and specialized tools to ensure service quality",
+        "requirements": [
+          "Modern Equipment",
+          "Specialized Tools",
+          "Regular Maintenance",
+          "Safety Standards"
+        ]
+      },
+      {
+        "title": "Team & Experience",
+        "description": "Qualified team with sufficient experience in automotive maintenance",
+        "requirements": [
+          "Qualified Team",
+          "Practical Experience",
+          "Training Certificates",
+          "Work References"
+        ]
+      },
+      {
+        "title": "Quality Assurance",
+        "description": "Commitment to quality standards and service guarantees",
+        "requirements": [
+          "Service Guarantee",
+          "Quality Standards",
+          "Customer Service",
+          "After-sales Follow-up"
+        ]
+      },
+      {
+        "title": "Reputation & Reviews",
+        "description": "Good market reputation and positive customer references",
+        "requirements": [
+          "Good Reputation",
+          "Customer References",
+          "Positive Reviews",
+          "Market Experience"
+        ]
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Verification Benefits for Workshops",
+    "subtitle": "Verified workshops receive additional benefits and greater customer trust",
+    "items": [
+      {
+        "title": "Customer Trust",
+        "description": "Verification badge increases customer trust and makes them choose your workshop",
+        "value": "+250%",
+        "metric": "Trust Increase"
+      },
+      {
+        "title": "Guaranteed Quality",
+        "description": "Verification ensures high level of quality and professionalism",
+        "value": "4.9",
+        "metric": "Average Rating"
+      },
+      {
+        "title": "Priority Customers",
+        "description": "Verified workshops get priority in service listings",
+        "value": "+150%",
+        "metric": "Request Increase"
+      },
+      {
+        "title": "Long-term Partnership",
+        "description": "Verification opens opportunities for special partnerships with the platform",
+        "value": "95%",
+        "metric": "Success Rate"
+      }
+    ]
+  },
+  "cta": {
+    "badge": "Join the Verified Network",
+    "title": "Ready to Get Verified?",
+    "subtitle": "Start the verification process today and join the network of trusted and verified workshops",
+    "primaryButton": "Start Verification",
+    "secondaryButton": "Learn Requirements"
+  }
+}

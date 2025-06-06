@@ -1,0 +1,63 @@
+{
+  "title": "Our Services",
+  "subtitle": "Professional automotive services you can trust",
+  "description": "We provide comprehensive car repair and maintenance services with certified technicians and quality guarantee.",
+  "services": [
+    {
+      "id": 1,
+      "title": "Car Tuning & Performance",
+      "description": "Professional tuning services to enhance your vehicle's performance and efficiency.",
+      "ctaText": "Book Tuning",
+      "ctaLink": "/en/services",
+      "features": [
+        "ECU Remapping & Tuning",
+        "Performance Upgrades",
+        "Exhaust System Optimization",
+        "Suspension Tuning",
+        "Power & Torque Enhancement"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Regular Maintenance Services",
+      "description": "Comprehensive maintenance to keep your vehicle running smoothly and safely.",
+      "ctaText": "Schedule Maintenance",
+      "ctaLink": "/en/maintenance",
+      "features": [
+        "Oil Change & Filter Replacement",
+        "Brake System Inspection",
+        "Engine Diagnostics",
+        "Tire Rotation & Alignment",
+        "Preventive Care Services"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Emergency Roadside Assistance",
+      "description": "24/7 emergency assistance and towing services when you need help on the road.",
+      "ctaText": "Get Emergency Help",
+      "ctaLink": "/en/emergency",
+      "features": [
+        "24/7 Emergency Response",
+        "Professional Tow Trucks",
+        "Roadside Repair Services",
+        "GPS Tracking & Updates",
+        "Insurance Coverage Assistance"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Premium Service Network",
+      "description": "Access to our network of certified and verified automotive workshops.",
+      "ctaText": "Find Workshops",
+      "ctaLink": "/en/workshops",
+      "features": [
+        "Certified Technicians",
+        "Quality Guarantee",
+        "Transparent Pricing",
+        "Customer Reviews",
+        "Professional Standards"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "title": "Find Workshops",
+  "subtitle": "Discover certified automotive workshops near you",
+  "description": "Browse our network of verified workshops and find the perfect service provider for your vehicle needs.",
+  "search": {
+    "placeholder": "Search by location, service type, or workshop name",
+    "filters": "Filters",
+    "location": "Location",
+    "serviceType": "Service Type",
+    "rating": "Rating",
+    "apply": "Apply Filters",
+    "clear": "Clear Filters"
+  },
+  "workshop": {
+    "verified": "Verified Workshop",
+    "rating": "Rating",
+    "reviews": "Reviews",
+    "distance": "Distance",
+    "services": "Services",
+    "contact": "Contact",
+    "bookNow": "Book Now",
+    "viewDetails": "View Details",
+    "openNow": "Open Now",
+    "closed": "Closed",
+    "opens": "Opens",
+    "hours": "Hours"
+  },
+  "filters": {
+    "all": "All Services",
+    "maintenance": "Maintenance",
+    "repair": "Repair",
+    "tuning": "Tuning",
+    "emergency": "Emergency",
+    "bodywork": "Body Work",
+    "electrical": "Electrical"
+  },
+  "sort": {
+    "title": "Sort by",
+    "distance": "Distance",
+    "rating": "Rating",
+    "price": "Price",
+    "reviews": "Most Reviews"
+  },
+  "noResults": {
+    "title": "No workshops found",
+    "description": "Try adjusting your search criteria or location",
+    "suggestion": "Browse all workshops"
+  },
+  "metadata": {
+    "title": "Find Workshops - El7a2ny",
+    "description": "Find certified automotive workshops near you. Browse verified service providers with ratings, reviews, and transparent pricing."
+  }
+}

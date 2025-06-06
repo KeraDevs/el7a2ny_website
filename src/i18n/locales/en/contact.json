@@ -1,0 +1,47 @@
+{
+  "title": "Contact Us",
+  "subtitle": "Get in touch with our team",
+  "description": "Have questions about our services? Need emergency assistance? We're here to help 24/7.",
+  "form": {
+    "title": "Send us a message",
+    "name": "Full Name",
+    "namePlaceholder": "Enter your full name",
+    "email": "Email Address",
+    "emailPlaceholder": "Enter your email address",
+    "phone": "Phone Number",
+    "phonePlaceholder": "Enter your phone number",
+    "subject": "Subject",
+    "subjectPlaceholder": "What is this about?",
+    "message": "Message",
+    "messagePlaceholder": "Tell us how we can help you",
+    "submit": "Send Message",
+    "sending": "Sending...",
+    "success": "Thank you! Your message has been sent successfully.",
+    "error": "Sorry, there was an error sending your message. Please try again."
+  },
+  "info": {
+    "title": "Contact Information",
+    "address": "123 Main Street, Cairo, Egypt",
+    "phone": "+20 123 456 7890",
+    "email": "info@el7a2ny.com",
+    "whatsapp": "+20 123 456 7890",
+    "hours": "24/7 Emergency Service Available"
+  },
+  "emergency": {
+    "title": "Emergency Service",
+    "description": "Need immediate assistance? Call our emergency hotline:",
+    "hotline": "+20 100 000 0000",
+    "available": "Available 24/7"
+  },
+  "social": {
+    "title": "Follow Us",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "twitter": "Twitter",
+    "linkedin": "LinkedIn"
+  },
+  "metadata": {
+    "title": "Contact Us - El7a2ny",
+    "description": "Get in touch with El7a2ny for automotive services, emergency assistance, or general inquiries. We're available 24/7."
+  }
+}

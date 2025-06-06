@@ -1,0 +1,52 @@
+{
+  "title": "Frequently Asked Questions",
+  "subtitle": "Find answers to common questions about our services",
+  "description": "Can't find what you're looking for? Contact our support team for personalized assistance.",
+  "categories": {
+    "general": "General",
+    "booking": "Booking & Scheduling",
+    "services": "Services",
+    "pricing": "Pricing",
+    "warranty": "Warranty & Support"
+  },
+  "searchPlaceholder": "Search questions...",
+  "noResults": "No questions found matching your search.",
+  "contactSupport": "Contact Support",
+  "stillNeedHelp": "Still need help?",
+  "faqs": [
+    {
+      "id": 1,
+      "category": "general",
+      "question": "What is El7a2ny?",
+      "answer": "El7a2ny is a professional automotive service platform that connects car owners with verified workshops and certified technicians for maintenance, repair, and emergency services."
+    },
+    {
+      "id": 2,
+      "category": "booking",
+      "question": "How do I book a service?",
+      "answer": "You can book a service through our website, mobile app, or by calling our customer service. Simply select your service type, choose a time slot, and we'll handle the rest."
+    },
+    {
+      "id": 3,
+      "category": "services",
+      "question": "Do you offer pickup and delivery?",
+      "answer": "Yes, we offer convenient pickup and delivery services. Our team will collect your vehicle from your location and return it after the service is completed."
+    },
+    {
+      "id": 4,
+      "category": "pricing",
+      "question": "How is pricing determined?",
+      "answer": "Our pricing is transparent and competitive. Costs are determined by the type of service, parts required, and labor involved. You'll receive a detailed quote before any work begins."
+    },
+    {
+      "id": 5,
+      "category": "warranty",
+      "question": "What warranty do you provide?",
+      "answer": "All our services come with a comprehensive warranty. The warranty period varies depending on the type of service, but we guarantee our work and will address any issues at no additional cost."
+    }
+  ],
+  "metadata": {
+    "title": "FAQ - El7a2ny",
+    "description": "Find answers to frequently asked questions about El7a2ny's automotive services, booking process, pricing, and warranty."
+  }
+}

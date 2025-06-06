@@ -1,0 +1,74 @@
+{
+  "title": "Car Pickup & Delivery Service",
+  "subtitle": "Convenient Door-to-Door Car Service Solutions",
+  "description": "No time to visit a workshop? Our pickup service brings professional car care to your location. We collect your car, service it at verified workshops, and deliver it back to you.",
+  "serviceLabel": "Pickup Service",
+  "process": {
+    "title": "How Our Pickup Service Works",
+    "subtitle": "Hassle-free car service from the comfort of your home or office",
+    "steps": [
+      {
+        "title": "1. Schedule Pickup",
+        "description": "Book a convenient pickup time and location. Tell us what service your car needs and we'll handle the rest."
+      },
+      {
+        "title": "2. Professional Collection",
+        "description": "Our certified driver arrives at your location with proper documentation and safely collects your vehicle."
+      },
+      {
+        "title": "3. Workshop Service",
+        "description": "Your car is taken to a verified partner workshop where qualified technicians perform the required services."
+      },
+      {
+        "title": "4. Safe Delivery",
+        "description": "Once service is complete, we deliver your car back to your specified location with detailed service report."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Why Choose El7a2ny Pickup Service?",
+    "items": [
+      {
+        "title": "Time Saving",
+        "description": "No need to wait at workshops or rearrange your schedule. We handle everything while you focus on your day."
+      },
+      {
+        "title": "Insured Transport",
+        "description": "Full insurance coverage during pickup, service, and delivery for complete peace of mind."
+      },
+      {
+        "title": "Flexible Locations",
+        "description": "Pickup and delivery anywhere within our service area - home, office, or any convenient location."
+      },
+      {
+        "title": "Quality Guarantee",
+        "description": "All services performed at verified workshops with our platform's quality assurance guarantee."
+      }
+    ]
+  },
+  "services": {
+    "title": "Services Available with Pickup",
+    "items": [
+      "Regular Maintenance Service",
+      "Oil Change & Filter Service",
+      "Brake System Inspection",
+      "Tire Services & Alignment",
+      "Battery Replacement",
+      "Air Conditioning Service",
+      "Engine Diagnostics",
+      "Electrical System Repair",
+      "Body Work & Painting",
+      "Interior Cleaning & Detailing"
+    ]
+  },
+  "schedule": {
+    "title": "Schedule Your Pickup",
+    "description": "Convenient door-to-door service",
+    "button": "Book Now"
+  },
+  "cta": {
+    "title": "Ready for Hassle-Free Car Service?",
+    "description": "Schedule your pickup today and let us take care of everything",
+    "button": "Schedule Pickup"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "toggleTheme": "تبديل السمة",
+  "loading": "جاري التحميل...",
+  "error": "خطأ",
+  "success": "نجح",
+  "submit": "إرسال",
+  "cancel": "إلغاء",
+  "close": "إغلاق",
+  "save": "حفظ",
+  "edit": "تعديل",
+  "delete": "حذف",
+  "confirm": "تأكيد",
+  "yes": "نعم",
+  "no": "لا",
+  "next": "التالي",
+  "previous": "السابق",
+  "viewMore": "عرض المزيد",
+  "readMore": "اقرأ المزيد",
+  "getStarted": "ابدأ الآن",
+  "learnMore": "اعرف المزيد",
+  "bookNow": "احجز الآن",
+  "contactUs": "اتصل بنا"
+}
