@@ -12,10 +12,11 @@ export function LanguageSwitcher() {
 
   const currentLang = pathname.split("/")[1];
   const isArabic = currentLang === "ar";
-
   const handleLanguageToggle = () => {
     const newLang = isArabic ? "en" : "ar";
-    const newPathname = pathname.replace(`/${currentLang}`, `/${newLang}`);
+    const basePath = process.env.NODE_ENV === 'production' ? '/el7a2ny_website' : '';
+    const currentPath = pathname.replace(`/${currentLang}`, '');
+    const newPathname = `${basePath}/${newLang}${currentPath}`;
     router.push(newPathname);
   };
 

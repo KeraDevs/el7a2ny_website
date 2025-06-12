@@ -23,7 +23,16 @@ export default function WorkshopsServicePage({
   params: Promise<{ lng: string }>;
 }) {  const { lng } = React.use(params);
   const isRtl = lng === "ar";
-  const { t } = useTranslations();  const workshopsService = t("workshops-service") as unknown as {
+  const { t } = useTranslations();
+  
+  // Helper function to construct relative paths for GitHub Pages
+  const getRelativePath = (path: string) => {
+    const basePath = process.env.NODE_ENV === 'production' ? '/el7a2ny_website' : '';
+    if (path === "") {
+      return `${basePath}/${lng}`;
+    }
+    return `${basePath}/${lng}${path}`;
+  };const workshopsService = t("workshops-service") as unknown as {
     title: string;
     subtitle: string;
     description: string;
@@ -220,10 +229,8 @@ export default function WorkshopsServicePage({
                 </div>
               )
             )}
-          </div>
-
-          <div className="text-center mt-12">
-            <Link href={`/${lng}/auth`}>
+          </div>          <div className="text-center mt-12">
+            <Link href={getRelativePath("/auth")}>
               <Button
                 size="lg"
                 className="bg-gradient-to-r from-primary to-orange-500 hover:from-orange-500 hover:to-primary text-white"
@@ -243,8 +250,7 @@ export default function WorkshopsServicePage({
           </h2>
           <p className="text-xl mb-8 opacity-90">
             {workshopsService.cta.description}
-          </p>
-          <Link href={`/${lng}/workshops`}>
+          </p>          <Link href={getRelativePath("/workshops")}>
             <Button
               size="lg"
               variant="secondary"

@@ -19,6 +19,16 @@ const Navbar = () => {
   const pathname = usePathname();
   const { navbar } = useTranslations();
   const currentLang = pathname.split("/")[1];
+  
+  // Helper function to construct relative paths for GitHub Pages
+  const getRelativePath = (path: string) => {
+    const basePath = process.env.NODE_ENV === 'production' ? '/el7a2ny_website' : '';
+    if (path === "") {
+      return `${basePath}/${currentLang}`;
+    }
+    return `${basePath}/${currentLang}${path}`;
+  };
+  
   const routes = [
     {
       label: navbar.home,
@@ -40,10 +50,10 @@ const Navbar = () => {
       label: navbar.contact,
       href: "/contact",
     },
-  ];  return (
+  ];return (
     <nav className="fixed top-0 w-full border-b bg-background/98 backdrop-blur-md z-50 shadow-sm dark:border-border/50">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-        <Link href={`/${currentLang}`} className="group">
+        <Link href={getRelativePath("")} className="group">
           {" "}
           <span className="text-2xl font-bold bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent group-hover:from-primary/80 group-hover:to-primary transition-all duration-300 flex items-center gap-2">
             {navbar.logo}
@@ -52,15 +62,10 @@ const Navbar = () => {
             </span>
           </span>
         </Link>
-        <div className="hidden md:flex items-center gap-8">
-          {routes.map((route) => (
+        <div className="hidden md:flex items-center gap-8">          {routes.map((route) => (
             <Link
               key={route.href}
-              href={
-                route.href === ""
-                  ? `/${currentLang}`
-                  : `/${currentLang}${route.href}`
-              }
+              href={getRelativePath(route.href)}
               className={cn(
                 "text-sm font-medium transition-all duration-300 hover:text-primary relative group dark:text-white",
                 (route.href === "" && pathname === `/${currentLang}`) ||
@@ -89,7 +94,7 @@ const Navbar = () => {
               variant="default"
               className="bg-primary hover:bg-primary/90 text-white dark:text-white shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105"
             >
-              <Link href={`/${currentLang}/auth`}>{navbar.login}</Link>
+              <Link href={getRelativePath("/auth")}>{navbar.login}</Link>
             </Button>
           </div>
         </div>        <div className="md:hidden flex items-center gap-3">
@@ -108,27 +113,21 @@ const Navbar = () => {
             <DropdownMenuContent
               align="end"
               className="w-56 bg-background/98 backdrop-blur-md border-border dark:bg-card/95"
-            >
-              {routes.map((route) => (
+            >              {routes.map((route) => (
                 <DropdownMenuItem
                   key={route.href}
                   className="hover:bg-accent transition-colors dark:hover:bg-accent/20"
                 >
                   <Link
-                    href={
-                      route.href === ""
-                        ? `/${currentLang}`
-                        : `/${currentLang}${route.href}`
-                    }
+                    href={getRelativePath(route.href)}
                     className="w-full text-sm font-medium flex items-center gap-2 dark:text-white"
                   >
                     {route.label}
                   </Link>
                 </DropdownMenuItem>
-              ))}
-              <DropdownMenuItem className="hover:bg-accent transition-colors dark:hover:bg-accent/20">
+              ))}              <DropdownMenuItem className="hover:bg-accent transition-colors dark:hover:bg-accent/20">
                 <Link
-                  href={`/${currentLang}/auth`}
+                  href={getRelativePath("/auth")}
                   className="w-full text-sm font-medium text-primary dark:text-primary"
                 >
                   {navbar.login}

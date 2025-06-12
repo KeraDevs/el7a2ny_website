@@ -23,8 +23,19 @@ export default function PickupServicePage({
   params,
 }: {
   params: Promise<{ lng: string }>;
-}) {  const { lng } = React.use(params);
+}) {
+  const { lng } = React.use(params);
   const { t } = useTranslations();
+
+  // Helper function to construct relative paths for GitHub Pages
+  const getRelativePath = (path: string) => {
+    const basePath = process.env.NODE_ENV === "production" ? "/el7a2ny_website" : "";
+    if (path === "") {
+      return `${basePath}/${lng}`;
+    }
+    return `${basePath}/${lng}${path}`;
+  };
+
   const pickup = t("pickup") as unknown as {
     title: string;
     subtitle: string;
@@ -208,8 +219,7 @@ export default function PickupServicePage({
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             {pickup.cta.title}
           </h2>
-          <p className="text-xl mb-8 opacity-90">{pickup.cta.description}</p>
-          <Link href={`/${lng}/contact`}>
+          <p className="text-xl mb-8 opacity-90">{pickup.cta.description}</p>          <Link href={getRelativePath("/contact")}>
             <Button
               size="lg"
               variant="secondary"

@@ -30,33 +30,43 @@ interface FooterProps {
 const Footer = ({ lng }: FooterProps) => {
   const { footer, navbar } = useTranslations();
   const currentYear = new Date().getFullYear();
+  
+  // Helper function to construct relative paths for GitHub Pages
+  const getRelativePath = (path: string) => {
+    const basePath = process.env.NODE_ENV === 'production' ? '/el7a2ny_website' : '';
+    if (path === "") {
+      return `${basePath}/${lng}`;
+    }
+    return `${basePath}/${lng}${path}`;
+  };
+  
   const services = [
     {
       label: footer.services?.maintenance,
-      href: `/${lng}/services/maintenance`,
+      href: getRelativePath("/services/maintenance"),
     },
     {
       label: footer.services?.emergency,
-      href: `/${lng}/services/emergency`,
+      href: getRelativePath("/services/emergency"),
     },
-    { label: footer.services?.pickup, href: `/${lng}/services/pickup` },
+    { label: footer.services?.pickup, href: getRelativePath("/services/pickup") },
     {
       label: footer.services?.workshops,
-      href: `/${lng}/verified`,
+      href: getRelativePath("/verified"),
     },
   ];
   const quickLinks = [
-    { label: footer.links?.about, href: `/${lng}/about` },
-    { label: footer.links?.howItWorks, href: `/${lng}/how-it-works` },
-    { label: footer.links?.workshops, href: `/${lng}/workshops` },
-    { label: footer.links?.contact, href: `/${lng}/contact` },
-    { label: footer.links?.faq, href: `/${lng}/faq` },
+    { label: footer.links?.about, href: getRelativePath("/about") },
+    { label: footer.links?.howItWorks, href: getRelativePath("/how-it-works") },
+    { label: footer.links?.workshops, href: getRelativePath("/workshops") },
+    { label: footer.links?.contact, href: getRelativePath("/contact") },
+    { label: footer.links?.faq, href: getRelativePath("/faq") },
   ];
   const legalLinks = [
-    { label: footer.legal?.privacy, href: `/${lng}/privacy-policy` },
-    { label: footer.legal?.terms, href: `/${lng}/terms-of-service` },
-    { label: footer.legal?.refund, href: `/${lng}/refund-policy` },
-    { label: footer.legal?.cookies, href: `/${lng}/cookie-policy` },
+    { label: footer.legal?.privacy, href: getRelativePath("/privacy-policy") },
+    { label: footer.legal?.terms, href: getRelativePath("/terms-of-service") },
+    { label: footer.legal?.refund, href: getRelativePath("/refund-policy") },
+    { label: footer.legal?.cookies, href: getRelativePath("/cookie-policy") },
   ];
 
   const socialLinks = [
