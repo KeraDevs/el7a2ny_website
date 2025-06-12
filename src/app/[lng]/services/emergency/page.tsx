@@ -26,10 +26,11 @@ export default function EmergencyServicePage({
   const { lng } = React.use(params);
   const isRtl = lng === "ar";
   const { t } = useTranslations();
-  
+
   // Helper function to construct relative paths for GitHub Pages
   const getRelativePath = (path: string) => {
-    const basePath = process.env.NODE_ENV === 'production' ? '/el7a2ny_website' : '';
+    const basePath =
+      process.env.NODE_ENV === "production" ? "/el7a2ny_website" : "";
     if (path === "") {
       return `${basePath}/${lng}`;
     }
@@ -145,7 +146,7 @@ export default function EmergencyServicePage({
                   )}
                 </div>
               )
-            }
+            )}
           </div>
         </div>
       </section>
@@ -161,7 +162,10 @@ export default function EmergencyServicePage({
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {emergency.benefits.items.map(
-              (benefit: { title: string; description: string }, index: number) => (
+              (
+                benefit: { title: string; description: string },
+                index: number
+              ) => (
                 <div key={index} className="text-center group">
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
                     {React.createElement(benefitIcons[index], {
@@ -176,7 +180,7 @@ export default function EmergencyServicePage({
                   </p>
                 </div>
               )
-            }
+            )}
           </div>
         </div>
       </section>
@@ -184,7 +188,6 @@ export default function EmergencyServicePage({
       <section className="py-20 px-4 bg-background">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            {" "}
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground dark:text-white">
                 {emergency.services.title}
@@ -202,7 +205,7 @@ export default function EmergencyServicePage({
                       </span>
                     </div>
                   )
-                }
+                )}
               </div>
             </div>
             <div className="relative">
@@ -242,7 +245,8 @@ export default function EmergencyServicePage({
             >
               <Phone className="h-5 w-5 mr-2" />
               {emergency.cta.button}
-            </Button>            <Link href={getRelativePath("/contact")}>
+            </Button>
+            <Link href={getRelativePath("/contact")}>
               <Button
                 size="lg"
                 variant="outline"
