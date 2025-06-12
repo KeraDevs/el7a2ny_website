@@ -13,25 +13,25 @@ import arServices from "@/i18n/locales/ar/services.json";
 const serviceStaticData = [
   {
     id: 1,
-    image: "/car-repair1.jpg",
+    image: "/images/car-repair1.jpg",
     isVerified: true,
     isEmergency: false,
   },
   {
     id: 2,
-    image: "/car-repair2.jpg",
+    image: "/images/car-repair2.jpg",
     isVerified: true,
     isEmergency: false,
   },
   {
     id: 3,
-    image: "/emergency-car1.jpg",
+    image: "/images/emergency-car1.jpg",
     isVerified: true,
     isEmergency: true,
   },
   {
     id: 4,
-    image: "/car-parts1.jpg",
+    image: "/images/car-parts1.jpg",
     isVerified: true,
     isEmergency: false,
   },
@@ -53,7 +53,17 @@ export default async function Home({
   // Use statically imported translation data
   const translation = lng === "ar" ? arServices : enServices;
   const services = (translation.services || []).map(
-    (service: { id: number; title: string; description: string; ctaText: string; ctaLink: string; features: string[] }, index: number) => ({
+    (
+      service: {
+        id: number;
+        title: string;
+        description: string;
+        ctaText: string;
+        ctaLink: string;
+        features: string[];
+      },
+      index: number
+    ) => ({
       ...service,
       image: serviceStaticData[index]?.image || "/default-service.jpg",
       isVerified: serviceStaticData[index]?.isVerified ?? true,
@@ -70,7 +80,8 @@ export default async function Home({
         <HeroCarousel slides={slides} />
         <section className="py-12 gradient-hero">
           <ServiceSection services={services} title={servicesTitle} lng={lng} />
-        </section>        {/* Detailed Services Section */}
+        </section>{" "}
+        {/* Detailed Services Section */}
         <section className="py-16 px-4 md:px-6 bg-gradient-to-br from-background via-muted/20 to-accent/10 dark:from-background dark:via-card/30 dark:to-accent/20">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -131,14 +142,16 @@ export default async function Home({
               ))}
             </div>
           </div>
-        </section>        {/* Call-to-Action Section */}
+        </section>{" "}
+        {/* Call-to-Action Section */}
         <section className="py-16 bg-gradient-to-r from-primary/10 via-accent/20 to-primary/10 relative overflow-hidden dark:from-background dark:via-card/30 dark:to-accent/20">
           {/* Background decorations */}
           <div className="absolute inset-0 opacity-5 dark:opacity-10">
             <div className="absolute top-10 left-10 text-6xl">🔧</div>
             <div className="absolute top-20 right-20 text-5xl">🚗</div>
             <div className="absolute bottom-10 left-1/4 text-4xl">⚙️</div>
-          </div>          <div className="max-w-4xl mx-auto text-center px-4 md:px-6 relative">
+          </div>{" "}
+          <div className="max-w-4xl mx-auto text-center px-4 md:px-6 relative">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-orange-500 bg-clip-text text-transparent leading-[1.3] md:leading-[1.35] dark:from-orange-400 dark:to-orange-300">
               {lng === "ar"
                 ? "جاهز لخدمة سيارتك؟"
@@ -150,7 +163,9 @@ export default async function Home({
                 : "Request a service and receive price offers from multiple verified workshops. Compare prices and ratings to choose what's best for you"}
             </p>
             {/* Enhanced features grid */}
-            <div className="grid md:grid-cols-3 gap-6 mb-8">              <div className="p-4 bg-white/10 dark:bg-black/20 backdrop-blur-sm rounded-xl border border-white/20 dark:border-white/10">
+            <div className="grid md:grid-cols-3 gap-6 mb-8">
+              {" "}
+              <div className="p-4 bg-white/10 dark:bg-black/20 backdrop-blur-sm rounded-xl border border-white/20 dark:border-white/10">
                 <div className="text-3xl mb-2">💰</div>
                 <h3 className="font-semibold mb-1 dark:text-white">
                   {lng === "ar" ? "عروض متعددة" : "Multiple Offers"}
@@ -160,7 +175,8 @@ export default async function Home({
                     ? "قارن الأسعار واختر الأفضل"
                     : "Compare prices and choose the best"}
                 </p>
-              </div>              <div className="p-4 bg-white/10 dark:bg-black/20 backdrop-blur-sm rounded-xl border border-white/20 dark:border-white/10">
+              </div>{" "}
+              <div className="p-4 bg-white/10 dark:bg-black/20 backdrop-blur-sm rounded-xl border border-white/20 dark:border-white/10">
                 <div className="text-3xl mb-2">⭐</div>
                 <h3 className="font-semibold mb-1 dark:text-white">
                   {lng === "ar" ? "تقييمات شفافة" : "Transparent Ratings"}
@@ -170,7 +186,8 @@ export default async function Home({
                     ? "تقييمات حقيقية من العملاء"
                     : "Real customer reviews and ratings"}
                 </p>
-              </div>              <div className="p-4 bg-white/10 dark:bg-black/20 backdrop-blur-sm rounded-xl border border-white/20 dark:border-white/10">
+              </div>{" "}
+              <div className="p-4 bg-white/10 dark:bg-black/20 backdrop-blur-sm rounded-xl border border-white/20 dark:border-white/10">
                 <div className="text-3xl mb-2">
                   <MdOutlineVerified className="h-8 w-8 text-blue-500 mx-auto" />
                 </div>

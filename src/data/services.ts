@@ -18,25 +18,25 @@ export interface ServiceData {
 const serviceStaticData = [
   {
     id: 1,
-    image: "/car-repair1.jpg",
+    image: "/images/car-repair1.jpg",
     isVerified: true,
     isEmergency: false,
   },
   {
     id: 2,
-    image: "/car-repair2.jpg",
+    image: "/images/car-repair2.jpg",
     isVerified: true,
     isEmergency: false,
   },
   {
     id: 3,
-    image: "/emergency-car1.jpg",
+    image: "/images/emergency-car1.jpg",
     isVerified: true,
     isEmergency: true,
   },
   {
     id: 4,
-    image: "/car-parts1.jpg",
+    image: "/images/car-parts1.jpg",
     isVerified: true,
     isEmergency: false,
   },

@@ -4,7 +4,7 @@
 export const enServiceDetails = [
   {
     id: 1,
-    image: "/car-repair1.jpg",
+    image: "/images/car-repair1.jpg",
     title: "Expert Car Repair Services",
     description: "Professional mechanics at your service, wherever you are.",
     longDescription:
@@ -22,7 +22,7 @@ export const enServiceDetails = [
   },
   {
     id: 2,
-    image: "/emergency-car1.jpg",
+    image: "/images/emergency-car1.jpg",
     title: "Emergency Car Pickup",
     description: "We come to you whenever you are in need of assistance.",
     longDescription:
@@ -40,7 +40,7 @@ export const enServiceDetails = [
   },
   {
     id: 3,
-    image: "/car-parts1.jpg",
+    image: "/images/car-parts1.jpg",
     title: "Quality Parts & Accessories",
     description: "We use only genuine and high-quality parts for your vehicle.",
     longDescription:
@@ -58,7 +58,7 @@ export const enServiceDetails = [
   },
   {
     id: 4,
-    image: "/car-repair2.jpg",
+    image: "/images/car-repair2.jpg",
     title: "Car Repair at Home",
     description: "We come to you - at home, work, or wherever you need us.",
     longDescription:
@@ -76,7 +76,7 @@ export const enServiceDetails = [
   },
   {
     id: 5,
-    image: "/car-wrapping1.jpg",
+    image: "/images/car-wrapping1.jpg",
     title: "Car Wrapping & Customization",
     description:
       "Transform your vehicle with our professional wrapping services.",
@@ -99,7 +99,7 @@ export const enServiceDetails = [
 export const arServiceDetails = [
   {
     id: 1,
-    image: "/car-repair1.jpg",
+    image: "/images/car-repair1.jpg",
     title: "خدمات إصلاح السيارات من الخبراء",
     description: "ميكانيكيون محترفون في خدمتك، أينما كنت.",
     longDescription:
@@ -117,7 +117,7 @@ export const arServiceDetails = [
   },
   {
     id: 2,
-    image: "/emergency-car1.jpg",
+    image: "/images/emergency-car1.jpg",
     title: "ونش إنقاذ السيارات",
     description: "نأتي إليك في أي وقت تحتاج فيه إلى المساعدة.",
     longDescription:
@@ -135,7 +135,7 @@ export const arServiceDetails = [
   },
   {
     id: 3,
-    image: "/car-parts1.jpg",
+    image: "/images/car-parts1.jpg",
     title: "قطع غيار واكسسوارات عالية الجودة",
     description: "نستخدم فقط قطع غيار أصلية وعالية الجودة لسيارتك.",
     longDescription:
@@ -153,7 +153,7 @@ export const arServiceDetails = [
   },
   {
     id: 4,
-    image: "/car-repair2.jpg",
+    image: "/images/car-repair2.jpg",
     title: "تصليح السيارات في المنزل",
     description: "نأتي إليك - في المنزل أو العمل أو أينما تحتاج إلينا.",
     longDescription:
@@ -171,7 +171,7 @@ export const arServiceDetails = [
   },
   {
     id: 5,
-    image: "/car-wrapping1.jpg",
+    image: "/images/car-wrapping1.jpg",
     title: "تغليف السيارات وتخصيصها",
     description: "قم بتحويل سيارتك مع خدمات التغليف الاحترافية لدينا.",
     longDescription:
