@@ -5,8 +5,6 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  // basePath: "/el7a2ny_website",
-  // assetPrefix: "/el7a2ny_website",
 };
 
 module.exports = nextConfig;

@@ -8,7 +8,6 @@ import {
   Phone,
   Mail,
   Clock,
-  Wrench,
   Star,
   ArrowRight,
   Car,
@@ -99,15 +98,14 @@ const Footer = ({ lng }: FooterProps) => {
       <div className="container mx-auto px-4 py-16 relative">
         {/* Main footer content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-          {/* Company Info */}
+          {/* Company Info */}{" "}
           <div className="space-y-6">
             <div className="flex items-center gap-3">
-              <div className="p-2 bg-gradient-to-r from-primary to-orange-500 rounded-xl">
-                <Wrench className="h-6 w-6 text-white" />
-              </div>{" "}
-              <span className="text-2xl font-bold bg-gradient-to-r from-primary to-orange-500 bg-clip-text text-transparent">
-                {navbar.logo}
-              </span>
+              <img
+                src="/images/logo-light.png"
+                alt={navbar.logoAlt}
+                className="h-10 w-auto"
+              />
             </div>{" "}
             <p className="text-muted-foreground leading-relaxed dark:text-white/90">
               {footer.description}
@@ -130,8 +128,8 @@ const Footer = ({ lng }: FooterProps) => {
               <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
             </Button>
           </div>
-
-          {/* Services */}          <div className="space-y-6">
+          {/* Services */}{" "}
+          <div className="space-y-6">
             {" "}
             <h3 className="text-lg font-semibold text-foreground flex items-center gap-2 dark:text-white">
               <div className="w-2 h-2 bg-primary rounded-full"></div>
@@ -151,7 +149,8 @@ const Footer = ({ lng }: FooterProps) => {
                 </li>
               ))}
             </ul>
-          </div>          {/* Quick Links */}
+          </div>{" "}
+          {/* Quick Links */}
           <div className="space-y-6">
             {" "}
             <h3 className="text-lg font-semibold text-foreground flex items-center gap-2 dark:text-white">
@@ -173,8 +172,8 @@ const Footer = ({ lng }: FooterProps) => {
               ))}
             </ul>
           </div>
-
-          {/* Contact Info */}        <div className="space-y-6">
+          {/* Contact Info */}{" "}
+          <div className="space-y-6">
             {" "}
             <h3 className="text-lg font-semibold text-foreground flex items-center gap-2 dark:text-white">
               <div className="w-2 h-2 bg-primary rounded-full"></div>
@@ -295,9 +294,7 @@ const Footer = ({ lng }: FooterProps) => {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             {" "}
             <div className="flex items-center gap-2 text-sm text-muted-foreground dark:text-white/80">
-              <span>
-                © {currentYear} {navbar.logo}.
-              </span>
+              <span>© {currentYear} El7a2ny.</span>
               <span>{footer.allRightsReserved}</span>
             </div>
             <div className="flex items-center gap-6">

@@ -40,17 +40,19 @@ const Navbar = () => {
       label: navbar.contact,
       href: "/contact",
     },
-  ];  return (
+  ];
+  return (
     <nav className="fixed top-0 w-full border-b bg-background/98 backdrop-blur-md z-50 shadow-sm dark:border-border/50">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
+        {" "}
         <Link href={`/${currentLang}`} className="group">
-          {" "}
-          <span className="text-2xl font-bold bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent group-hover:from-primary/80 group-hover:to-primary transition-all duration-300 flex items-center gap-2">
-            {navbar.logo}
-            <span className="inline-block transition-all duration-300 group-hover:animate-wrench">
-              🔧
-            </span>
-          </span>
+          <div className="flex items-center gap-2 transition-all duration-300 group-hover:scale-105">
+            <img
+              src="/images/logo-light.png"
+              alt={navbar.logoAlt}
+              className="h-8 w-auto"
+            />
+          </div>
         </Link>
         <div className="hidden md:flex items-center gap-8">
           {routes.map((route) => (
@@ -92,7 +94,8 @@ const Navbar = () => {
               <Link href={`/${currentLang}/auth`}>{navbar.login}</Link>
             </Button>
           </div>
-        </div>        <div className="md:hidden flex items-center gap-3">
+        </div>{" "}
+        <div className="md:hidden flex items-center gap-3">
           <ThemeToggle />
           <LanguageSwitcher />
           <DropdownMenu>

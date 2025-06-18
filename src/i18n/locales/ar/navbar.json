@@ -1,5 +1,6 @@
 {
-  "logo": "الحقني",
+  "logo": "/images/logo-light.png",
+  "logoAlt": "الحقني",
   "home": "الرئيسية",
   "services": "الخدمات",
   "howItWorks": "أعمالنا",
