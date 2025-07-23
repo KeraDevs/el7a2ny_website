@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowRight, Wrench, Clock } from "lucide-react";
 import { MdOutlineVerified } from "react-icons/md";
+import { useAnalytics } from "@/hooks/use-analytics";
 
 interface ServiceCardProps {
   image: string;
@@ -27,6 +28,11 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   isVerified = true,
   lng = "en",
 }) => {
+  const { trackServiceView } = useAnalytics();
+
+  const handleServiceClick = () => {
+    trackServiceView(title);
+  };
   return (
     <div className="group relative bg-card rounded-xl overflow-hidden shadow-lg transition-all duration-500 hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-2 border border-border/50 hover:border-primary/30 glass">
       {/* Verified badge - Facebook-style blue checkmark */}
@@ -67,7 +73,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       <div className="p-6 relative">
         {/* Decorative line */}
         <div className="absolute top-0 left-0 w-0 h-1 bg-gradient-to-r from-primary to-orange-500 group-hover:w-full transition-all duration-500" />
-        
+
         <h3 className="text-xl font-bold mb-3 text-foreground group-hover:text-primary transition-colors duration-300 dark:text-white">
           {title}
         </h3>
@@ -82,6 +88,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         >
           <Link
             href={ctaLink}
+            onClick={handleServiceClick}
             className="flex items-center justify-center gap-2"
           >
             {ctaText}

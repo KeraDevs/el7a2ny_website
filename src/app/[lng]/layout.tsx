@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 import { languages } from "../../../i18n/settings";
 import "../globals.css";
@@ -81,6 +82,7 @@ export default async function LanguageLayout({
   const { lng } = await params;
   return (
     <ClientProviders lang={lng}>
+      <GoogleAnalytics />
       <Navbar />
       <main>{children}</main>
       <Footer lng={lng} />

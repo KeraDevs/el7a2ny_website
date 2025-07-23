@@ -4,6 +4,7 @@
 import { usePathname, useRouter } from "next/navigation";
 import { Button } from "./ui/button";
 import { useTranslations } from "@/i18n/hooks";
+import { trackEvent } from "@/lib/analytics";
 
 export function LanguageSwitcher() {
   const pathname = usePathname();
@@ -15,6 +16,10 @@ export function LanguageSwitcher() {
 
   const handleLanguageToggle = () => {
     const newLang = isArabic ? "en" : "ar";
+
+    // Track language switch
+    trackEvent.languageSwitch(newLang);
+
     const newPathname = pathname.replace(`/${currentLang}`, `/${newLang}`);
     router.push(newPathname);
   };
