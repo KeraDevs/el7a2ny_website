@@ -3,32 +3,56 @@
   "lastUpdated": "Last updated: {{date}}",
   "sections": [
     {
-      "title": "Refund Eligibility",
-      "content": "Refunds are available for cancelled services before work begins, unsatisfactory service that cannot be corrected, or in case of service provider errors."
+      "title": "Overview",
+      "content": "At El7a2ny, we strive to provide exceptional automotive services and customer satisfaction. This refund policy outlines the circumstances under which refunds may be requested and granted for services booked through our platform. Please read this policy carefully before booking any services."
     },
     {
-      "title": "Refund Process",
-      "content": "To request a refund, contact our customer service within 7 days of service completion. We will review your case and process eligible refunds within 5-10 business days."
+      "title": "Refund Eligibility Criteria",
+      "content": "Refunds may be eligible in the following situations: services cancelled before work begins (subject to cancellation policy), unsatisfactory service quality that cannot be corrected through rework, service provider fails to arrive within agreed timeframe without valid reason, services not performed as described or agreed upon, safety issues or damage caused by service provider negligence, and technical issues preventing service completion."
     },
     {
-      "title": "Non-Refundable Items",
-      "content": "Emergency services, diagnostic fees after service completion, and parts that have been installed cannot be refunded unless there is a warranty issue."
+      "title": "Non-Refundable Services and Fees",
+      "content": "The following items are typically non-refundable: emergency services that have been successfully completed, diagnostic fees after initial assessment is performed, parts and materials that have been installed or used (unless defective), services where customer was not present or accessible as required, cancellations made after service provider has already dispatched, and third-party fees (payment processing, etc.)."
+    },
+    {
+      "title": "Refund Request Process",
+      "content": "To request a refund: contact our customer service within 7 days of service completion, provide your booking reference number and detailed explanation of the issue, submit any supporting evidence (photos, videos, documentation), allow our team to investigate and contact the service provider if necessary. Refund requests submitted after 7 days may not be processed unless there are exceptional circumstances."
+    },
+    {
+      "title": "Refund Processing Timeline",
+      "content": "Once a refund request is approved: full refunds will be processed within 5-10 business days, partial refunds may take up to 14 days for complex cases, refunds will be credited to the original payment method used, bank processing times may add 2-5 additional business days. You will receive confirmation once the refund has been initiated."
     },
     {
       "title": "Partial Refunds",
-      "content": "In some cases, partial refunds may be offered when only part of the service was unsatisfactory or when services were partially completed."
+      "content": "Partial refunds may be offered when: only portion of the service was unsatisfactory, services were partially completed before cancellation, minor issues that don't warrant full refund, customer contributed to service complications, or when negotiated resolution is reached between parties. The refund amount will be determined based on the specific circumstances."
     },
     {
-      "title": "Warranty vs Refund",
-      "content": "Issues covered under warranty will be addressed through repair or replacement rather than refund, unless repair is not possible."
+      "title": "Quality Assurance vs Refunds",
+      "content": "Before processing refunds, we may offer alternative solutions: rework by the same or different service provider at no cost, partial service credit for future bookings, replacement parts or services under warranty, mediation between customer and service provider. Refunds are considered when these alternatives cannot resolve the issue satisfactorily."
+    },
+    {
+      "title": "Emergency Services Policy",
+      "content": "Emergency automotive services have special considerations: refunds may be limited due to the urgent nature of emergency situations, emergency dispatch fees are generally non-refundable once service provider is en route, emergency services completed successfully may not be eligible for refunds, however, substandard emergency work or additional damages may still qualify for compensation."
+    },
+    {
+      "title": "Disputes and Escalation",
+      "content": "If you disagree with our refund decision: you may request escalation to a senior customer service representative, provide additional evidence or documentation, request mediation through our dispute resolution process, or pursue resolution through appropriate legal channels. We aim to resolve all disputes fairly and promptly."
+    },
+    {
+      "title": "Service Provider Compensation",
+      "content": "When refunds are granted: we may deduct amounts from service provider compensation, service providers may be required to cover refund costs in cases of negligence, repeated quality issues may result in service provider account suspension, compensation adjustments protect both customers and platform integrity."
+    },
+    {
+      "title": "Prevention and Quality Control",
+      "content": "To minimize refund situations, we: thoroughly vet all service providers, provide clear service descriptions and expectations, maintain customer feedback and rating systems, offer customer support throughout the service process, regularly review and improve our quality standards, and provide ongoing training to service providers."
     },
     {
       "title": "Contact for Refunds",
-      "content": "For refund requests or questions, contact our customer service at refunds@el7a2ny.com or call our support hotline."
+      "content": "For refund requests, questions, or appeals: email us at refunds@el7a2ny.com with your booking details, call our customer service hotline during business hours, use the in-app support feature for immediate assistance, or write to our customer service department at our registered address. Our team is committed to resolving your concerns promptly and fairly."
     }
   ],
   "metadata": {
     "title": "Refund Policy - El7a2ny",
-    "description": "Learn about El7a2ny's refund policy, including eligibility criteria, process, and timeframes for service refunds."
+    "description": "Comprehensive refund policy for El7a2ny automotive services, including eligibility criteria, process, timeframes, and quality assurance measures."
   }
 }

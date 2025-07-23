@@ -1,9 +1,13 @@
 "use client";
 
 import React from "react";
+import { trackEvent } from "@/lib/analytics";
 
 const WhatsAppButton = () => {
   const handleWhatsAppClick = () => {
+    // Track WhatsApp button click
+    trackEvent.whatsappClick();
+
     const phoneNumber = "+201234567890"; // Replace with actual phone number
     const message = "Hello! I'm interested in your car maintenance services.";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(

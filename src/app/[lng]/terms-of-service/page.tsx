@@ -8,6 +8,14 @@ import {
   Shield,
   AlertTriangle,
   Scale,
+  UserCheck,
+  Settings,
+  Lock,
+  Phone,
+  Smartphone,
+  Edit,
+  Info,
+  Archive,
 } from "lucide-react";
 import { useTranslations } from "@/i18n/hooks";
 
@@ -32,24 +40,69 @@ const TermsOfServicePage = () => {
       content: termsOfService.sections[1].content,
     },
     {
-      icon: CreditCard,
+      icon: UserCheck,
       title: termsOfService.sections[2].title,
       content: termsOfService.sections[2].content,
     },
     {
-      icon: Shield,
+      icon: Settings,
       title: termsOfService.sections[3].title,
       content: termsOfService.sections[3].content,
     },
     {
-      icon: AlertTriangle,
+      icon: CreditCard,
       title: termsOfService.sections[4].title,
       content: termsOfService.sections[4].content,
     },
     {
-      icon: Scale,
+      icon: Users,
       title: termsOfService.sections[5].title,
       content: termsOfService.sections[5].content,
+    },
+    {
+      icon: Shield,
+      title: termsOfService.sections[6].title,
+      content: termsOfService.sections[6].content,
+    },
+    {
+      icon: Archive,
+      title: termsOfService.sections[7].title,
+      content: termsOfService.sections[7].content,
+    },
+    {
+      icon: Edit,
+      title: termsOfService.sections[8].title,
+      content: termsOfService.sections[8].content,
+    },
+    {
+      icon: Lock,
+      title: termsOfService.sections[9].title,
+      content: termsOfService.sections[9].content,
+    },
+    {
+      icon: AlertTriangle,
+      title: termsOfService.sections[10].title,
+      content: termsOfService.sections[10].content,
+    },
+    {
+      icon: Scale,
+      title: termsOfService.sections[11].title,
+      content: termsOfService.sections[11].content,
+    },
+    {
+      icon: Info,
+      title: termsOfService.sections[12].title,
+      content: termsOfService.sections[12].content,
+    },
+    {
+      icon: Phone,
+      title: termsOfService.sections[13].title,
+      content: termsOfService.sections[13].content,
+    },
+    {
+      icon: Smartphone,
+      title: termsOfService.sections[14].title,
+      content: termsOfService.sections[14].content,
     },
   ];
 
@@ -78,7 +131,7 @@ const TermsOfServicePage = () => {
             <div className="text-sm text-muted-foreground">
               {termsOfService.lastUpdated?.replace(
                 "{{date}}",
-                "December 1, 2024"
+                "July 23, 2025"
               )}
             </div>
           </div>
@@ -91,9 +144,9 @@ const TermsOfServicePage = () => {
           <div className="max-w-4xl mx-auto">
             {/* Terms Sections */}
             <div className="space-y-12">
-              {sections.map((section, index) => (
+              {sections.map((section) => (
                 <div
-                  key={index}
+                  key={section.title}
                   className="group p-8 bg-card rounded-2xl border border-border/50 hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10"
                 >
                   <div className="flex items-start gap-4">

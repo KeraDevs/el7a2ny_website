@@ -4,31 +4,51 @@
   "sections": [
     {
       "title": "What are Cookies",
-      "content": "Cookies are small text files that are stored on your device when you visit our website. They help us provide you with a better experience and improve our services."
+      "content": "Cookies are small text files that are stored on your device (computer, tablet, or mobile) when you visit our website or use our mobile application. They help us provide you with a better experience, remember your preferences, and improve our services. Cookies contain information that is transferred to your device's hard drive and stored there."
     },
     {
       "title": "Types of Cookies We Use",
-      "content": "We use essential cookies for website functionality, analytics cookies to understand usage patterns, and preference cookies to remember your settings."
+      "content": "We use different types of cookies for various purposes: Essential/Strictly Necessary Cookies (required for basic website functionality), Performance/Analytics Cookies (help us understand how visitors use our site), Functional Cookies (remember your preferences and settings), and Targeting/Advertising Cookies (used to deliver relevant advertisements). Each type serves a specific purpose in enhancing your user experience."
     },
     {
       "title": "Essential Cookies",
-      "content": "These cookies are necessary for the website to function properly and cannot be disabled. They include session management and security features."
+      "content": "These cookies are strictly necessary for the website and mobile app to function properly and cannot be disabled in our systems. They are usually set in response to actions you take, such as setting privacy preferences, logging in, or filling forms. Essential cookies include session management, security features, load balancing, and basic functionality that enables you to navigate and use our services."
     },
     {
-      "title": "Analytics Cookies",
-      "content": "We use analytics cookies to understand how visitors interact with our website, helping us improve user experience and service quality."
+      "title": "Performance and Analytics Cookies",
+      "content": "We use analytics cookies to collect information about how visitors use our website and mobile app. This includes pages visited, time spent on pages, error messages, and other usage statistics. We use services like Google Analytics to help us understand user behavior, improve our services, and optimize user experience. This data is aggregated and anonymous."
     },
     {
-      "title": "Managing Cookies",
-      "content": "You can control cookies through your browser settings. However, disabling certain cookies may affect website functionality."
+      "title": "Functional Cookies",
+      "content": "These cookies enable the website and app to provide enhanced functionality and personalization. They may be set by us or by third-party providers whose services we use. Functional cookies remember your language preferences, location settings, font size, and other customizable elements. If you disable these cookies, some or all of these services may not function properly."
+    },
+    {
+      "title": "Advertising and Targeting Cookies",
+      "content": "These cookies may be set through our site and mobile app by our advertising partners. They may be used by those companies to build a profile of your interests and show you relevant advertisements on other sites and apps. They don't store directly personal information but are based on uniquely identifying your browser and internet device."
     },
     {
       "title": "Third-Party Cookies",
-      "content": "Our website may contain links to third-party services that set their own cookies. We are not responsible for their cookie practices."
+      "content": "Our website and mobile app may contain content from third-party services such as social media platforms, payment processors, map services, and analytics providers. These third parties may set their own cookies when you interact with their content. We do not control these cookies and recommend reviewing the privacy policies of these third-party services."
+    },
+    {
+      "title": "Managing Your Cookie Preferences",
+      "content": "You can control and manage cookies in several ways: through your browser settings (most browsers allow you to view, delete, and block cookies), through our cookie consent banner when you first visit our site, by contacting us directly to opt-out of non-essential cookies. Please note that blocking or deleting cookies may impact your user experience and some features may not work properly."
+    },
+    {
+      "title": "Mobile App Data Collection",
+      "content": "Our mobile application may collect similar information through mobile-specific technologies such as mobile analytics SDKs, push notification services, crash reporting tools, and in-app analytics. This information helps us improve app performance, fix bugs, and enhance user experience. You can manage these preferences through your device settings."
+    },
+    {
+      "title": "Cookie Retention and Updates",
+      "content": "Different cookies have different retention periods - some expire when you close your browser (session cookies), while others remain on your device for a specified period (persistent cookies). We regularly review and update our cookie usage. When we make significant changes to this policy, we will notify you through our website, app, or email."
+    },
+    {
+      "title": "Contact Us About Cookies",
+      "content": "If you have any questions about our use of cookies or this Cookie Policy, please contact us at: privacy@el7a2ny.com. You can also write to us at our registered address. For EU residents, you may contact our Data Protection Officer at dpo@el7a2ny.com regarding cookie-related privacy concerns."
     }
   ],
   "metadata": {
     "title": "Cookie Policy - El7a2ny",
-    "description": "Learn about how El7a2ny uses cookies to improve your browsing experience and provide better services."
+    "description": "Learn about how El7a2ny uses cookies and similar technologies to improve your browsing experience, provide better services, and comply with privacy regulations."
   }
 }
