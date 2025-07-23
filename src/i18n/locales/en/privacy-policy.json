@@ -4,31 +4,55 @@
   "sections": [
     {
       "title": "Information We Collect",
-      "content": "We collect information you provide directly to us, such as when you create an account, book a service, or contact us for support."
+      "content": "We collect information you provide directly when you create an account, book services, or contact support. This includes: personal details (name, email, phone), vehicle information, location data when using our services, payment information, and service history. We also automatically collect device information, app usage data, and location data to improve our services and provide emergency assistance."
     },
     {
       "title": "How We Use Your Information",
-      "content": "We use the information we collect to provide, maintain, and improve our services, process transactions, and communicate with you."
+      "content": "We use your information to: provide and improve our automotive services, process bookings and payments, send service notifications and updates, provide customer support, ensure platform security, comply with legal obligations, and analyze usage patterns to enhance user experience. Location data is used specifically for dispatching services and emergency assistance."
     },
     {
-      "title": "Information Sharing",
-      "content": "We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except as described in this policy."
+      "title": "Information Sharing and Disclosure",
+      "content": "We share your information only as necessary: with service providers to fulfill your bookings, with payment processors for transactions, with emergency services when requested, as required by law or legal process, with your explicit consent, and in case of business transfers. We never sell your personal data to third parties for marketing purposes."
     },
     {
-      "title": "Data Security",
-      "content": "We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction."
+      "title": "Data Security and Retention",
+      "content": "We implement industry-standard security measures including encryption, secure servers, and regular security audits. Your payment information is processed through certified payment processors. We retain your data as long as your account is active or as needed to provide services, comply with legal obligations, and resolve disputes. You can request data deletion at any time."
     },
     {
-      "title": "Your Rights",
-      "content": "You have the right to access, update, or delete your personal information. You may also opt out of certain communications from us."
+      "title": "Your Privacy Rights",
+      "content": "You have the right to: access and receive a copy of your personal data, correct inaccurate information, delete your personal data, restrict or object to data processing, data portability, and withdraw consent. For EU residents, these rights are protected under GDPR. For California residents, these rights are protected under CCPA. Contact us to exercise these rights."
+    },
+    {
+      "title": "Children's Privacy",
+      "content": "Our services are not intended for children under 13. We do not knowingly collect personal information from children under 13. If you become aware that a child has provided us with personal information, please contact us immediately, and we will take steps to remove such information and terminate the child's account."
+    },
+    {
+      "title": "International Data Transfers",
+      "content": "Your information may be transferred to and processed in countries other than your own. We ensure appropriate safeguards are in place to protect your data during international transfers, including standard contractual clauses and adequacy decisions where applicable."
+    },
+    {
+      "title": "Cookies and Tracking Technologies",
+      "content": "We use cookies, web beacons, and similar technologies to enhance your experience, analyze usage, and provide personalized content. You can control cookie preferences through your browser settings. Essential cookies are necessary for the platform to function properly."
+    },
+    {
+      "title": "Third-Party Services",
+      "content": "Our app may contain links to third-party services or integrate with external platforms (payment processors, map services, social media). These third parties have their own privacy policies. We are not responsible for their privacy practices and encourage you to review their policies."
+    },
+    {
+      "title": "Data Breach Notification",
+      "content": "In the event of a data breach that may affect your personal information, we will notify you and relevant authorities within 72 hours as required by applicable law. We will provide information about the breach, potential risks, and steps being taken to address the issue."
+    },
+    {
+      "title": "Changes to This Policy",
+      "content": "We may update this privacy policy periodically to reflect changes in our practices or legal requirements. We will notify you of significant changes through the app, email, or by posting the updated policy on our website. Continued use of our services after changes constitutes acceptance of the updated policy."
     },
     {
       "title": "Contact Us",
-      "content": "If you have any questions about this Privacy Policy, please contact us at privacy@el7a2ny.com"
+      "content": "If you have questions about this Privacy Policy or wish to exercise your privacy rights, please contact us at: privacy@el7a2ny.com, or write to us at our registered address. For EU residents, you may also contact our Data Protection Officer at dpo@el7a2ny.com."
     }
   ],
   "metadata": {
     "title": "Privacy Policy - El7a2ny",
-    "description": "Learn how El7a2ny collects, uses, and protects your personal information. Read our privacy policy for complete details."
+    "description": "Learn how El7a2ny collects, uses, and protects your personal information. Read our comprehensive privacy policy compliant with GDPR, CCPA, and app store requirements."
   }
 }

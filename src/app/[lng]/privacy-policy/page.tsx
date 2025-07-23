@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Shield, Eye, Lock, UserCheck, Database, Mail } from "lucide-react";
+import { Shield, Eye, Lock, UserCheck, Database, Mail, Users, Globe, Cookie, ExternalLink, AlertTriangle, FileText } from "lucide-react";
 import { useTranslations } from "@/i18n/hooks";
 
 const PrivacyPolicyPage = () => {
@@ -35,9 +35,39 @@ const PrivacyPolicyPage = () => {
       content: privacyPolicy.sections[3].content,
     },
     {
-      icon: Mail,
+      icon: Shield,
       title: privacyPolicy.sections[4].title,
       content: privacyPolicy.sections[4].content,
+    },
+    {
+      icon: Users,
+      title: privacyPolicy.sections[5].title,
+      content: privacyPolicy.sections[5].content,
+    },
+    {
+      icon: Globe,
+      title: privacyPolicy.sections[6].title,
+      content: privacyPolicy.sections[6].content,
+    },
+    {
+      icon: Cookie,
+      title: privacyPolicy.sections[7].title,
+      content: privacyPolicy.sections[7].content,
+    },
+    {
+      icon: ExternalLink,
+      title: privacyPolicy.sections[8].title,
+      content: privacyPolicy.sections[8].content,
+    },
+    {
+      icon: AlertTriangle,
+      title: privacyPolicy.sections[9].title,
+      content: privacyPolicy.sections[9].content,
+    },
+    {
+      icon: FileText,
+      title: privacyPolicy.sections[10].title,
+      content: privacyPolicy.sections[10].content,
     },
   ];
 
@@ -66,7 +96,7 @@ const PrivacyPolicyPage = () => {
             <div className="text-sm text-muted-foreground">
               {privacyPolicy.lastUpdated.replace(
                 "{{date}}",
-                "December 1, 2024"
+                "July 23, 2025"
               )}
             </div>
           </div>
@@ -79,9 +109,9 @@ const PrivacyPolicyPage = () => {
           <div className="max-w-4xl mx-auto">
             {/* Policy Sections */}
             <div className="space-y-12">
-              {sections.map((section, index) => (
+              {sections.map((section) => (
                 <div
-                  key={index}
+                  key={section.title}
                   className="group p-8 bg-card rounded-2xl border border-border/50 hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10"
                 >
                   <div className="flex items-start gap-4">
@@ -104,10 +134,10 @@ const PrivacyPolicyPage = () => {
 
             {/* Contact Section */}
             <div className="mt-16 text-center p-8 bg-gradient-to-r from-muted/30 to-accent/20 rounded-2xl border border-border/50">              <h2 className="text-2xl font-bold mb-4 text-foreground dark:text-white">
-                {privacyPolicy.sections[5].title}
+                {privacyPolicy.sections[11].title}
               </h2>
               <p className="text-muted-foreground mb-6">
-                {privacyPolicy.sections[5].content}
+                {privacyPolicy.sections[11].content}
               </p>
               <div className="flex flex-col sm:flex-row justify-center items-center gap-4 text-sm">
                 <div className="flex items-center gap-2">

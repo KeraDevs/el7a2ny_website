@@ -4,35 +4,67 @@
   "sections": [
     {
       "title": "Acceptance of Terms",
-      "content": "By accessing and using El7a2ny services, you accept and agree to be bound by the terms and provision of this agreement."
+      "content": "By accessing, downloading, installing, or using the El7a2ny mobile application or website, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service and our Privacy Policy. If you do not agree to these terms, you must not use our services. You must be at least 18 years old or have parental consent to use our services."
     },
     {
-      "title": "Service Description",
-      "content": "El7a2ny provides a platform connecting vehicle owners with certified automotive service providers for maintenance, repair, and emergency services."
+      "title": "Service Description and Availability",
+      "content": "El7a2ny is a digital platform that connects vehicle owners with certified automotive service providers for maintenance, repair, emergency assistance, and related services. We act as an intermediary and do not directly provide automotive services. Service availability depends on location, time, provider capacity, and other factors. We reserve the right to modify, suspend, or discontinue services at any time without prior notice."
     },
     {
-      "title": "User Responsibilities",
-      "content": "Users are responsible for providing accurate information, maintaining account security, and using services in accordance with applicable laws."
+      "title": "User Account and Responsibilities",
+      "content": "Users must provide accurate, current, and complete information when creating an account. You are responsible for maintaining account security, including password confidentiality. You must immediately notify us of any unauthorized access. Users agree to use services lawfully, provide accurate vehicle and service information, respect service providers, and comply with all applicable laws and regulations."
     },
     {
-      "title": "Service Availability",
-      "content": "Services are subject to availability and may be limited by geographic location, time, and service provider capacity."
+      "title": "Service Booking and Execution",
+      "content": "Service bookings are subject to provider availability and confirmation. Prices are displayed before booking and may vary based on location, time, and service complexity. Emergency services may have different pricing structures. You agree to be present during scheduled services and provide necessary access to your vehicle. Cancellation policies apply as specified in the app."
     },
     {
-      "title": "Payment Terms",
-      "content": "Payment for services is due upon completion unless otherwise agreed. We accept various payment methods as indicated on our platform."
+      "title": "Payment Terms and Billing",
+      "content": "Payment is due upon service completion unless otherwise agreed. We accept various payment methods as indicated in the app. All prices include applicable taxes unless stated otherwise. In case of payment disputes, you must contact us within 7 days of service completion. Refunds are subject to our refund policy and may require verification of service quality issues."
     },
     {
-      "title": "Limitation of Liability",
-      "content": "El7a2ny's liability is limited to the amount paid for services. We are not liable for indirect, incidental, or consequential damages."
+      "title": "Service Provider Relationship",
+      "content": "Service providers are independent contractors, not employees of El7a2ny. We facilitate connections but do not directly control service execution. Providers are responsible for their own licenses, insurance, and compliance with regulations. We verify provider credentials but cannot guarantee service quality. Disputes between users and providers should be resolved directly, though we may assist in mediation."
     },
     {
-      "title": "Termination",
-      "content": "We reserve the right to terminate or suspend access to our services at our sole discretion, without notice, for any reason."
+      "title": "Limitation of Liability and Disclaimers",
+      "content": "El7a2ny's liability is limited to the amount paid for the specific service in question. We are not liable for indirect, incidental, consequential, or punitive damages. Services are provided 'as is' without warranties. We disclaim responsibility for provider actions, vehicle damage not caused by negligence, delays due to external factors, and third-party service failures."
+    },
+    {
+      "title": "Intellectual Property Rights",
+      "content": "The El7a2ny app, website, logo, trademarks, and content are protected by intellectual property laws. Users are granted a limited, non-exclusive license to use our services for personal purposes. You may not copy, modify, distribute, sell, or reverse engineer our software or content without written permission."
+    },
+    {
+      "title": "User Content and Conduct",
+      "content": "Users may submit reviews, photos, and other content through our platform. You retain ownership of your content but grant us a license to use it for service improvement and marketing. You agree not to submit illegal, offensive, false, or copyrighted content. We reserve the right to remove content and suspend accounts for policy violations."
+    },
+    {
+      "title": "Privacy and Data Protection",
+      "content": "Your privacy is important to us. Our collection, use, and protection of your personal information is governed by our Privacy Policy, which is incorporated into these terms by reference. By using our services, you consent to data collection and processing as described in the Privacy Policy."
+    },
+    {
+      "title": "Termination and Suspension",
+      "content": "We may terminate or suspend your account immediately, without prior notice, for any reason including terms violation, fraudulent activity, or legal requirements. Upon termination, your right to use services ceases immediately. Termination does not affect payment obligations for completed services. You may terminate your account by contacting customer support."
+    },
+    {
+      "title": "Dispute Resolution and Governing Law",
+      "content": "These terms are governed by the laws of [Your Jurisdiction]. Any disputes will first be addressed through good faith negotiations. If unresolved, disputes may be submitted to binding arbitration or local courts as applicable. You agree to resolve disputes individually and waive rights to class action lawsuits except where prohibited by law."
+    },
+    {
+      "title": "Changes to Terms",
+      "content": "We reserve the right to modify these terms at any time. Material changes will be communicated through the app, email, or website posting at least 30 days before taking effect. Continued use after changes constitutes acceptance of modified terms. If you disagree with changes, you must stop using our services."
+    },
+    {
+      "title": "Emergency Services Disclaimer",
+      "content": "While we offer emergency automotive assistance, El7a2ny is not a substitute for emergency medical services or law enforcement. In life-threatening situations, contact emergency services (911, 112, etc.) immediately. We cannot guarantee emergency service response times and are not liable for delays in emergency situations."
+    },
+    {
+      "title": "App Store Compliance",
+      "content": "Our mobile application complies with app store terms and conditions. Users must also comply with applicable app store terms when downloading and using our app. In case of conflicts between these terms and app store terms, app store terms take precedence regarding app distribution and technical requirements."
     }
   ],
   "metadata": {
     "title": "Terms of Service - El7a2ny",
-    "description": "Read El7a2ny's terms of service to understand the rules and guidelines for using our automotive service platform."
+    "description": "Read El7a2ny's comprehensive terms of service covering user responsibilities, service provisions, liability limitations, and legal compliance for our automotive service platform."
   }
 }
