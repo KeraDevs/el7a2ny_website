@@ -107,10 +107,7 @@ const RefundPolicyPage = () => {
               {refundPolicy.metadata.description}
             </p>
             <div className="text-sm text-muted-foreground">
-              {refundPolicy.lastUpdated.replace(
-                "{{date}}",
-                "July 23, 2025"
-              )}
+              {refundPolicy.lastUpdated.replace("{{date}}", "July 23, 2025")}
             </div>
           </div>
         </div>
@@ -157,7 +154,9 @@ const RefundPolicyPage = () => {
               <div className="flex flex-col sm:flex-row justify-center items-center gap-4 text-sm">
                 <div className="flex items-center gap-2">
                   <Mail className="h-4 w-4 text-primary" />
-                  <span className="text-foreground dark:text-white">refunds@el7a2ny.com</span>
+                  <span className="text-foreground dark:text-white">
+                    refunds@el7a2ny.com
+                  </span>
                 </div>
                 <div className="hidden sm:block w-px h-4 bg-border"></div>
                 <div className="flex items-center gap-2">
