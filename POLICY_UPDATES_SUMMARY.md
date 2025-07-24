@@ -1,12 +1,15 @@
 # Privacy Policy and Terms Compliance Update
 
 ## Overview
+
 Updated El7a2ny's privacy policy, terms of service, cookie policy, and refund policy to comply with Google Play Store and Apple App Store requirements, as well as major privacy regulations (GDPR, CCPA).
 
 ## Changes Made
 
 ### 1. Privacy Policy Updates
+
 **English (`/src/i18n/locales/en/privacy-policy.json`)**
+
 - Expanded from 6 to 12 comprehensive sections
 - Added detailed information collection practices
 - Included GDPR and CCPA compliance sections
@@ -19,18 +22,22 @@ Updated El7a2ny's privacy policy, terms of service, cookie policy, and refund po
 - Added policy change notification process
 
 **Arabic (`/src/i18n/locales/ar/privacy-policy.json`)**
+
 - Complete translation of all enhanced sections
 - Culturally appropriate language and terminology
 - Maintained legal accuracy in Arabic
 
 **Component (`/src/app/[lng]/privacy-policy/page.tsx`)**
+
 - Updated to handle 12 sections with appropriate icons
 - Fixed ESLint warnings (removed array index keys)
 - Updated contact section reference
 - Updated last modified date to July 23, 2025
 
 ### 2. Terms of Service Updates
+
 **English (`/src/i18n/locales/en/terms-of-service.json`)**
+
 - Expanded from 7 to 15 comprehensive sections
 - Added age verification and parental consent requirements
 - Enhanced service description and availability terms
@@ -48,18 +55,22 @@ Updated El7a2ny's privacy policy, terms of service, cookie policy, and refund po
 - App store compliance section
 
 **Arabic (`/src/i18n/locales/ar/terms-of-service.json`)**
+
 - Complete translation of all enhanced sections
 - Legal terminology accuracy in Arabic
 - Cultural sensitivity in language usage
 
 **Component (`/src/app/[lng]/terms-of-service/page.tsx`)**
+
 - Updated to handle 15 sections with appropriate icons
 - Added new icon imports for additional sections
 - Fixed ESLint warnings
 - Updated last modified date
 
 ### 3. Cookie Policy Updates
+
 **English (`/src/i18n/locales/en/cookie-policy.json`)**
+
 - Expanded from 6 to 11 comprehensive sections
 - Detailed cookie types and purposes
 - Mobile app data collection practices
@@ -69,17 +80,21 @@ Updated El7a2ny's privacy policy, terms of service, cookie policy, and refund po
 - Contact information for cookie-related inquiries
 
 **Arabic (`/src/i18n/locales/ar/cookie-policy.json`)**
+
 - Complete translation of enhanced cookie policy
 - Technical terminology accurately translated
 
 **Component (`/src/app/[lng]/cookie-policy/page.tsx`)**
+
 - Completely rewritten to match other policy pages
 - Uses translation system instead of hardcoded content
 - Consistent UI/UX with other policy pages
 - Added appropriate icons for each section
 
 ### 4. Refund Policy Updates
+
 **English (`/src/i18n/locales/en/refund-policy.json`)**
+
 - Expanded from 6 to 12 comprehensive sections
 - Clear refund eligibility criteria
 - Detailed refund process timeline
@@ -92,10 +107,12 @@ Updated El7a2ny's privacy policy, terms of service, cookie policy, and refund po
 - Prevention and quality control measures
 
 **Arabic (`/src/i18n/locales/ar/refund-policy.json`)**
+
 - Complete translation of enhanced refund policy
 - Business terminology accurately translated
 
 **Component (`/src/app/[lng]/refund-policy/page.tsx`)**
+
 - Completely rewritten to match other policy pages
 - Uses translation system for consistency
 - Added appropriate icons and styling
@@ -104,6 +121,7 @@ Updated El7a2ny's privacy policy, terms of service, cookie policy, and refund po
 ## App Store Compliance Features
 
 ### Google Play Store Requirements
+
 ✅ **Privacy Policy**: Comprehensive data collection disclosure
 ✅ **Data Safety**: Clear data usage and sharing practices
 ✅ **Children's Privacy**: COPPA compliance for users under 13
@@ -113,6 +131,7 @@ Updated El7a2ny's privacy policy, terms of service, cookie policy, and refund po
 ✅ **Sensitive Permissions**: Clear justification for app permissions
 
 ### Apple App Store Requirements
+
 ✅ **Privacy Nutrition Labels**: Detailed data type collection
 ✅ **Privacy Policy Link**: Accessible privacy policy
 ✅ **Children's Privacy**: Age-appropriate data collection
@@ -122,6 +141,7 @@ Updated El7a2ny's privacy policy, terms of service, cookie policy, and refund po
 ✅ **Data Retention**: Clear retention and deletion policies
 
 ### GDPR Compliance
+
 ✅ **Lawful Basis**: Clear legal basis for data processing
 ✅ **User Rights**: Right to access, rectify, delete, restrict, object, and portability
 ✅ **Data Protection Officer**: Contact information provided
@@ -130,6 +150,7 @@ Updated El7a2ny's privacy policy, terms of service, cookie policy, and refund po
 ✅ **Consent Withdrawal**: Easy consent withdrawal mechanism
 
 ### CCPA Compliance
+
 ✅ **Data Categories**: Clear data category disclosure
 ✅ **Business Purposes**: Specific business purpose explanations
 ✅ **Consumer Rights**: Access, delete, opt-out rights
@@ -137,6 +158,7 @@ Updated El7a2ny's privacy policy, terms of service, cookie policy, and refund po
 ✅ **Third-Party Sales**: Clear disclosure of data sales (none in our case)
 
 ## Technical Improvements
+
 - Consistent component structure across all policy pages
 - Improved accessibility with semantic HTML
 - Better mobile responsiveness
@@ -146,12 +168,14 @@ Updated El7a2ny's privacy policy, terms of service, cookie policy, and refund po
 - Proper error handling for missing translations
 
 ## Contact Information Updates
+
 - **Privacy**: privacy@el7a2ny.com
 - **Data Protection Officer**: dpo@el7a2ny.com
 - **Legal**: legal@el7a2ny.com
 - **Refunds**: refunds@el7a2ny.com
 
 ## Next Steps
+
 1. Legal review of all policy content
 2. Update app store listings with new policy links
 3. Implement cookie consent banner
@@ -161,6 +185,7 @@ Updated El7a2ny's privacy policy, terms of service, cookie policy, and refund po
 7. Train customer service team on new policies
 
 ## Files Modified
+
 - `/src/i18n/locales/en/privacy-policy.json`
 - `/src/i18n/locales/ar/privacy-policy.json`
 - `/src/i18n/locales/en/terms-of-service.json`
