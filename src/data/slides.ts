@@ -37,7 +37,7 @@ export const enSlides = [
   },
   {
     id: 5,
-    imageUrl: "/car-wrapping1.jpg",
+    imageUrl: "/images/car-wrapping1.jpg",
     title: "Premium Car Customization",
     description:
       "Transform your vehicle with professional wrapping and customization. Make your car uniquely yours.",
