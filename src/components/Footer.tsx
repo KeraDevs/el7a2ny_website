@@ -56,6 +56,7 @@ const Footer = ({ lng }: FooterProps) => {
     { label: footer.legal?.terms, href: `/${lng}/terms-of-service` },
     { label: footer.legal?.refund, href: `/${lng}/refund-policy` },
     { label: footer.legal?.cookies, href: `/${lng}/cookie-policy` },
+    { label: footer.legal?.accountDeletion, href: `/${lng}/account-deletion` },
   ];
 
   const socialLinks = [

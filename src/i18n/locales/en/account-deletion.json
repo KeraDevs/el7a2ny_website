@@ -1,0 +1,75 @@
+{
+  "title": "Account & Data Deletion",
+  "lastUpdated": "Last updated: {{date}}",
+  "sections": [
+    {
+      "title": "How to Delete Your Account & Data",
+      "content": "We provide multiple ways for you to delete your El7a2ny account and associated data. You can delete your account immediately through the app or request deletion via email if you can't access the app. All deletion requests are processed in compliance with applicable privacy laws and regulations."
+    },
+    {
+      "title": "Option 1: In-App Deletion (Immediate)",
+      "content": "For immediate account deletion: 1. Open the El7a2ny mobile app, 2. Navigate to Settings from the main menu, 3. Scroll down and tap 'Delete Account', 4. Read the deletion warning carefully, 5. Confirm deletion by typing 'DELETE' when prompted, 6. Your account will be permanently deleted within minutes. This is the fastest method for account deletion."
+    },
+    {
+      "title": "Option 2: Email Request",
+      "content": "If you cannot access the app, send an email to: Support@el7a2ny.com with the subject line 'Account Deletion Request - El7a2ny App'. Please include your registered phone number or email address associated with your account. We will process your request within 48 hours during Egyptian business days and send you a confirmation email once deletion is complete."
+    },
+    {
+      "title": "What Data Gets Deleted",
+      "content": "When you delete your account, the following data is permanently removed: your user profile and personal information, vehicle information and service history, saved payment methods and transaction history, app preferences and settings, location data and search history, all photos and documents uploaded to the app, Firebase authentication data, and any chat or communication history with service providers."
+    },
+    {
+      "title": "Data We Keep (Legal Requirements)",
+      "content": "Due to Egyptian tax and regulatory compliance requirements, we must retain certain data: financial transaction records for tax purposes (5 years as required by Egyptian tax law), basic transaction logs for regulatory compliance (3 years), anonymized usage analytics with no personal identifiers, and records required for legal disputes or investigations. This retained data cannot be linked back to your identity."
+    },
+    {
+      "title": "Deletion Timeline",
+      "content": "Your data deletion follows this timeline: most personal data is deleted within 30 days of your request, cached data and temporary files are cleared within 7 days, app data synced across devices is removed within 14 days, legally required retention data is kept as mandated by Egyptian law, and you will receive email confirmation once the primary deletion is complete."
+    },
+    {
+      "title": "Before You Delete Your Account",
+      "content": "Please consider these important points before deleting your account: account deletion is permanent and cannot be undone, you will lose access to all service history and receipts, any active service bookings will be cancelled, stored payment methods will be removed, you will need to create a new account to use El7a2ny services again, and consider downloading your data first if you need records for personal use."
+    },
+    {
+      "title": "Impact on Service Providers",
+      "content": "When you delete your account: service providers will no longer see your contact information, past service ratings and reviews will be anonymized, any ongoing communications will be terminated, scheduled appointments will be cancelled with notification to providers, and payment for completed services will still be processed normally before account deletion."
+    },
+    {
+      "title": "Alternative Options",
+      "content": "If you're concerned about privacy but don't want to delete your account completely, consider these alternatives: temporarily deactivate your account instead of deleting, update your privacy settings to limit data collection, remove specific personal information from your profile, unsubscribe from marketing communications, or contact our support team to discuss your specific privacy concerns."
+    },
+    {
+      "title": "Reactivation After Deletion",
+      "content": "Once your account is deleted, it cannot be reactivated or restored. If you want to use El7a2ny services again, you will need to create a completely new account with a new email address or phone number. Your previous service history, preferences, and data will not be recoverable. This ensures your privacy and confirms that your data deletion request was fully honored."
+    },
+    {
+      "title": "Developer Information",
+      "content": "El7a2ny App is developed by Keradevs. We are committed to protecting your privacy and ensuring compliance with all applicable data protection laws. Our development team regularly reviews and updates our data handling practices to maintain the highest standards of user privacy and data security."
+    },
+    {
+      "title": "Contact for Deletion Support",
+      "content": "For account deletion requests, questions, or support: Email us at Support@el7a2ny.com with 'Account Deletion Request - El7a2ny App' in the subject line. Include your registered phone number or email address. We respond within 48 hours during Egyptian business days. For technical issues with in-app deletion, contact our support team through the app's help section or email us for immediate assistance."
+    }
+  ],
+  "ui": {
+    "appName": "El7a2ny App",
+    "developerInfo": "Developed by Keradevs",
+    "option1Title": "Option 1: In-App Deletion (Immediate)",
+    "option1Description": "Fastest method - Delete your account instantly through the app",
+    "option1Steps": "Settings → Delete Account → Confirm",
+    "option2Title": "Option 2: Email Request",
+    "option2Description": "Can't access the app? Email us for account deletion",
+    "option2Contact": "48hr response time",
+    "emailTemplate": "Email Template:",
+    "emailTo": "To:",
+    "emailSubject": "Subject:",
+    "emailMessage": "Message:",
+    "emailBody": "Please delete my El7a2ny account.",
+    "emailRegistered": "Registered email/phone: [Your registered info]",
+    "responseTime": "48hr Response Time"
+  },
+  "metadata": {
+    "title": "Account & Data Deletion - El7a2ny",
+    "description": "Complete guide on how to delete your El7a2ny account and personal data. Learn about our deletion process, data retention policies, and your privacy rights."
+  }
+}

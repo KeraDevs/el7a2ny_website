@@ -16,6 +16,7 @@ import enPrivacyPolicy from "./locales/en/privacy-policy.json";
 import enTermsOfService from "./locales/en/terms-of-service.json";
 import enRefundPolicy from "./locales/en/refund-policy.json";
 import enCookiePolicy from "./locales/en/cookie-policy.json";
+import enAccountDeletion from "./locales/en/account-deletion.json";
 
 // Arabic translations
 import arCommon from "./locales/ar/common.json";
@@ -34,6 +35,7 @@ import arPrivacyPolicy from "./locales/ar/privacy-policy.json";
 import arTermsOfService from "./locales/ar/terms-of-service.json";
 import arRefundPolicy from "./locales/ar/refund-policy.json";
 import arCookiePolicy from "./locales/ar/cookie-policy.json";
+import arAccountDeletion from "./locales/ar/account-deletion.json";
 
 export const translations = {
   en: {
@@ -53,6 +55,7 @@ export const translations = {
     "terms-of-service": enTermsOfService,
     "refund-policy": enRefundPolicy,
     "cookie-policy": enCookiePolicy,
+    "account-deletion": enAccountDeletion,
   },
   ar: {
     common: arCommon,
@@ -71,6 +74,7 @@ export const translations = {
     "terms-of-service": arTermsOfService,
     "refund-policy": arRefundPolicy,
     "cookie-policy": arCookiePolicy,
+    "account-deletion": arAccountDeletion,
   },
 };
 
